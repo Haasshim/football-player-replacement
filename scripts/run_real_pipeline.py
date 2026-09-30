@@ -44,7 +44,7 @@ def main():
     print("  data_confidence breakdown:", players["data_confidence"].value_counts().to_dict())
 
     print("\n== position separation (within vs cross, higher is better) ==")
-    sep = m.position_separation(player_stats, engine, max_pairs_per_position=25)
+    sep = m.position_separation(player_stats, engine, max_pairs_per_position=40, n_trials=8)
     for pos, res in sep.items():
         print(f"  {pos}: {res}")
 

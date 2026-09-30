@@ -137,12 +137,23 @@ ranks across their position's stats, scaled down to 10. It's the same
 from the same data already computed for the radar and match score
 rather than a separate model.
 
+Each player also shows a nationality flag, age (from date of birth),
+market value where known, and a "best attribute" callout - their
+single highest-percentile stat, only surfaced when it's genuinely a
+strength (60th percentile or above), so it doesn't say something
+generic for a player with no standout quality.
+
+Stat rows where neither player has data are hidden entirely, rather
+than showing a confusing "- vs -" - a count of how many were hidden is
+still shown, so nothing disappears silently.
+
 ## Team badges
 
 Real club crests are trademarked, so instead of reproducing actual
 badge artwork, each club gets a generated shield in its real colors
-with its short code (e.g. ARS, LIV) - gives every team a distinct,
-recognizable visual identity without using logo assets that aren't ours
+with its short code (e.g. ARS, LIV), plus a simple generated jersey
+icon in the same colors - gives every team a distinct, recognizable
+visual identity without using logo or kit assets that aren't ours
 to redistribute. Player photos are left out for the same reason - real
 photos of real, named people aren't something to source and embed
 without rights to do so, so the visual identity here is built from
@@ -230,26 +241,46 @@ default team strength rather than a guessed number.
 
 There's no labeled "this replacement worked out" data to compute real
 accuracy against, so `src/metrics.py` checks things that stand in for
-it, and the two tunable parameters (`DISTANCE_SCALE` in `src/similarity.py`,
-and each position's `big_game_delta_pct` weight) were picked by grid
-search against these checks, not guessed:
+it, and the tunable parameters were picked by testing against these
+checks, not guessed - including one negative result, kept here because
+a documented dead end is still useful:
 
-- **Position separation**: does a player's profile actually look more
-  like same-position players than other positions? A grid search over
-  `DISTANCE_SCALE` (1.0-4.0) and the big-game weight (0.15-0.5) showed
-  worst-case separation kept improving as `DISTANCE_SCALE` increased -
-  but past about 2.5 the score distribution compressed so hard that the
-  tool almost never showed a genuinely poor match (0% of a 300-pair
-  sample scored 20% or below), which would make the actual comparisons
-  less honest even though the one metric looked better. `DISTANCE_SCALE
-  = 2.0` with `big_game_delta_pct` weight `0.4` was the best trade-off
-  found: **7 of 8 positions separate clearly** (ratio > 1.0, e.g. GK at
-  10.6, CB at 1.25, ST at 1.18), and **central midfielders improved from
-  0.83 to 0.88** - still the weakest position, but no longer worse than
-  random, and without flattening the score range. The remaining CM
-  weakness looks like a genuine finding rather than a tuning problem:
-  central midfielders' stat profiles are less statistically distinctive
-  than specialist roles in this data.
+- **A real bug, found by this process**: `save_pct` was configured and
+  weighted for goalkeepers but the real-data pipeline never actually
+  computed it (a leftover gap from the placeholder-to-real-data
+  migration) - every GK comparison was silently running on one fewer
+  stat than intended. Fixed in `src/season_aggregation.py` and covered
+  by two new tests.
+- **The separation metric itself was noisy**: an early single-sample
+  check (30 pairs, one seed) showed central midfielders separating
+  worse than random (ratio 0.83). Re-running the same config with a
+  stable, seed-averaged measurement (320 samples: 8 seeds x 40 pairs)
+  showed CM actually separates fine (1.12) - the original number was
+  mostly sampling noise on a modest-sized position, not a real model
+  weakness. `position_separation()` now supports an `n_trials` argument
+  for exactly this reason, and the pipeline uses it by default.
+- **Position separation** (does a player's profile actually look more
+  like same-position players than other positions), measured this
+  stable way: **all 8 positions separate clearly** (ratio > 1.0) - CB
+  1.28, GK 4.68, AM/DM/CM/WING 1.08-1.12, FB/ST ~1.1.
+- **`DISTANCE_SCALE`** (in `src/similarity.py`) and each position's
+  `big_game_delta_pct` weight were chosen by grid search over
+  `DISTANCE_SCALE` (1.0-4.0) x weight (0.15-0.5): separation kept
+  improving as `DISTANCE_SCALE` increased, but past about 2.5 the score
+  distribution compressed so hard the tool almost never showed a
+  genuinely poor match (0% of a 300-pair sample scored 20% or below) -
+  less honest even though the one metric looked better. `2.0` / `0.4`
+  was the best trade-off: strong separation without flattening the
+  score range.
+- **A data-informed reweight was tried and rejected**: stats where a
+  position's hand-set weight looked high relative to how much that
+  stat actually differs from other positions (e.g. full-backs' `xa_p90`
+  was weighted 0.9 despite barely differing from the rest of the
+  league) were identified and tested as a batch adjustment. Measured
+  the same stable way, it made no real difference to 7 of 8 positions
+  and slightly *worsened* goalkeepers - so it wasn't applied. Chasing a
+  single correlation-style statistic without validating the actual
+  effect would have been a regression dressed up as an improvement.
 - **Score distribution**: match scores across a same-position sample
   spread from ~11 to ~95 with a mean around 55 and a real spread
   (std ~14) - informative in both directions, not bunched at one value.

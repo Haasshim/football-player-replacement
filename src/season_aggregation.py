@@ -101,6 +101,13 @@ def aggregate_season_stats(
         else:
             row["psxg_prevented_p90"] = float("nan")
 
+        saves = stat_row.get("saves")
+        goals_against = stat_row.get("goals_against")
+        if not pd.isna(saves) and not pd.isna(goals_against) and (saves + goals_against) > 0:
+            row["save_pct"] = float(saves) / (saves + goals_against)
+        else:
+            row["save_pct"] = float("nan")
+
         row["big_game_delta_pct"] = big_game_by_team.get(info["club"], 0.0)
 
         rows.append(row)

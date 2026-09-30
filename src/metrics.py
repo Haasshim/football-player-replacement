@@ -41,6 +41,7 @@ def position_separation(
     engine,
     max_pairs_per_position: int = 30,
     seed: int = 42,
+    n_trials: int = 1,
 ) -> dict:
     """
     For each position with at least 2 players, compares the average
@@ -49,8 +50,13 @@ def position_separation(
     random player from a different position (cross), both scored using
     the same position's stat config. within should be clearly higher
     than cross if the model is capturing real positional signal.
+
+    n_trials > 1 repeats the sampling across that many seeds and pools
+    every trial's scores before averaging, for a more stable estimate -
+    a single trial at max_pairs_per_position=30 can swing the separation
+    ratio by several tenths purely from sampling noise on positions with
+    a modest population (see README "Model validation").
     """
-    rng = random.Random(seed)
     results = {}
 
     for position in player_stats_df["primary_position"].unique():
@@ -63,13 +69,15 @@ def position_separation(
         cross_scores = []
         same_pos_records = same_pos.to_dict("records")
 
-        for _ in range(max_pairs_per_position):
-            a, b = rng.sample(same_pos_records, 2)
-            within_scores.append(engine.match_score(pd.Series(a), pd.Series(b), position))
+        for trial in range(n_trials):
+            rng = random.Random(seed + trial)
+            for _ in range(max_pairs_per_position):
+                a, b = rng.sample(same_pos_records, 2)
+                within_scores.append(engine.match_score(pd.Series(a), pd.Series(b), position))
 
-            a = rng.choice(same_pos_records)
-            b = other_pos.sample(1, random_state=rng.randint(0, 10_000)).iloc[0]
-            cross_scores.append(engine.match_score(pd.Series(a), b, position))
+                a = rng.choice(same_pos_records)
+                b = other_pos.sample(1, random_state=rng.randint(0, 10_000)).iloc[0]
+                cross_scores.append(engine.match_score(pd.Series(a), b, position))
 
         within_avg = statistics.mean(within_scores)
         cross_avg = statistics.mean(cross_scores)

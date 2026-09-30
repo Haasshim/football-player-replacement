@@ -23,6 +23,32 @@ def test_season_aggregation_computes_per90_and_pct():
     assert result["big_game_delta_pct"] == 5.5
 
 
+def test_save_pct_computed_for_goalkeepers():
+    stats = pd.DataFrame([{
+        "player_id": "gk1", "season_used": "2025-26",
+        "minutes_played": 900, "matches_played": 10,
+        "saves": 30, "goals_against": 10,
+    }])
+    players = pd.DataFrame([{"player_id": "gk1", "full_name": "Test Keeper", "primary_position": "GK", "club": "ARS"}])
+    teams = pd.DataFrame([{"team_id": "ARS", "big_game_factor_pct": 0.0}])
+
+    result = aggregate_season_stats(stats, players, teams).iloc[0]
+    assert result["save_pct"] == pytest.approx(30 / 40)  # 30 saves out of 40 shots faced
+
+
+def test_save_pct_is_nan_when_no_shots_faced():
+    stats = pd.DataFrame([{
+        "player_id": "gk1", "season_used": "2025-26",
+        "minutes_played": 90, "matches_played": 1,
+        "saves": 0, "goals_against": 0,
+    }])
+    players = pd.DataFrame([{"player_id": "gk1", "full_name": "Test Keeper", "primary_position": "GK", "club": "ARS"}])
+    teams = pd.DataFrame([{"team_id": "ARS", "big_game_factor_pct": 0.0}])
+
+    result = aggregate_season_stats(stats, players, teams).iloc[0]
+    assert math.isnan(result["save_pct"])
+
+
 def test_season_aggregation_missing_fields_become_nan_not_zero():
     stats = pd.DataFrame([{
         "player_id": "p1", "season_used": "2024-25",
