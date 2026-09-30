@@ -13,8 +13,12 @@ more.
 
 ## Try it
 
-Open `frontend/index.html` in a browser. Everything (data included) is
-in that one file.
+**Live:** https://haasshim.github.io/football-player-replacement/
+
+Or open `frontend/index.html` directly in a browser - everything (data
+included) is in that one file. `docs/index.html` is the same file, kept
+there for GitHub Pages to serve; re-copy it after regenerating
+`frontend/index.html` if you rebuild the data.
 
 ## What is in this repo
 

@@ -75,11 +75,24 @@ async function main() {
   // 7. Confirm replace works and returns to squad with swapped player
   const replaceBtn = doc.querySelector('#replace-btn');
   const expectedTokenCount = tokens.length;
+  const candidateName = doc.querySelector('.compare-side.right .compare-name').textContent;
   replaceBtn.click();
   await wait(50);
   const tokensAfter = doc.querySelectorAll('.token');
   assert(tokensAfter.length === expectedTokenCount, 'expected same token count after replacement');
   console.log('OK: replace player returns to squad view with', tokensAfter.length, 'tokens intact');
+
+  // the candidate must actually be visible on the pitch now, in the same
+  // slot - not vanished because their real position differs from the
+  // player they replaced (this was the reported bug)
+  const pitchLabels = Array.from(doc.querySelectorAll('.token .label')).map((el) => el.textContent);
+  const candidateSurname = candidateName.trim().split(' ').pop();
+  assert(pitchLabels.includes(candidateSurname), `expected replaced-in player "${candidateSurname}" to appear on the pitch, got: ${pitchLabels.join(', ')}`);
+  console.log('OK: replacement candidate is visible on the pitch in the vacated slot');
+
+  const banner = doc.querySelector('.panel-head + div');
+  assert(banner && banner.textContent.includes('Replaced'), 'expected a swap confirmation banner');
+  console.log('OK: swap confirmation banner shown:', banner.textContent.trim());
 
   console.log('\nALL FRONTEND FLOW CHECKS PASSED');
   process.exit(0);
