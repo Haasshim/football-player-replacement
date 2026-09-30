@@ -1,6 +1,17 @@
 """
-Runs the full pipeline end to end against whatever is in data/, and
-writes frontend/data.json for the UI to consume.
+Runs the ORIGINAL match-level demo pipeline, against synthetic sample data
+(see scripts/generate_sample_data.py). This is a development sandbox for
+the per-match opponent-weighting logic in src/player_aggregation.py and
+src/opponent_weighting.py - useful if genuine match-level data (per
+player, per fixture) ever becomes available.
+
+The data/ folder currently holds REAL data (from scripts/real_data/),
+which scripts/run_real_pipeline.py uses instead. Running this script
+will overwrite data/teams.csv and data/players.csv with synthetic
+placeholders - regenerate the sample data into a separate folder first
+if you want to try this without touching the real dataset, e.g.:
+  python scripts/generate_sample_data.py /tmp/demo_data
+and point DATA_DIR below at that folder instead.
 
 Usage: python scripts/run_pipeline.py
 """

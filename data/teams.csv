@@ -1,9 +1,21 @@
-team_id,team_name,league,final_league_position,points,points_per_game_last10,goal_difference,uefa_coefficient
-MCI,Manchester City,EPL,1,89,2.3,55,106.0
-ARS,Arsenal,EPL,2,84,2.1,45,88.0
-LIV,Liverpool,EPL,3,79,1.9,38,92.0
-CHE,Chelsea,EPL,4,71,1.7,22,61.0
-TOT,Tottenham Hotspur,EPL,5,68,1.6,15,54.0
-NEW,Newcastle United,EPL,6,63,1.4,10,38.0
-BHA,Brighton & Hove Albion,EPL,7,58,1.3,4,22.0
-EVE,Everton,EPL,8,45,1.0,-8,9.0
+team_id,team_name,league,final_league_position,points,goal_difference,points_per_game_last10,big_game_factor_pct,data_confidence,uefa_coefficient
+BOU,AFC Bournemouth,EPL,10.89,49.56,-6.56,1.3042105263157895,-2.3,recency_weighted_2025_2024_2023,19.703
+ARS,Arsenal,EPL,2.3,80.0,42.9,2.1052631578947367,5.7,recency_weighted_2025_2024_2023_2022,113.5
+AVL,Aston Villa,EPL,6.1,63.5,8.1,1.6710526315789473,9.5,recency_weighted_2025_2024_2023_2022,78.0
+BRE,Brentford,EPL,11.0,50.5,2.5,1.3289473684210527,-15.1,recency_weighted_2025_2024_2023_2022,19.703
+BHA,Brighton & Hove Albion,EPL,8.1,56.3,4.3,1.4815789473684209,2.4,recency_weighted_2025_2024_2023_2022,19.703
+CHE,Chelsea,EPL,6.1,62.7,15.1,1.6500000000000001,0.6,recency_weighted_2025_2024_2023_2022,99.25
+COV,Coventry City,EPL,17.0,38.0,-15.0,1.0,0.0,no_recent_top_flight_data,19.703
+CRY,Crystal Palace,EPL,10.6,49.7,-1.7,1.3078947368421054,-11.5,recency_weighted_2025_2024_2023_2022,19.703
+EVE,Everton,EPL,12.7,44.7,-11.0,1.1763157894736842,-4.1,recency_weighted_2025_2024_2023_2022,19.703
+FUL,Fulham,EPL,11.44,51.22,-1.56,1.3478947368421053,5.1,recency_weighted_2025_2024_2023,19.703
+HUL,Hull City,EPL,17.0,38.0,-15.0,1.0,0.0,no_recent_top_flight_data,19.703
+IPS,Ipswich Town,EPL,16.0,22.0,-46.0,0.5789473684210527,11.8,recency_weighted_2025,19.703
+LEE,Leeds United,EPL,15.0,33.33,-32.33,0.8771052631578947,-27.5,recency_weighted_2023_2022,19.703
+LIV,Liverpool,EPL,2.5,80.8,43.9,2.126315789473684,12.5,recency_weighted_2025_2024_2023_2022,130.0
+MCI,Manchester City,EPL,1.8,82.8,49.3,2.1789473684210527,2.0,recency_weighted_2025_2024_2023_2022,125.5
+MUN,Manchester United,EPL,9.2,55.6,-1.3,1.4631578947368422,-7.6,recency_weighted_2025_2024_2023_2022,76.5
+NEW,Newcastle United,EPL,5.7,63.5,20.5,1.6710526315789473,0.7,recency_weighted_2025_2024_2023_2022,35.0
+NFO,Nottingham Forest,EPL,11.22,49.33,-7.33,1.298157894736842,-10.6,recency_weighted_2025_2024_2023,19.703
+SUN,Sunderland,EPL,17.0,38.0,-15.0,1.0,0.0,no_recent_top_flight_data,19.703
+TOT,Tottenham Hotspur,EPL,9.5,54.1,7.8,1.4236842105263159,-9.6,recency_weighted_2025_2024_2023_2022,82.0

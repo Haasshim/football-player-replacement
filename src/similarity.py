@@ -30,17 +30,19 @@ class SimilarityEngine:
         """
         Computes per-position mean/std for every stat that position's
         config lists, across all players currently in player_stats_df.
+        NaN values (a stat genuinely not available from the data source
+        for some players) are skipped automatically by pandas mean/std.
         """
         for position, config in self.position_config.items():
             stat_names = list(config.get("stats", {}).keys())
             group = player_stats_df[player_stats_df["primary_position"] == position]
             stats = {}
             for stat in stat_names:
-                if stat not in group.columns or group.empty:
+                if stat not in group.columns or group[stat].dropna().empty:
                     stats[stat] = (0.0, 1.0)
                     continue
-                mean = group[stat].mean()
-                std = group[stat].std()
+                mean = group[stat].mean(skipna=True)
+                std = group[stat].std(skipna=True)
                 stats[stat] = (float(mean), float(std) if std and not math.isnan(std) else 1.0)
             self._position_stats[position] = stats
         self._fitted = True
@@ -73,8 +75,21 @@ class SimilarityEngine:
         for stat, spec in config.items():
             weight = spec["weight"]
             direction = spec.get("direction", 1)
-            val_a = float(player_a.get(stat, 0.0))
-            val_b = float(player_b.get(stat, 0.0))
+            val_a = player_a.get(stat, float("nan"))
+            val_b = player_b.get(stat, float("nan"))
+            val_a = float(val_a) if val_a is not None else float("nan")
+            val_b = float(val_b) if val_b is not None else float("nan")
+
+            if math.isnan(val_a) or math.isnan(val_b):
+                # stat unavailable for one or both players (real-world data
+                # gap) - skip its contribution rather than poisoning the score
+                breakdown.append({
+                    "stat": stat, "weight": weight, "direction": direction,
+                    "player_a_value": val_a, "player_b_value": val_b,
+                    "z_diff": None, "favored": "unavailable",
+                })
+                continue
+
             za = self._z(position, stat, val_a)
             zb = self._z(position, stat, val_b)
             sq_diff = (za - zb) ** 2
@@ -97,13 +112,15 @@ class SimilarityEngine:
         score = 100 * math.exp(-raw_distance / DISTANCE_SCALE)
         score = max(0.0, min(100.0, score))
 
-        breakdown.sort(key=lambda r: r["weight"] * abs(r["z_diff"]), reverse=True)
+        breakdown.sort(key=lambda r: r["weight"] * abs(r["z_diff"]) if r["z_diff"] is not None else -1, reverse=True)
 
         return {
             "position_used": position,
             "match_score": round(score, 1),
             "raw_distance": round(raw_distance, 3),
             "stat_breakdown": breakdown,
+            "stats_compared": sum(1 for r in breakdown if r["favored"] != "unavailable"),
+            "stats_unavailable": sum(1 for r in breakdown if r["favored"] == "unavailable"),
         }
 
     def match_score(self, player_a: pd.Series, player_b: pd.Series, position: str | None = None) -> float:

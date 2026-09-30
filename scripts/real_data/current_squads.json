@@ -1,0 +1,7556 @@
+{
+  "AFC Bournemouth": {
+    "squad": [
+      {
+        "raw_name": "Aarons, Maximillian James",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Adams, Tyler Shaan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Adli, Amine",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Araujo Zuniga, Julian Vicente",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Brooks, David Robert",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Christie, Ryan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Cook, Lewis John",
+        "home_grown": true
+      },
+      {
+        "raw_name": "De Lima Barbosa, Francisco Evanilson",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Di Gregorio, Michele",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Diakite, Bafode",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Forster, Fraser Gerard",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Hill, James",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Jebbison, Daniel David",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Kluivert, Justin Dean",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Pereira De Albuquerque Tavares Da Silva, Antonio Joao",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Petrovic, Djorde",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Rodriguez Munoz, Alvaro Daniel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Sanchez Velasco, Juan Luis",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Scott, Alex Jay",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Smith, Adam James",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Tavernier, Marcus Joseph",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Truffert, Adrien Lillan Gaetan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Winterburn, Benjamin George",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Aibangbee, Jeffery Eghosa",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Akaunu, Oghene-Kobaro Cornelius Elijah",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Akinmboni, Matai Eyitayo",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Ali, Ameer Salah-Al'Din",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Allan, Mack William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Arthur, Kelvin Yaw Mbro",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Azzouz Scafe, Jaheim Elie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Batista Guanchez, Aidan Andrew",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Brogan, Adam James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Christie, Zac",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Chubinidze, George Manuel Goncalves",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Collins, Max Luca George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Conteh, Jalil",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Crampton, Kai Barry",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Dacosta Gonzalez, Malcom",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Dane, Mingo Ndimukum",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Day, Jonny Raye",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Decardi-Nelson, Denzel Derek Nii Ayeetey",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dixon, Danny Robert",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Doak, Ben Gannon",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Drewett, Jake Christopher",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Gasiorowski, Marko",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gyedu, Eugene Nyarko",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jimenez Sanchez, Alejandro",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Kearney, Damani Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kroupi, Eli Junior",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lyall-Rajendra, Max",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McKenna, Callan Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Melin, Zachary Samuel James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Merritt, Alfie Michael Patrick",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Milosavljevic, Veljko",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Oluwande, Adrian Olufolajinmi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Osazee, Nefeye Kaylan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Rees-Dottin, Remy William James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Robinson, Thomas Dean",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sills, Ethan Philip",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Simplicio Rocha, Rayan Vitor",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Solanke, Joseph Ademide",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Soler Barreto, Julio Cesar",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Spence, Joe",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Stevens, Charlie George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stuckey, Thomas Alexander",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stuttle, Jonathon Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sutton, Zachary John Stewart",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thomas, Alfie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tindall, Levi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Toth, Alex Laszlo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Upstell, William Alexander",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Waite, Leyland",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Webb, Harry Callum",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Westcott, Benjamin William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "William, Harold Ikenna",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Arsenal": {
+    "squad": [
+      {
+        "raw_name": "Arrizabalaga Revuelta, Kepa",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Calafiori, Riccardo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Dos Santos Magalhaes, Gabriel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Eze, Eberechi Oluchi",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Guimaraes Rodriguez Moura, Bruno",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Gyokeres, Viktor Einar",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Havertz, Kai",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Hincapie Reyna, Piero Martin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Konsa, Ezri",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Madueke, Chukwunonso Azuka Tristan",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Merino Zazon, Mikel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Meslier, Illan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mosquera Ibarg\u00fcen, Cristhian Andrey",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Odegaard, Martin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Raya Martin, David",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Rice, Declan",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Saka, Bukayo",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Saliba, William",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Timber, Jurrien",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Tzolis, Christos",
+        "home_grown": false
+      },
+      {
+        "raw_name": "White, Benjamin",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Zubimendi Ibanez, Martin",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Abubakar, Hakeem Adnan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Agustien, Demiane Hesus",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Arteta Bernal, Gabriel Sebastian",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bailey-Joseph, Brando Nyle",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Clarke, Brayden Cian",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Copley, Louie George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dixon, Jaden Benjamin James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Donczew, Axel Karol",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dowman, Max Robert",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Frohock, Marley Linnaeus Henry",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hamill, Callan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Harriman-Annous, Andre Ryan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hashi, Maalik Hakeem Mohamed",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ibrahim, Ifeoluwa David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Julienne, Theo Devon",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kabia, Ismeal",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "King, Josiah Barack",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lewis-Skelly, Myles Anthony",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lupinski, Remigiusz",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mbala, Elyon Zikansa",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McCarron, Daniel James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mooney, Evan Andrew",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Murisa, Teshaun Tarumbidzwa",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nwaneri, Emerson Paul Kelechi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nwaneri, Ethan",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Nygaard, Lucas Martin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "O'Neill, Ceadach Liam",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Oba, Jayden Daniel Tomiwa",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Odaji-Ukueku, Theo Evandro Oghenekevwe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ogunnaike, Joshua",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ogunneye, Habeeb Omotolani Oluwatoyin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Owusu-Gyasi, Abraham",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pedro, Angelinou Mbele",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Phillips, Bowen Bradley",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Porter, Jack Kenny",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Purdy, Charlie Daniel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ranson, Khari Bolaji Mawuvi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Salmon, Marli Ellis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sampang, Saurap",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Scanlon, James Robert",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sesay, Joshua Charlie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Setford, Tommy Hogan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stachow, Patrick",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stevens, Archie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tahou, Joshua Jimmitry",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Talbot, Jack Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tyjon, Igor Justin",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Upson, Elijah Richard",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Washington, Marcell Yamani",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Zecevic John, Louis Alexander",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Aston Villa": {
+    "squad": [
+      {
+        "raw_name": "Bakumo-Abraham, Kevin Oghenetega Tamaraebi",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Barkley, Ross",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Bizot, Marco",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Bogarde, Lamare Trenton Chansey",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Buendia Stati, Emiliano",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Cash, Matthew Stuart",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Francisco Torres, Pau",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Garnacho Ferreyra, Alejandro",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Gomes Da Silva, Joao Victor",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Goretzka, Leon Christop",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Harwood-Bellis, Taylor Jay",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Jackson, Nicolas",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Kamara, Boubacar Bernard",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Maatsen, Ian Ethan",
+        "home_grown": true
+      },
+      {
+        "raw_name": "McGinn, John",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mings, Tyrone Deon",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Mvom Onana, Amadou Ba Z",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Nilsson Lindelof, Victor Jorgen",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Ruggeri, Matteo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Suzuki, Zion",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Wan-Bissaka, Aaron",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Wright, James Thomas",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Addey, Farid Taufiq",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Adediran, Daniel Ayomide",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Allan, Jack Richard",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Asemota, Aimuamwonnsa Presley Owen",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Atkins, Clay",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Barnard, Finlay Kai",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Bindley, Oliver Luke",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Blake, Joshua Kemar",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Bloomfield, Teddie Arthur",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Borland, Aidan Gerald",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Boyd, Fletcher Owen",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Brannigan, Cole Patrick",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Broggio, Benjamin David",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Burgess, Woody Jack Robert",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Burrowes, Bradley-Paul",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Carroll, Theodore James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Cisse, Modou Keba",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cotcher, Mason Lee",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Cronin McGrath, Jack Michael",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Da Cruz Sousa, Lino Goncalo",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Earley, Blade Owen",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Feeney, Joshua Philip",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Franco da Rocha dos Santos, Alysson Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Garthwaite, Jayden Leigh Jasper",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Green, Jacob",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Hammond, Rio Rafael",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Hayward, Vinnie Brendan Sean",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Hemmings, George Lawrence",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Houston, Theo James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Iyeli, Murphy Junior",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jenner, Max Daniel",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Jimoh-Aloba, Jamaldeen",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Johnson, Oscar Cameron James Kweku Ewsi",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Kellyman, Jahmi Omaly",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Ketebu, Kairi Bryan",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lewis, Samuel Jack",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lloyd, Olly",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lynch, Luka John",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lynskey, Alfie Tomas",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Madjo, Brian Djomeni",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Manzambi, Johan Kula",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mbaye, Ibrahim",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McWilliams, Ashton Tyler",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Meade, Markie Junior James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Melhuish, Lennon Ian Farren",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Mitchell, Curtis Owen",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Monteiro Fortes, Rodrigo",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Moss, Lennon Kevin",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Mudame, Vincely Afumbom",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Mulley, Trai-Varn Divinche",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Nedeljkovic, Kosta",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Oakley, Rhys John",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Orebowale, Erinoluwa Joel Musinguzi",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Ozcan, Yasin",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Patterson, Travis",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Pinnell, Harry Michael",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Proctor, Sam Adrian",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Quinn, Keilan James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Redmond, Zepiqueno Ponimin Charmant",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Routh, Leon George",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Rowe, Triston Tye",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Smithen, Tay'veon Shakayne-James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Taylor, Kane",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Wilson, Rory",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Young, Kadan Christophe",
+        "home_grown": true,
+        "loan": true
+      }
+    ]
+  },
+  "Brentford": {
+    "squad": [
+      {
+        "raw_name": "Ajer, Kristoffer Vassbakk",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Anthony, Jaidon Kya Denley",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Avenell, Caelan",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Balcombe, Ellery Ronald",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Collins, Nathan",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Damsgaard, Mikkel Krogh",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Dasilva, Pelenda Joshua Tunga",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Diouf, El Hadji Malick",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Freitas Gouveia De Carvalho, Fabio Leandro",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Henry, Rico",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Hickey, Aaron Buchanan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Janelt, Vitaly",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Jensen, Mathias",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Kayode, Michael Olabode",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Kelleher, Caoimhin Odhran",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Kim, Ji-Soo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Lewis-Potter, Keane William",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Nascimento Rodrigues, Igor Thiago",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Ouattara, Dango Aboubacar Faissal",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Sangare, Mamadou",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Schade, Kevin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Valdimarsson, Hakon Rafn",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Van Den Berg, Sepp",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Wilson, Callum Eddie Graham",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Yarmoliuk, Yehor",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Agyei, Kai Kwadjo Alfie Britwun",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Allen Bobb-Semple, Domeiro Dominic JR Davies",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Arthur, Benjamin Kristian",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Balogun, Ethan-David Emmanuel Obafemi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bansoodeb, Jai Gooroodev",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bentt, Luka Maxime Deyne",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Biggs, Harry Raymond",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Boni, Gbenankpon Michel Destiny",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cohalan, Christopher Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Danso, Dylan Kojo-Agyei",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Donovan, Romelle Troy",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Eyestone, Julian Ryan",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Fanoiki, Micaiah Oluwadare Paakwesi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Foster-Jones, Ellis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Fredrick, Benjamin Chiemela",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Furo, Kaye Iyowuna",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Giles, Cameron Christopher",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Giscombe, Naeem Umar Alexander Dita",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Golding, Aidan Martin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Goppy, Amaru Malik Braithwaite",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Grey, Andre Everett",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Guagua Silva, Darwin Johan",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Hanson, Jacob Oliver",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Holland, Isaac Joel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Honor, Otis Samuel Birch",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kasujja, Jovan Edrick",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Klimas, Matas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Konak, Yunus Emre",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Kuall, Mohtady Hatm Deng Adam",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lawal, Reuben Marlo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lyon, Felix Fritz",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Madden, Coran Gerard",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mason, Dwayne Anthony",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mawene, Theodore Beaumont",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Meghoma, Jayden Ade Trindade",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Milambo, Antoni-Djibu",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nicholls, Layton Curtis Julienne",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Noni, Andrew Takunda",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nunes Fernandes Gomes, Gustavo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nwosu, Jai Chukwuebuka",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "O'Connor, Donal Eamon",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ogungbemi, Nathaniel Oluwatoyosi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Oladapo-Gamu, Jeremiah Joshua Oluwateleayomi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Owen, Riley Jay",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Owusu, Nedved Amankwaa",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Picotto, Luca James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Powis, Isaiah Hindowa",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Redknapp, Beau Henry",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Roca, Enrique Jose",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Roca, Rafael Jose",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Rose, Reginald George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Schuster, Jannik",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sene-Richardson, Samuel Luke",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Serme, Ibrahim",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Shield, Oliver George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stephenson, Joshua James",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Stokes, Aidan Nicholas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Trimboli, Archie Ian McBlain",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wheeler-Henry, Joseph",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wilson, Ben Mark",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wolfheimer, Connor",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Zetter-Plummer, Josh Wade",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Brighton & Hove Albion": {
+    "squad": [
+      {
+        "raw_name": "Ayari, Yasin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Azeez Beloso, Oluwafemi Javier",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Beadle, James Giles",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Boscagli, Olivier",
+        "home_grown": false
+      },
+      {
+        "raw_name": "David, Promise Oluwatobi Emmanuel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "De Cuyper, Maxim Peter",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Dunk, Lewis Carl",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Ferguson, Evan Joe",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Gomez Amarilla, Diego Alexander",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Gross, Pascal Alexander",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Hadjam, Jaouen Djimmy",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Kadioglu, Ferdi Erenay",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Loureiro Da Costa, Joao Pedro",
+        "home_grown": false
+      },
+      {
+        "raw_name": "McGill, Thomas Peter Wayne",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Minteh, Yankuba",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mitoma, Kaoru",
+        "home_grown": false
+      },
+      {
+        "raw_name": "O'Riley, Matthew Sean",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Osman, Ibrahim",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Rutter, Georginio",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Steele, Jason Sean",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Struijk, Pascal Augustus",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Svoboda, Michael",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Verbruggen, Bart",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Wieffer, Mats Henrik Berne",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Ademola, Sebastian Adebola",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Akapo, Sultan Oluwatobi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Alakiu, Isaiah Fariq",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Anah, Cristiano Ekene",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Andres Baixauli, Jose Maria",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Brennan, Zachary Michael",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Brett, Adam Caesar",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Condy, Christopher",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cooper, Finley",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cozier-Duberry, Amario",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Crutchett, Liam Robert",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dike, Michael Uchenna",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Doyle, Kamari Olivier Newby",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Doyle, Liam James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dzekawong, Finn Matthew Nyuydzee",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Eistrand Ramming, Nils Arvid",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Evans, Jake Aaron",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ezenwata, Chimechetam Lucius Ekon Nnamdi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ferdinand, Lorenz",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Ferdinand, Tate",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ferreira Rego, Rodrigo Miguel",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Hall, Steven James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hartshorn, Louie Stuart",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hinshelwood, Jack Luca",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Howell, Harry John",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Ibrahim, Younes Ahmed",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Joseph, Valentin Ifeanyi Chukwu",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Kasvosve, Henry Tinashe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Keogh, Sean Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kostoulas, Charalampos",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lams, George Rhys",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lane, Darius Jefferson Ahamada",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mackley, Callum Luke",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mayer, Oliver James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Middleton, Jesse Gene",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Morby, Jackson Junior",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Munday, George Alexander Norman",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Newnham-Reeve, Bode",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nneji, Daniel Onyebuchi Teodor",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nti, Shane Kojo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "O'Mahony, Mark Jeremiah",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Oppong, Raffaele",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Oriola II, Nehemiah Said",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Orozco Lopez, Matias Yuseth",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Outen, Theo Angelo Ronald",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Palmer, Anton Kai",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Palmer, Bailey Austin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Parsons, Jacob James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pope, Frankie Laiton",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Robertson, Joshua",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Shaw, Kofi Ashton",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Silsby, Tyler Michael",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Simmonds, Freddie James",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Smith, Brook Jayden",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stephens, Mason James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Sykens, Rory George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tasker, Charlie Kian",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Tzimas, Stefanos",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Vickers, Jacob Arne",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Vuskovic, Luka",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Watson, Thomas",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "West, Aidan Luke",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Widdop, Fraser William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wilson-Papps, Charles Thackray",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Yalcouye, Malick",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Yohanna, Zadok Abu",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Yoon, Doyoung",
+        "home_grown": false,
+        "loan": true
+      }
+    ]
+  },
+  "Chelsea": {
+    "squad": [
+      {
+        "raw_name": "Barco, Valentin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Bynoe-Gittens, Jamie Jermaine",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Caicedo Corozo, Moises Isaac",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Chavarria Perez, Josep Maria",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Emegha, Emmanuel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Fofana, Wesley Tidjan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Gusto, Malo Arthur",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Henderson, Jordan Brian",
+        "home_grown": true
+      },
+      {
+        "raw_name": "James, Reece",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Junqueira De Jesus, Joao Pedro",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Lacroix, Maxence Guy",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Lavia, Romeo",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Lomba Neto, Pedro",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Martinez Romero, Dami\u00e1n Emiliano",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Palmer, Cole",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Rogers, Morgan Elliot",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Samuels Colwill, Levi Lamar",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Sharman-Lowe, Teddy Samuel",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Slonina, Gabriel Pawel",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Welbeck, Daniel",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Acheampong, Joshua Kofi",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Alao, Yisa Marcus",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Almeida de Oliveira Goncalves, Estevao Willian",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Alves Evangelista Pereira, Denner",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ampah, Kwamina Nhyira",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Anderson, Jack Adam",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Anselmino, Aaron",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Antwi, Genesis Kofi Koranteng",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Austin, Jack Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ayinde, Emmanuel Ehigbai Abiola",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Barbour, Kobe Zane Liston Jr",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bell, Toby George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bernal, Freddy Jorge",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Best, Kian Andrew",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Bettoni, Harrison Lee",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Collinson, Isaac",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Curd, Ted",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Da Silva, Isaac Badu Pecixe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Derry, Jesse Shaun",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Diakite, Calvin Kader Djoume",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dyer, Kiano Ramone",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Ebho, Riley Osemudiahmen",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Eboue, Mathis Maxime E.",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Emenalo, Landon Cruz Buzi",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Ezenwata, Chizaram Nathan-Rowland",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gordon, Sol Diego Neville",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Greenwood, Jashayde Jahkobii Moses",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Grimwade, Hezekiah-daniel Jahaziel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hall, Jacob Arthur Samuel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Harrison, Ollie",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Hato, Jorrel Evan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Holland, Charles Robert",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kavuma-McQueen, Ryan Denis Edward",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Luis Essugo, Dario Cassia",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Malundama, Jayden Katako",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McMahon, Harrison",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mendes Da Silva, Isago",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Menezes Trovoada Cardoso, Leonardo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Merrick, Max Andrew",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Mheuka, Shumaira Zion",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Murray, Jake Robert",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Murray-Campbell, Harrison",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Nicoll-Jazuli, Mahdi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Osagie, Justin Marvellous",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Osborne, Alfie David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Paez Andrade, Ray Kendry",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Palestra, Marco",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Penders, Mike",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pennie, Andrew Ebo Kobina",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Quenda, Geovany Tcherno",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Rabbaj, Ibrahim",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Richards, Dujuan Odile",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Richards, Lewi Andrew",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sambou, Gabriel Richard",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Samuels-Smith, Ishe Barrington",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Sands, Hudson",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Sarr, Mamadou",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Satpayev, Dastan",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Subuloye, Olutayo Peter Gabriel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wade, Shaun Charlie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Waite, Onassis Dante",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Walsh, Reggie Spencer",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Watson, Reggie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wilson, Kaiden Carlton Anthony",
+        "home_grown": false,
+        "loan": true
+      }
+    ]
+  },
+  "Coventry City": {
+    "squad": [
+      {
+        "raw_name": "Amenda, Aurele Florian",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Awoniyi, Taiwo Micheal",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Bentley, Daniel Ian",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Dasilva, Jay Rhys",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Eccles, Joshua Elliot",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Grimes, Matthew Jacob",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Hamer, Gustavo Martin Emilio",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Hayden, Kaine Kesler",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Latibeaudiere, Joel Owen",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Mason-Clark, Ephron Jardell",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Onyeka, Ogochukwu Frank",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Overgaard, Victor Torp",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Pinnock, Ethan Rupert",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Rudoni, Jack Edward",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Rushworth, Carl Andrew",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Sakamoto, Tatsuhiro",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Simms, Ellis Reco",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Tchaouna, Loum",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Thomas, Bobby Craig",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Thomas-Asante, Solomon Brandon Michael Clarke",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Van Ewijk, Milan Fabrizio",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Wilson, Ben",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Woolfenden, Luke Matthew",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Wright, Haji Amir",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Agyman-Boadi, Ivan Safo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Andrews, Kai Bernard James",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Bassega, Nsemi Sostene",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Batanwi, Tristen Vyss",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bengi, Cosar Deniz",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Betjemann, Elliot George Joshua",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Briscoe, Elijah Brandon",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Broad, Harvey Ronald",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Brophy, Tyler John William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cherif, Sidiki",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Clarke, Brody Harry",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Critchlow-Woyo, Tionne David Winston",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cullinane, Billy-Ray",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dausch, Aidan William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dunn, Shay Leslie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Fletcher, Ollie-James Alan Albert",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gordon, Joshua David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gray, Harrison Steven",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Holman, Jimmy Michael",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jones, Finley Christopher Ray",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jorgensen, Oscar Lewie-Bech",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kengema, Hassan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lincoln, Kah'vanni Amarni",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Madu, Ubachukwu Victor Oluebube",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Mantle, David Michael",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Meredith, Eliot Boyd",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mfuni, Stephen-Nevin Mutanda",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Moore, Isaac Burgess",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Nitu-Paka, Chaavy",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Odei-Wontumi, Alexander-Jermaine Kwesi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Osborne, Lucas Neil",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Perry, Callum Michael",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Petty, Billy James Rocco",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Richards, Oscar David John",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Richards-Dore, Rio",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ruddy, Jack Peter",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Shepherd, George David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stidder, Joshua Maxwel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stretton, MacKenzie Jake",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Toluwaloju, Joshua Ayotunde",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Uzochukwu, Chukwudubem Ebube Chukwu Daniel Ebuka",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Varney, Oscar Robert",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "West, Devon William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Williams, Thomas James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Yirenkyi, Caleb Marfo",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Crystal Palace": {
+    "squad": [
+      {
+        "raw_name": "Benitez, Walter Daniel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Chilwell, Benjamin James",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Disasi Mhakinis Belho, Axel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Doucoure, Cheick Oumar",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Franca De Oliveira, Matheus",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Guessand, Evann Ludovic Vidjannagni",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Henderson, Dean Bradley",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Hughes, William James",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Kamada, Daichi",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Khalaili, Anan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Larsen, Jorgen Strand",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Lerma, Jefferson",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mateta, Jean-Philippe",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Matthews, Remi Luke",
+        "home_grown": true
+      },
+      {
+        "raw_name": "McNeil, Dwight James Matthew",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Mingueza Garcia, Oscar",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mitchell, Tyrick",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Nketiah, Edward Keddar",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Osorio Osorio, Dario Esteban",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Pino Santos, Yeremy Jesus",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Richards, Christopher Jeffrey",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Sarr, Ismaila",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Timber, Quinten Ryan Crispito",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Tomiyasu, Takehiro",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Wharton, Adam James",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Adams-Collman, Kai-Reece",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ahanor, Honest Eghomwan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Anderson, Raihaan Hanif Ali",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Angibeaud Montjen, David Alun",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Baah, Kwasi Agyemang",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Barrett III, Anthony Samuel Brockholst",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Benamar, Dean",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Benetton, Lucca Magalhaes",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bernard-Ferguson, Makai Keon Hugh",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bonsu-Amako, Sebastian Kofi Gilado",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bull, Hugo Alexander Suna",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Canvot, Jaydee Bruce Hamady",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cardines, Rio Solomon",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Casey, Benjamin Omena Akpowubrunei",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Danaher, Euan Maurice",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Drakes-Thomas, Joel Jason",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Esse, Romain Joy Kouakou",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Fasida, Jacob Ayomide",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Frazer-Williams, Khyan Kayne",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gibbard, Joseph Finbarr",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gozo, Zavier Didier Tapei",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Greaves, Ajean-Ray Anthony",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hill, Marcus Edward James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jordan, Jay Emmanuel David Ngozika",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Judd, Jasper",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "King, George Callum Michael",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kporha, Caleb Billy Mawuko",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lamidi, Oladotun Sherif",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lee, Jamar Shane Amari",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Martin, Donte Tyrel Leshawn",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McDonald, Jayden Lloyd",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Monk, Dylan Arthur",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Morgan Smith, Aiden Joseph",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Moses, Kayden Michael",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mulvenna, Alfie Stewart",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mustapha, Hindolo Thomas Eric",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Okoli, Chukwunonyelum Uchenna Amobi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Owoade, Daniel David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ozoh, David Ikechukwu",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Sealey, Amaari Kacper",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Shittu, Oluwaremi Nathanael Chinomso",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Smith-Phillips, Kairo Mekhi Jamal Elliott",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Somade, Oreoluwatomiwa Sean",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Speroni, Thiago Alessandro",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tejan, Malik Abdul Sholla",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Walker-Smith, Charlie George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Whyte, Tyler Shae",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Williams, Sebastian Harry Christopher",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Williams, Toby Keith",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Everton": {
+    "squad": [
+      {
+        "raw_name": "Alcaraz Duran, Carlos Jonas",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Barnsley, Fraser Paul",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Barry, Thierno Mamadou",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Bars\u00f8e N\u00f8rgaard, Christian Thers",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Branthwaite, Jarrad Paul",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Dewsbury-Hall, Kiernan Frank",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Garner, James David",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Grealish, Jack Peter",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Hackney, Hayden Rhys",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Johnson, Brennan Price",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Keane, Michael Vincent",
+        "home_grown": true
+      },
+      {
+        "raw_name": "King, Thomas Lloyd",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Maitland-Niles, Ainsley Cory",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Mykolenko, Vitalii",
+        "home_grown": false
+      },
+      {
+        "raw_name": "O'Brien, Jake Patrick",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Pickford, Jordan Lee",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Rohl, Merlin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Tarkowski, James Alan",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Travers, Mark John",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Aduda, Rodney Christopher",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Armstrong, Harrison David",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Aznou Ben Cheikh, Adam",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Barratt, Arthur Columbus",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bates, Callum Terry",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Benjamin, Omari Kai",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Billington, Harvey Lucas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Brookes, Harry Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Carrington, Ezra Sheridan",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Catesby, Joel William",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Clarke, Jaykar Justin Donte",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dibling, Tyler-Jay Robert",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Dodds, John Rodrick Daniel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Evans, Lewis Alfie George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Finney, George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Foster, Harvey John",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gardner, Luis John",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "George, Tyrique Aaron Delali Yusuff",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Gokah, Reuben Emmanuel Delali",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Graham, Braiden David Jay",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hacker Davis, Luca Isaac",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hutchison, Kai Kingsley Akanna",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lambert, Rocco Marlo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lee, Zachary George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Loney, Ceiran",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lukjanciks, Douglass",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Madueke, Divine Dozie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Matos, Melvin Wiafe Akenten",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McDermott, Thomas Jack",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McEveley, Harlow James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Moogan, Lucas Alan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Morgan, George Charlie",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Moses, Amari Junior Nankhonya",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Murdock, Freddie James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nsangou, Jonathan Alipson",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Okorie Ndubuisi, Levi Emmanuel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Olayiwola, Malik Chibeke Babtunde",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Patrick, Adam Seve James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Patterson, Jack David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pemberton, Dafi-tomos",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pickford, George John",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pita, Shea",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Robert, Ray",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Samuels-Smith, Odin Darren",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sherif, Martin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tambadou, Francis Gomez",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tamen, William Nkwawu",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thomas, Aled Osian",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Van Schoor, Joshua Mark",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wilcox, Teddy",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Fulham": {
+    "squad": [
+      {
+        "raw_name": "Affengruber, David Leopold",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Allen, Michael Thomas",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Andersen, Joachim Christian",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Bassey, Calvin",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Berge, Sander Gard Bolin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Bobb, Oscar",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Cairney, Thomas",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Castagne, Timothy",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Charles, Shea Emmanuel",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Cuenca Barreno, Jorge",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Garcia Torres, Gonzalo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Iwobi, Alexander Chuka",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Larsson, Hugo Emanuel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Lecomte, Benjamin Pascal",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Leno, Bernd",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Moran Ibanez, Manuel \u00c1ngel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Muniz Carvalho, Rodrigo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Palacios Perez, Cesar",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Reed, Harrison James",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Robinson, Antonee",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Santos Lopes de Macedo, Kevin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Sessegnon, Kouassi Ryan",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Smith Rowe, Emile",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Tete, Kenny Joelle",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Works, Terrell Lawrence Isaiah",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Amissah, Samuel Kweku Sarsah",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Bagot, Matthew Anthony",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Batra, Anand Vincenzo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Benchaita, Nazim Racim",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Brief, Zack Alexander",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Casey, Daniel John",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Cavell, Devonte Tarrell Watkiss",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cech, Damian",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Chingwaro, Seth Tinashe",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Cooke, Logan Thomas Michael",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Dadi Sessegnon, Kayden Yannick",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dair, Brodie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "De-Gale, Dylan James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Driscoll, Teddy Ray",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Evans, Aidan Martin Connor",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gomins, Markuss",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Grant, Kyle Antonio",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hamilton, Leo Romain",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Harris, Luke Bernard",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Kaiser, Dino",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Kapotwe, Chase Moses",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "King, Joshua David Steven",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Konadu-Wall, Lewis William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kusi-Asare, Jonah Daniel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Loupalo-Bi, Aaron Bradley",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Lubega, Bashil",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Morrison, Kymarley Carlton Hugh",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nsasi, Eddy",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Nwoko Junior, Chibuzo Udo",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Obeng-John, Joe Mikel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Oluyemmy, Benjamin Oladayo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Olyott, Thomas James Ward",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Onwuegbusi Allen, Isaiah Kassa Ozioma",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Quashie, Jayden Louie",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Rennie, Erskine Alexander Clifford",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ridgeon, Seth Somapalan",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Rollet De Fougerolles, Luc",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Sani, Jose Badara Mbong Epie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Slade, Bradley Gregory",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Sutton-Bangura, William Joseph",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Taylor, Archie Robert",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Underwood, Marco Jenson",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Vally, Khai Llewellyn",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wahid, Farhaan Ali",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "White, Alfie William Philip",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Yeboah, Jordan Atta",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Zaidan-Jones, Maddox Lawrence",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Zepa, Macaulay Adams",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Hull City": {
+    "squad": [
+      {
+        "raw_name": "Ajayi, Oluwasemilogo Adesewo Ibidapo",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Ansah, Ilyas",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Belloumi, Mohamed Elbachir",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Butland, Jack",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Cho, Mohamed-Ali",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Coyle, Lewie Jacob",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Crooks, Matt Davidson Rider",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Egan, John Patrick",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Gelhardt, Joseph Paul",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Giles, Ryan John",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Gourna-Douath, Lucas Dobe Nicolas Lucien",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Hughes, Charles Roger",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Iroegbunam, Timothy Emeka",
+        "home_grown": true
+      },
+      {
+        "raw_name": "McBurnie, Oliver Robert",
+        "home_grown": true
+      },
+      {
+        "raw_name": "McNair, Patrick James Coleman",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Mendy, Nobel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Morita, Hidemasa",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Norton-Cuffy, Brooke Dion Nelson",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Omur, Abdulkadir",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Phillips, Dillon",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Slater, Regan Newman",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Stroud, Elliot Karl",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Targett, Matthew Robert",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Thomas, Benjamin Sorba William",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Tzolakis, Konstantinos",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Akinniranye, Oluwatadese George Omogbolahan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ashbee, Stanley Luca",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Bray, Alfie Farrell Morrow",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Carter, Ramell Lee McKenzie",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Cawte, Alfie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Crawford, Jude Samuel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Creaser, Jamie Micheal Graham",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Daley, Damari Anthony",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Debayo, James Boluwatife",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Devine, Edward James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dunn, Reuben Frank",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Edey, Alexander",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Gode, Ted Alban Jefferson",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gomeniuk, Aleksandr Pavlovich",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Goodman, George Christopher",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Herrington, Lucas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hjerto-Dahl, Jens",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Howard, Archie George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jagielka, Zac Alexander",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jones, Tyler James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kaggwa, Jonathan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Leach, Charlie Anthony",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lizardos, Alfie William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Maskell, Alfie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Matique, Albert Miguel Tafara",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McCarthy, Cathal",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Moore, Bobby-Dean",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Morfitt, Joel Paul",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ofuyaekpone-Shombe, Khiani Hrukti Toju",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Okike, Calvin Lorenzo Chikezie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Okot Ocaya, Joshua Aaron Mbabazi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Parker, Hugh William",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Reynolds, Kerr Charles",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Robinson, Ben Alexander`",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Robinson, Dellan Jeremiah",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Russell, James Lewis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sarpong, Emmanuel Boateng",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sellars-Fleming, Tyrell",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Silk, Reuben David Michael",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tinsdale, Nathan Scott",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Umoren, Ekemini-Abasi Zackary Jayden Edet",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Vaz, Robinio",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Walker, Coist Daniel",
+        "home_grown": false,
+        "loan": true
+      }
+    ]
+  },
+  "Ipswich Town": {
+    "squad": [
+      {
+        "raw_name": "Akpom, Chuba Amechi",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Clarke, Jack Raymond",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Correia Da Silva, Emersonn",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Davis, Leif",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Diop, Issa Laye Lucas Jean",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Enciso Espinola, Julio Cesar",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Fatawu, Issahaku Abdul",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Flemming, Zian",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Furlong, Darnell Anthony",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Greaves, Jacob John",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Kipre, Cedric",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Lukic, Sasa",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Maeda, Daizen",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Matusiwa, Azor Melo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "McAteer, Kasey Ian Robert",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Mehmeti, Anis",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Morris Luis, Florentino Ibrain",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Nunez Espinoza, Marcelino Ignacio",
+        "home_grown": false
+      },
+      {
+        "raw_name": "O'Shea, Dara Joseph",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Palacios, Exequiel Alejandro",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Palmer, Alexander",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Philogene-Bidace, Jaden Richard",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Scherpen, Kjell",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Taylor, Jack Henry",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Walton, Christian Timothy",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Adebayo, Praise Michael Okikioluwa Olamide Oluwaseyitan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Adetiba, Jayden Jonathan Mojolaoluwa",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Ambrose, Freddie Francis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Atherton, Christopher Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Barrett, George Lewis Carr",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Barry, Riley-Joe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bentley, Joshua Ian Alan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Boakye-King, Isaac William John Yaw",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Boniface, Somtochukwu Alan Udochukwu",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Boswell, Ashton Luke",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Brentnall, James John",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Brown, Archie Perry Elliott",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Buabo, Gerrard Bantu",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Burton-Yurevich, Roman Mark",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Buskell, Benjamin Ivan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Carr, Reuben Alvin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Compton, Matthew Charles",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Conneely, George David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Doherty, Ryan Sean",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Duarte Enkotosia, Johrmi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Duggins, Harvey",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Egeli, Sindre Walle",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Eldred, Sidney Christopher",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Elliott, Leon Levi",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Eze, Nelson Chudi",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Felicio, Pedro Victor",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Fletcher, Luca George Murphy",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Gray, Henry Merson Leonard",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Hammond, Joshua John",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ladegbaye, Joel Adedamola Adedolapo Oluwadara Inioluwa",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lewis, Joshua James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Mauge, James Carlton",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Mazionis, Jokubas",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "McCann, Darragh Francis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mendel, Tudor Olorunninbe",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Msabah, Ibrahim Khamis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mthunzi, Corbin Sipho",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Ness, Harvey Daniel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nicolaou, Shakil",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Noonan, Alex Bob",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Olakazim, Mustaan Olatokunbo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Olawole, Kellyan Bilal",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Ologho, Daniel Shakil Garcia Fraile",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ouattara, Guemissongui Abdoul Moumine",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pedder, Indiana Ronnie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pitts, Joshua Nathaniel",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Runham, Frankie Leonard",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Sains, Bobby Barrie",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Shabazz-Edwards, Walker Zidane Waqar Brian",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stewart, Callum Dunlop",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Taylor, Thomas Jack",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Turner, Steven Jack",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Valentine, Nico Andre",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Wilkinson, Oliver George",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Williamson, Woody Scott",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Wood, Charlie Terence",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Wreford, Ruben Fernando",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Leeds United": {
+    "squad": [
+      {
+        "raw_name": "Aaronson, Brenden Russell",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Ampadu, Ethan Kwame Colm Raymond",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Bard, Melvin Michel Maxence",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Bijol, Jaka",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Bogle, Jayden Ian",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Cairns, Alex Thomas",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Calvert-Lewin, Dominic",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Elvedi, Nico",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Gruev, Ilia",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Gudmundsson, Gabriel Johan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "James, Daniel Owen",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Joseph Fernandez-Regatillo, Mateo",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Justin, James Michael",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Longstaff, Sean David",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Muharemovic, Tarik",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Nmecha, Lukas Okechukwu",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Okafor, Noah Arinzechukwu",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Rodon, Joseph Peter",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Stach, Anton Levi",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Tanaka, Ao",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Trafford, James Harrington",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Wilson, Harry",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Zetterer, Michael Nikolaus",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Alker, Samuel Joseph",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bahoya, Jean-Matteo Bruno",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Balmer, Liam Stephen",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Banks, George Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bennett, Oliver Joseph",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bhaskaran, Joseph Daniel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bird, Coban Rocket",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Bridge, Isaac Ewen",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Chadwick, Rhys Alexander",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Chambers, Samuel Rory",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Cook, Robert James Almeida",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cresswell, Alfie Wesley",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Crew, Charles David",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Dudley, Louie Reuben",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Enahoro-Marcus, Louis",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Firth, William Jamie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gray, Harry Andrew",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Hamilton, Joshua Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hazell-Schofield, Marley Ty",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Heywood, Owen Jack",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hodja, Ditmir",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Howard, Jacob Keiron",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ibrovic-Fletcher, Edward",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Johnson, Oluwatobi Akintayo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kenyon, George Patrick",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lane, Freddie Daniel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lienou, Jayden Patipe",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lopata-White, Reuben",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Mahady, Rory Alexander",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Massey, Alexander Steven",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Matykiewicz, Luke",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McDonald, Joshua William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Megson, Miller",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mensah, Kenneth Isak",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mensah, Marlon",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mills, Callum",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Morrall, Kai Nathaniel Christian",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Morris, Jack Lewis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ngenge, Leonard Chukwudalu",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nguekap Njinko, Carrick Salomon",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ombang, Darryl Merveil",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Philpott, Louie Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pickles, Oliver Craig",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Render, Jacob Davis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Stockton, Thomas James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thompson, Aiden Wayne",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tyler-Earnshaw, Silva Mexes",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Vincent, Harvey Jake",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Walker, Alfie James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Watson, Jacob Martin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "White, Logan Charlie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Whitehead, Loui",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wood, Oliver James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Woolfrey, Joshua Robert",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Liverpool": {
+    "squad": [
+      {
+        "raw_name": "Araujo da Silva, Ronald Federico",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Barcola, Bradley Jean Manuel Essolisam Addo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Becker, Alisson Ramses",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Bradley, Conor",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Chambers, Luke",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Chiesa, Federico",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Ekitike, Hugo Timoth\u00e9e",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Endo, Wataru",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Frimpong, Jeremie",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Gakpo, Cody",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Gomez, Joseph David",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Gravenberch, Ryan Jiro",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Isak, Alexander",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Jaros, Vitezslav",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Kerkez, Milos",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mabaya, Isaac Angus",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Mac Allister, Alexis",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mamardashvili, Giorgi",
+        "home_grown": false
+      },
+      {
+        "raw_name": "McConnell, James William",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Munoz Villanueva, Victor",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Szoboszlai, Dominik",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Tsimikas, Konstantinos",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Van Dijk, Virgil",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Wirtz, Florian Richard",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Woodman, Frederick John",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Abe, Joshua Oluwatobi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Adekoya, Noah Jonathan Francis Adedayo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ayman, Alvin",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Bradshaw, Joseph Daniel",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Brughmans, Lucca Kiaba",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cisse, Prince Kobe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Clarke, Lucas James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Conde, Lenix Fode",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cowley, Ryan Robert",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Coxon, Zak Francis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Danns, Jayden Alexander",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Dixon, Joseph James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ekiugbo, Shadrach Ogheneogaga",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Esdaille, DJ",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Evans, Noah McGinlay",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Evans O'Connor, Oliver James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ewing, Clae Louis Adrian",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Farkas, Erik Leonard",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Figueroa Norales, Keyrol Alexis",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Forrester, La'more Lake Lee",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Garin, Isaiah Joel Norbert",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hall, Bailey",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Hawkins, Max Finley",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hickman, Ellis David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hilditch, James Gunnar George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Huth, Charlie Alexander",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Inglethorpe, Finn Alexander",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Izekor Garan, Japhect Imuetinyansa",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jacquet, Jeremy",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jikiemi, Olamilekan Oluwadarasimi Isaac",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kelly, Kyle Damian",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Koumas, Lewis Terence",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Laffey, Michael Mark Paul",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Leoni, Giovanni",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lucky Omoruyi, Wellity",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Majekodunmi, Anjolaoluwa Oladpupo Jotham",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Misciur, Kornel Artur",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Moran, Harry Sam",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Morrison, Kieran Yusuf",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Murray-Holme, Hadyn Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nallo, Amara",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Ndiaye, El Hadji Mor Talla",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ndukwe, Ifeanyi Arthur",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Ngumoha, Chima Rio",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Nyoni, Trey",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Onanuga, Daniel Folami Jesusemilore",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Owen, Harvey Michael",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pecsi, Armin",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Phillips, Charlie Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pitt, Lucas Rafael Philip Jose",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Powney Wain, Cian George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Scanlon, Calum Alexander",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Sonni Lambie, Joshua Junior",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Trueman, Ben",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Upton, Joseph James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Williams, Cameron Finn",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wright, Matthew Arthur",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wright, William Stephen",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Yeguo, Aiden Jozef Bediako",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Manchester City": {
+    "squad": [
+      {
+        "raw_name": "Ait-Nouri, Rayan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Anderson, Elliot Junior",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Andrade Elias, Allan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Bettinelli, Marcus",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Cherki, Mathis Rayan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Doku, Jeremy Baffour",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Donnarumma, Gianluigi",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Dos Santos Gato Alves Dias, Ruben",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Fernandez, Enzo Jeremias",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Foden, Philip Walter",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Guehi, Addji Keaninkin Marc-Israel",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Gvardiol, Josko",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Haaland, Erling Braut",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Khusanov, Abdukodir",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Kovacic, Mateo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Lewis, Rico Mark",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Ndiaye, Iliman Cheikh Baroy",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Nunes, Matheus Luiz",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Rulli, Geronimo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Semenyo, Antoine Serlom",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Aiyegbusi , Tirenioluwa Ayobamidele Raphael",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Alleyne, Max Lewis Rowe",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Bah, Abdulai Juma",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Barrett, Marlow Rae",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bouaddi, Ayyoub",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Braithwaite, Kaden Elliot",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Brits, Thorsten Spike",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Cadamarteri, Caelan-Kole",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Carrington, Theodore Victor Sheridan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Chabot, Max Edgar",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Charles, Pierce Joseph",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Courtman, Charlie",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Dada-Mascoll, Isaiah Jelani Oladele Adedeji",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "De Oliveira Nunes Dos Reis, Vitor",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Detourbet, Mathys Alain Jean-Louis",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Drake, Leke",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Dunbar-McDonald, Christian Ky-Andre",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Echeverri, Claudio Jeremias",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Fapetu, Oluwafemi David Adetayo",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Gorman, Finlay Ellis",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Gray, Charlie George",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Grigg, Finley James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Headley, Dante Ferdinand",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Henderson-Hall, Matthew James",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Heskey, Jaden Emile Tyrone",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Hudson, Max",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Kilwa, Heaven Marcel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lamb, Teddie Jack",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lawrence, Emilio Alford Anthony",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Lawrie, Freddie John",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Martin , Milo John James",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Mathiesen, Toran Zade",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "McAidoo, Ryan Kelly",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "McFarlane, Christian Hector",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "McMeekin, Keir Alastair Samuel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mfuni, Stephen-Nevin Mutanda",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Midwood, Kylan Jo-Aiden Ian",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Miles, Harrison Frank",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Monga, Jeremy Ngola",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Motsi, Darren Tadiwanashe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mukasa, Divine Tayon Mahogany",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Nduka, Mishel Ifeanyi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nfonkeu Feuba, Brooklyn",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Noble, Kian Lee",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Nypan, Sverre Halseth",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "O'Reilly, Nico",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Obin, Yohann Abraham Achi",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Oliver, Dexter Jack",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Parker, Harrison Percival",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Parker, Xavier Tau",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Samba, Floyd Veijeany Junior",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Samba, Tyrone Prosper William",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Samuel, Lakyle",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Sangare, Mahamadou",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Shire, Jaxon Paul",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Tevenan, Oliver Louis",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Thomas, Rhys Lloyd",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Thornton, Archie Robert",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Turley, Alfie Frank",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Vickery, Ben Alexander Slack",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wadsworth, Sam Keith",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Wain, Jacob William",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Whatmuff, Oliver Jackson",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Whisker, Timeo Medard George",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Wint, Jack Thomas Charles",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Woode, Javahn Roger Ernest",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Manchester United": {
+    "squad": [
+      {
+        "raw_name": "Borges Fernandes, Bruno Miguel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Dalot Teixeira, Jose Diogo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Darlow, Karl",
+        "home_grown": true
+      },
+      {
+        "raw_name": "De Ligt, Matthijs",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Diallo, Amad",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Dorgu, Patrick Chinazaekpere",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Heaton, Thomas David",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Lammens, Senne",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Maguire, Harry Jacob",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Martinez, Lisandro",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mazraoui, Noussair",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mbeumo, Bryan Tetsadong Marceau",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mee, Dermot William",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Mount, Mason Tony",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Nascimento dos Santos, Andrey",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Noom Quomah Baleba, Carlos",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Rashford, Marcus",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Santos Carneiro da Cunha, Matheus",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Sesko, Benjamin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Shaw, Luke Paul Hoare",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Tielemans, Youri Marion A.",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Ugarte Ribeiro, Manuel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Zirkzee, Joshua Orobosa",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Aigbomian Musa, Victor Osezele",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ajayi, Noah",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Amass, Harry John",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Armer, Daniel James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Benoliel Monteiro Barbosa, Neithan Dylan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Biancheri, Gabriele Cataldo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Brown, Nathaniel-Junior Calvin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Byrne-Hughes, Cameron Samuel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Camacho Sidos, Jaume",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Carrick, Jacey",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "De Jonge-Seiros, Edson",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Devaney, Jacob Patrick John",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Emsden-James, Harley Marlon",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Fabiyi, Idris James Yusuff",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Fitzgerald, Jayce John",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Fletcher, Jack Davidson",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Fletcher, Tyler Robert",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Ford, Jake Lewis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hardy, Charlie James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Harrison, Elyh Samuel",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Heath, Frederick Henry",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Heaven, Ayden Edford",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Helafu, Yuel Ghebreyesus",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Honor, Solomon Lindsay Birch",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Ibragimov, Amir",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ibragimov, Gazimagamed",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kamason, Jaydan Dejon",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kana Biyik, Enzo Roselin Teffe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kone, Sekou",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Kukonki, Godwill",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lacey, Shea",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Laurie, Connor John",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Leon Blanco, Diego Basilio",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lusale, Samuel Malama",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mainoo, Kobbie Boateng",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Mantato, Bendito Boanova",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Margetson, Kit",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "McAllister, Finley Joseph",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McCormack, Rafe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McEvoy, Jay Paul",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McLaughlin, Harlem Sean Andrews",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mills, Albert Frederick",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Missin, Ashton Brett",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Moorhouse, Jack Lee",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mpofu, Camron Andrew Oliver",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Munro, Reece Stafford",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Murdock, William Alexander",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nganga, Jodie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ngwashi Chinjie, Jayden Armstrong",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "O'Brien, Samuel Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Obi, Chidozie Martin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Orozco Valdes, Cristian Camilo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Overy, James Harrison",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Plunkett, Dante Jeevan Jamal",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Rooney, Kai Wayne",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Shah, Jariyah Zain",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Silvester, Pharell James Ayebatari",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thompson, Tynan Torres",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thwaites, Jim Alec Joseph",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Watson, Jacob James Fraser",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Watson, Zachary Alexander",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wheatley, Ethan Joseph",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Yoro, Leny Jean-Luc",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ziro, Emmanuel Hope",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Newcastle United": {
+    "squad": [
+      {
+        "raw_name": "Apolinario De Lira, Joelinton Cassio",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Barnes, Harvey Lewis",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Botman, Sven Adriaan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Burn, Daniel Johnson",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Dedic, Amar",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Elanga, Anthony David Junior",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Gillespie, Mark Joseph",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Gonzalez Iglesias, Nicolas",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Hall, Lewis",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Hornicek, Lukas",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Livramento, Valentino",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Murphy, Jacob Kai",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Osula, William Idamudia Daugaard",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Pope, Nicholas David",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Ramsey, Jacob Matthew Decourcey",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Schar, Fabian Lukas",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Thiaw, Malick",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Willock, Joseph George",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Wissa, Yoane",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Afumuzor, Chukwudi Theophilus Mduduzi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Alabi, Adedamola Samuel Ireoluwajoba",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bailey, Scott Patrick",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bamba, Aladji Kairaba",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Benjamin, Theo Junior",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bloomer, Guy Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Boothe, Christian Francis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ca, Afner Bernardinho",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Callaghan, Jack",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Charlton, Dylan Harry",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cordero Campillo, Antonio Jose",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Craggs, Luke Steven",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Diabate, Ousmane",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Dowell, Roman Toma",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Durrant, Jake Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Emerson, Johnny William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Epia, Aaron Ovie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Fernandez-Pardo, Matias",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Finneran, Rory James",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Fitzgerald, Kyle Wesley",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gilligan, Luke",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Goodbrand, Oliver William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Harper, Fraser Harrison",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Harris, Aidan Francis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Healy-Matthews, Kyle Joseph",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Holland, Oliver Henry",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hutchison, Alfie David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jaouen, Ewen Jean",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Johnson, Henry William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jones, Tyler Stuart",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kouossu, Jayden Pressley",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mair, George William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Miley, Lewis",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Miley, Mason",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mills, Michael Asamoah",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Moran, Isaac James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Morgan, Noah Oliver",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Mukumbira, Leon Ngonidzashe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Munda, Anthony Junior",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Ndiweni, Ethan Nyasha",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Neave, Sean Thomas",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Old, Thomas Sam",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Park, Seungsoo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Patterson, Jack James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pinnington, Samuel James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pivas, Miodrag",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Rodrigues Ferreira, Matheos",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Salia, Vakhtang",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sanusi, Trevan Farooq",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Seldon, Alfie Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Shahar, Leo Oren",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Steur, Sean Johannes Maria",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thompson, Kyran Anthony",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Toure, Bazoumana",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Waddani, Mohamed",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Walpole, Alexander Guy",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Watts, Logan Mathew",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wooster, Kacey Robert Mikie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Yeutembip, Aristide Lesecond Bakinan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Yildiz, Baran",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Nottingham Forest": {
+    "squad": [
+      {
+        "raw_name": "Aina, Temitayo Olufisayo Olaoluwa",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Benda, Steven-Andreas",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Bott, Aaron Charlie",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Costa Dos Santos, Murillo Santiago",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Delap, Liam Rory",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Diomande, Ousmane",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Dominguez, Nicolas Martin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Gibbs-White, Morgan Anthony",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Hudson-Odoi, Callum James",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Kalimuendo-Muinga, Arnaud",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Maciel Da Cruz, Igor Jesus",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Maciel Furtado, John Victor",
+        "home_grown": false
+      },
+      {
+        "raw_name": "McAtee, James John",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Milenkovic, Nikola",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Munoz Mejia, Daniel",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Ndoye, Dan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Netz, Luca",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Rodrigues Da Silva, Felipe",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Sangare, Ibrahim",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Savona, Nicolo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Schlager, Xaver",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Sels, Matz Willy Els",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Williams, Neco Shay",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Wood, Christopher Grant",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Yates, Ryan James",
+        "home_grown": true
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Abbott, Zach MacFarlane",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Andrews, Harvey George",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Baba Yaya, Cherif-Dine",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bailey, Joseph Robert",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Balagizi, Basima Baba",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bartley, Okello Odongo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bindon, Tyler Grant",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Blake, Zyan Julius",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bowman, Boyd Lee Jake",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bradshaw, Kanye Kennedy",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Broomes, Ethan Thomas",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Brown, Kasen Orlando",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Campbell, Luke Bruno",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Clarke, Kristian Takura",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Da Silva Moreira, Eric Emanuel",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Donaldson, Mason",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gardner, Daniel Rogan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Grady Francis, McDonnell",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Graham, Alastair John",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Jones, Brodie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lokote, Eleazar Don",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Maveso , Jaydon Mputu",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McClure, Blaine Alexander Harris",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McNeilly, Donnell Ocarriel",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Modupe, David Dennis Ayodeji Richard Christiano",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Newton, Jamie Christopher",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ngatang Djamna, Frank Evans",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nolan, Sonny",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nwosu, Chinazaekpere Samuel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Orr, Matthew",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Paula Da Cunha Filho, Jair",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Powell, Jayden Anthony",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Powell, Joshua Alan",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Robinson, Riko Leon Rickelmae Piper",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Russell, Blaine Saint Aubein",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Samuels, Shakur Ruben",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sanneh, Buba",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Schluter, Gabriel Toby",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sillah, Lamin",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Sinclair, James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Smith, Fuad Ayorinde",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sutton, Spencer James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thompson, Kalum Stewart",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Whitehall, Archie Harry Thomas",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Willows, Jordan Scott",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Willows, Keehan Martyn",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  },
+  "Sunderland": {
+    "squad": [
+      {
+        "raw_name": "Alderete Fernandez, Omar Federico",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Alese, Ajibola Joshua Odunayo",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Ba, Abdoullah Mustapha",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Ballard, Daniel George",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Brobbey, Brian Ebenezer Adjai",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Browne, Alan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Danso, Kevin",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Diarra, Mouhamadou Habib",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Ellborg, Melker Ake",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Hume, Trai",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Isidor, Wilson",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Le Fee, Enzo Jeremy",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mandava, Reinildo Isnard",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Meunier, Thomas Andre",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Moore, Simon William",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Mukiele Mulere, Nordi",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mundle, Romaine Lee",
+        "home_grown": true
+      },
+      {
+        "raw_name": "O'Nien, Luke Terry",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Ramirez, Nilson David Angulo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Roefs, Robin Gerardus Petrus",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Sadiki, Noah Junior",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Xhaka, Granit",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Ahoka, Jules",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Aleksi\u0107, Milan",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Allan, Isaac Jacob",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Barker, James Charles",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bell, Luke Anthony",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Berry, Ethan Samuel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bowman, Arron Stephen",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Brown, Wess Jay",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Burns, Matthew Evan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Campbell, Lewis Graham",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Cowan, Joseph Christopher Leonard",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dinsdale, Charles Richard",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Dolan-Dent, Charlie",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Fofana, Malick Martin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Geragusian, Finn Casper Adam",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Hamilton Forsyth, Charlie James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hester, Bayley",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Holcroft, Finlay",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Hunt, Liam",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Hunter, Harry Zane",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Jones, Jaydon Mark",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Jones, Jenson Oliver",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Jones, Josh Hilton",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kindon, Ben Anthony",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lienard, Alexander James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Lightfoot, Archie Jay Stephen",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Makepeace, Joseph Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Matadeen, Jay Samuel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Metcalf, Benjamin Laurence",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Methalie, Dayann Kendy Amick",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Munyakazi, Kay Garvey",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Neild, Joseph Matthew",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Neill, Marcus Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Nelson, Adam David",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Pollock, Alfie Jason Johnson",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Proctor, Tom William",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Rigg, Christopher John",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Robertson, Finley",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Samuel Ogunsuyi, Trey Osamuyimen",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Scott, Felix",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Shakespeare, Caleb",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ta, Bi Djiamgone Jocelin",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Talbi, Chemsdine",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thompson, Harvey Joe",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tutierov, Timur",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Walton, Robert Arthur",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "White, Noah Alexander",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Whittaker, Jack Thomas",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Wilson, Triziano Lorenzo Sanchez Alvin",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Young, Matthew",
+        "home_grown": true,
+        "loan": true
+      }
+    ]
+  },
+  "Tottenham Hotspur": {
+    "squad": [
+      {
+        "raw_name": "Adarabioyo, Abdul-Nasir Oluwatosin",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Austin, Brandon Anthony",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Bentancur, Rodrigo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Davies, Benjamin Thomas",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Dubravka, Martin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Espanha Fernandes, Mateus Goncalo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Gallagher, Conor",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Kinsky, Antonin",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Knightbridge, Jacob Christopher",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Kudus, Mohammed",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Kulusevski, Dejan",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Maddison, James",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Marmoush, Omar Khaled",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Moreira De Oliveira, Savio",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Mudryk, Mykhailo",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Odobert, Wilson Serge Eric",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Porro Sauceda, Pedro Antonio",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Robertson, Andrew",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Senesi Baron, Marcos Nicolas",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Simons, Xavi Quentin Shay",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Solanke-Mitchell, Dominic Ayodele",
+        "home_grown": true
+      },
+      {
+        "raw_name": "Tonali, Sandro",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Udogie, Iyenoma Destiny",
+        "home_grown": false
+      },
+      {
+        "raw_name": "Van De Ven, Micky",
+        "home_grown": false
+      },
+      {
+        "raw_name": "van Hecke, Jan-Paul",
+        "home_grown": false
+      }
+    ],
+    "u21": [
+      {
+        "raw_name": "Abbott, George Benedict",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Adedeji, Maxwell Henry Oliver",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Adewole, Miracle Adetonmiwa Jimoh Elijah",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Agyekum, Ezra Kweku Baffour Ayo",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ajayi, Oyindamola Oluwatobi Peter",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Akhamrich, Yusuf",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Archer, Samual Cyril",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Batty, Daniel Jake",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Beckles, Zion Jordan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bergvall, Lucas Erik Holger",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Bloedorn, Carey Brian",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Boast, Oliver Richard",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Byfield, Jun'Ai De'Andre Ashlee",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Byrne, Harry Luke",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Coffi-smith, Courtney Reggie Charles",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Dawes, Oscar Victor Lee",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "De Souza Menezes, Joao Victor",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Donley, Jamie Paul",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Doran, Farren Jamie",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Dorrington, Alfie Terry Charlie",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Elliott-Parris, Reiss Dennis",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Evans, Ted Brian",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Feeney, George James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Furnell-Gill, Luca Roman",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Glancy, Conall HG",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Gray, Archie James Frances",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Gunter, Luca Jackson",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Hall, Tye Fitz",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hall, Tyrese Shaun",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hanson, Cayon Daniel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hardy, Malachi John",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Hughes, Harry Foster",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Irow, Blake",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Irow, Oliver",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Jobling, George Joseph",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kabongolo, Melvyn Emmanuel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "King, Maeson Bradley",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Kyerematen, Rio",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Lehane, Ellis Anthony Mark",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "McFadden, Max John",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Melia, Mason",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Moncur, Ronny Alan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Moore, Mikey Steven Danny",
+        "home_grown": true,
+        "loan": true
+      },
+      {
+        "raw_name": "Muslika, Armend",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Offiah, Phoenix Beau Shaw",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Olajide, Babafemi Solomon Anoluwa",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Olusesi, Callum",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Philogene-Bidace, Blake Richard",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Ramsey, Cole Paul",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Rowswell, James Patrick Lynch",
+        "home_grown": true,
+        "loan": false
+      },
+      {
+        "raw_name": "Russell-Denny, Reiss-Alexander",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Salter, Oliver Michael Vaughan",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sandiford, Oscar Alan Edward",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Senyah, Kwasi Mensah",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sievey, Max Owen",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Sowunmi, Elisha Oladotun Oluwatade",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Tel, Mathys Henri",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thomas, Cameron Malachi",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Thompson, Dylan Warren Edward",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "Tingey, Tyler Roy Joseph Rickey",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Vidal-Philbert, Joel",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Wellspring, Oluwatitojumi Oritseshemaye",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Williams-Barnett, Luca James",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Yang, Minhyeok",
+        "home_grown": false,
+        "loan": true
+      },
+      {
+        "raw_name": "A \"Home Grown Player\" means a player who, irrespective of nationality or age, has been registered with any club affiliated to The Football Association or the Football",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "Association of Wales for a period, continuous or not, of three entire seasons, or 36 months, before his 21st birthday (or the end of the season during which he turns 21).",
+        "home_grown": false,
+        "loan": false
+      },
+      {
+        "raw_name": "For the 2026/27 Premier League season, Under-21 players will have been born on or after 1 January 2007.",
+        "home_grown": false,
+        "loan": false
+      }
+    ]
+  }
+}

@@ -1,145 +1,450 @@
 {
   "_comment": "weight: relative importance in the similarity calculation (0-1, not required to sum to 1). direction: +1 means a higher raw value is better, -1 means a lower raw value is better. big_game_composite_stats: the underlying per-90 stats used to compute each position's big_game_delta_pct feature.",
-
   "GK": {
     "stats": {
-      "save_pct":              { "weight": 0.9, "direction": 1 },
-      "psxg_prevented_p90":    { "weight": 1.0, "direction": 1 },
-      "clean_sheet_pct":       { "weight": 0.8, "direction": 1 },
-      "pass_completion_pct":   { "weight": 0.4, "direction": 1 },
-      "long_pass_accuracy_pct":{ "weight": 0.5, "direction": 1 },
-      "progressive_passes_p90":{ "weight": 0.3, "direction": 1 },
-      "recoveries_p90":        { "weight": 0.2, "direction": 1 },
-      "fouls_committed_p90":   { "weight": 0.2, "direction": -1 },
-      "big_game_delta_pct":    { "weight": 1.0, "direction": 1 }
+      "save_pct": {
+        "weight": 0.9,
+        "direction": 1
+      },
+      "psxg_prevented_p90": {
+        "weight": 1.0,
+        "direction": 1
+      },
+      "clean_sheet_pct": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "pass_completion_pct": {
+        "weight": 0.4,
+        "direction": 1
+      },
+      "long_pass_accuracy_pct": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "progressive_passes_p90": {
+        "weight": 0.3,
+        "direction": 1
+      },
+      "recoveries_p90": {
+        "weight": 0.2,
+        "direction": 1
+      },
+      "fouls_committed_p90": {
+        "weight": 0.2,
+        "direction": -1
+      },
+      "big_game_delta_pct": {
+        "weight": 0.3,
+        "direction": 1
+      }
     },
-    "big_game_composite_stats": ["psxg_prevented_p90"]
+    "big_game_composite_stats": [
+      "psxg_prevented_p90"
+    ]
   },
-
   "CB": {
     "stats": {
-      "tackle_success_pct":     { "weight": 0.8, "direction": 1 },
-      "tackles_won_p90":        { "weight": 0.7, "direction": 1 },
-      "interceptions_p90":      { "weight": 0.9, "direction": 1 },
-      "blocks_p90":             { "weight": 0.7, "direction": 1 },
-      "clearances_p90":         { "weight": 0.8, "direction": 1 },
-      "aerial_duel_pct":        { "weight": 0.9, "direction": 1 },
-      "duel_win_pct":           { "weight": 0.8, "direction": 1 },
-      "pass_completion_pct":    { "weight": 0.6, "direction": 1 },
-      "progressive_passes_p90": { "weight": 0.6, "direction": 1 },
-      "long_pass_accuracy_pct": { "weight": 0.5, "direction": 1 },
-      "fouls_committed_p90":    { "weight": 0.3, "direction": -1 },
-      "times_dribbled_past_p90":{ "weight": 0.5, "direction": -1 },
-      "big_game_delta_pct":     { "weight": 1.0, "direction": 1 }
+      "tackle_success_pct": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "tackles_won_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "interceptions_p90": {
+        "weight": 0.9,
+        "direction": 1
+      },
+      "blocks_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "clearances_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "aerial_duel_pct": {
+        "weight": 0.9,
+        "direction": 1
+      },
+      "duel_win_pct": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "pass_completion_pct": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "progressive_passes_p90": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "long_pass_accuracy_pct": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "fouls_committed_p90": {
+        "weight": 0.3,
+        "direction": -1
+      },
+      "times_dribbled_past_p90": {
+        "weight": 0.5,
+        "direction": -1
+      },
+      "big_game_delta_pct": {
+        "weight": 0.3,
+        "direction": 1
+      }
     },
-    "big_game_composite_stats": ["tackles_won_p90", "interceptions_p90", "clearances_p90", "blocks_p90"]
+    "big_game_composite_stats": [
+      "tackles_won_p90",
+      "interceptions_p90",
+      "clearances_p90",
+      "blocks_p90"
+    ]
   },
-
   "FB": {
     "stats": {
-      "tackle_success_pct":      { "weight": 0.7, "direction": 1 },
-      "interceptions_p90":       { "weight": 0.7, "direction": 1 },
-      "times_dribbled_past_p90": { "weight": 0.6, "direction": -1 },
-      "cross_accuracy_pct":      { "weight": 1.0, "direction": 1 },
-      "crosses_completed_p90":   { "weight": 0.8, "direction": 1 },
-      "key_passes_p90":          { "weight": 0.7, "direction": 1 },
-      "xa_p90":                  { "weight": 0.9, "direction": 1 },
-      "progressive_carries_p90": { "weight": 0.8, "direction": 1 },
-      "dribble_success_pct":     { "weight": 0.6, "direction": 1 },
-      "aerial_duel_pct":         { "weight": 0.5, "direction": 1 },
-      "recoveries_p90":          { "weight": 0.6, "direction": 1 },
-      "duel_win_pct":            { "weight": 0.6, "direction": 1 },
-      "big_game_delta_pct":      { "weight": 1.0, "direction": 1 }
+      "tackle_success_pct": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "interceptions_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "times_dribbled_past_p90": {
+        "weight": 0.6,
+        "direction": -1
+      },
+      "cross_accuracy_pct": {
+        "weight": 1.0,
+        "direction": 1
+      },
+      "crosses_completed_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "key_passes_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "xa_p90": {
+        "weight": 0.9,
+        "direction": 1
+      },
+      "progressive_carries_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "dribble_success_pct": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "aerial_duel_pct": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "recoveries_p90": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "duel_win_pct": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "big_game_delta_pct": {
+        "weight": 0.3,
+        "direction": 1
+      }
     },
-    "big_game_composite_stats": ["xa_p90", "key_passes_p90", "tackles_won_p90", "interceptions_p90"]
+    "big_game_composite_stats": [
+      "xa_p90",
+      "key_passes_p90",
+      "tackles_won_p90",
+      "interceptions_p90"
+    ]
   },
-
   "DM": {
     "stats": {
-      "tackle_success_pct":      { "weight": 0.8, "direction": 1 },
-      "tackles_won_p90":         { "weight": 0.7, "direction": 1 },
-      "interceptions_p90":       { "weight": 0.9, "direction": 1 },
-      "recoveries_p90":          { "weight": 0.8, "direction": 1 },
-      "pass_completion_pct":     { "weight": 0.8, "direction": 1 },
-      "progressive_passes_p90":  { "weight": 0.7, "direction": 1 },
-      "duel_win_pct":            { "weight": 0.7, "direction": 1 },
-      "fouls_committed_p90":     { "weight": 0.3, "direction": -1 },
-      "key_passes_p90":          { "weight": 0.4, "direction": 1 },
-      "through_balls_p90":       { "weight": 0.3, "direction": 1 },
-      "blocks_p90":              { "weight": 0.4, "direction": 1 },
-      "big_game_delta_pct":      { "weight": 1.0, "direction": 1 }
+      "tackle_success_pct": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "tackles_won_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "interceptions_p90": {
+        "weight": 0.9,
+        "direction": 1
+      },
+      "recoveries_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "pass_completion_pct": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "progressive_passes_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "duel_win_pct": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "fouls_committed_p90": {
+        "weight": 0.3,
+        "direction": -1
+      },
+      "key_passes_p90": {
+        "weight": 0.4,
+        "direction": 1
+      },
+      "through_balls_p90": {
+        "weight": 0.3,
+        "direction": 1
+      },
+      "blocks_p90": {
+        "weight": 0.4,
+        "direction": 1
+      },
+      "big_game_delta_pct": {
+        "weight": 0.3,
+        "direction": 1
+      }
     },
-    "big_game_composite_stats": ["tackles_won_p90", "interceptions_p90", "recoveries_p90"]
+    "big_game_composite_stats": [
+      "tackles_won_p90",
+      "interceptions_p90",
+      "recoveries_p90"
+    ]
   },
-
   "CM": {
     "stats": {
-      "pass_completion_pct":     { "weight": 0.8, "direction": 1 },
-      "progressive_passes_p90":  { "weight": 0.8, "direction": 1 },
-      "key_passes_p90":          { "weight": 0.8, "direction": 1 },
-      "xa_p90":                  { "weight": 0.8, "direction": 1 },
-      "tackles_won_p90":         { "weight": 0.5, "direction": 1 },
-      "interceptions_p90":       { "weight": 0.5, "direction": 1 },
-      "dribble_success_pct":     { "weight": 0.6, "direction": 1 },
-      "progressive_carries_p90": { "weight": 0.7, "direction": 1 },
-      "through_balls_p90":       { "weight": 0.5, "direction": 1 },
-      "recoveries_p90":          { "weight": 0.5, "direction": 1 },
-      "goals_p90":               { "weight": 0.5, "direction": 1 },
-      "big_game_delta_pct":      { "weight": 1.0, "direction": 1 }
+      "pass_completion_pct": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "progressive_passes_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "key_passes_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "xa_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "tackles_won_p90": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "interceptions_p90": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "dribble_success_pct": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "progressive_carries_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "through_balls_p90": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "recoveries_p90": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "goals_p90": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "big_game_delta_pct": {
+        "weight": 0.3,
+        "direction": 1
+      }
     },
-    "big_game_composite_stats": ["key_passes_p90", "xa_p90", "progressive_passes_p90"]
+    "big_game_composite_stats": [
+      "key_passes_p90",
+      "xa_p90",
+      "progressive_passes_p90"
+    ]
   },
-
   "AM": {
     "stats": {
-      "xa_p90":                  { "weight": 1.0, "direction": 1 },
-      "xg_p90":                  { "weight": 0.8, "direction": 1 },
-      "key_passes_p90":          { "weight": 1.0, "direction": 1 },
-      "through_balls_p90":       { "weight": 0.7, "direction": 1 },
-      "dribble_success_pct":     { "weight": 0.7, "direction": 1 },
-      "dribbles_completed_p90":  { "weight": 0.7, "direction": 1 },
-      "progressive_carries_p90": { "weight": 0.6, "direction": 1 },
-      "pass_completion_pct":     { "weight": 0.6, "direction": 1 },
-      "shots_p90":               { "weight": 0.5, "direction": 1 },
-      "touches_in_box_p90":      { "weight": 0.6, "direction": 1 },
-      "goals_p90":               { "weight": 0.6, "direction": 1 },
-      "big_game_delta_pct":      { "weight": 1.0, "direction": 1 }
+      "xa_p90": {
+        "weight": 1.0,
+        "direction": 1
+      },
+      "xg_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "key_passes_p90": {
+        "weight": 1.0,
+        "direction": 1
+      },
+      "through_balls_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "dribble_success_pct": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "dribbles_completed_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "progressive_carries_p90": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "pass_completion_pct": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "shots_p90": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "touches_in_box_p90": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "goals_p90": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "big_game_delta_pct": {
+        "weight": 0.3,
+        "direction": 1
+      }
     },
-    "big_game_composite_stats": ["xa_p90", "xg_p90", "key_passes_p90"]
+    "big_game_composite_stats": [
+      "xa_p90",
+      "xg_p90",
+      "key_passes_p90"
+    ]
   },
-
   "WING": {
     "stats": {
-      "xg_p90":                  { "weight": 0.8, "direction": 1 },
-      "xa_p90":                  { "weight": 0.9, "direction": 1 },
-      "dribbles_completed_p90":  { "weight": 0.9, "direction": 1 },
-      "dribble_success_pct":     { "weight": 0.8, "direction": 1 },
-      "key_passes_p90":          { "weight": 0.8, "direction": 1 },
-      "shots_p90":               { "weight": 0.6, "direction": 1 },
-      "shot_accuracy_pct":       { "weight": 0.5, "direction": 1 },
-      "cross_accuracy_pct":      { "weight": 0.6, "direction": 1 },
-      "touches_in_box_p90":      { "weight": 0.6, "direction": 1 },
-      "progressive_carries_p90": { "weight": 0.7, "direction": 1 },
-      "goals_p90":               { "weight": 0.7, "direction": 1 },
-      "big_game_delta_pct":      { "weight": 1.0, "direction": 1 }
+      "xg_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "xa_p90": {
+        "weight": 0.9,
+        "direction": 1
+      },
+      "dribbles_completed_p90": {
+        "weight": 0.9,
+        "direction": 1
+      },
+      "dribble_success_pct": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "key_passes_p90": {
+        "weight": 0.8,
+        "direction": 1
+      },
+      "shots_p90": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "shot_accuracy_pct": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "cross_accuracy_pct": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "touches_in_box_p90": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "progressive_carries_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "goals_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "big_game_delta_pct": {
+        "weight": 0.3,
+        "direction": 1
+      }
     },
-    "big_game_composite_stats": ["xg_p90", "xa_p90", "dribbles_completed_p90"]
+    "big_game_composite_stats": [
+      "xg_p90",
+      "xa_p90",
+      "dribbles_completed_p90"
+    ]
   },
-
   "ST": {
     "stats": {
-      "xg_p90":              { "weight": 1.0, "direction": 1 },
-      "goals_p90":           { "weight": 1.0, "direction": 1 },
-      "shots_p90":           { "weight": 0.6, "direction": 1 },
-      "shot_accuracy_pct":   { "weight": 0.6, "direction": 1 },
-      "touches_in_box_p90":  { "weight": 0.7, "direction": 1 },
-      "xa_p90":              { "weight": 0.6, "direction": 1 },
-      "key_passes_p90":      { "weight": 0.5, "direction": 1 },
-      "aerial_duel_pct":     { "weight": 0.5, "direction": 1 },
-      "dribble_success_pct": { "weight": 0.4, "direction": 1 },
-      "duel_win_pct":        { "weight": 0.4, "direction": 1 },
-      "big_game_delta_pct":  { "weight": 1.0, "direction": 1 }
+      "xg_p90": {
+        "weight": 1.0,
+        "direction": 1
+      },
+      "goals_p90": {
+        "weight": 1.0,
+        "direction": 1
+      },
+      "shots_p90": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "shot_accuracy_pct": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "touches_in_box_p90": {
+        "weight": 0.7,
+        "direction": 1
+      },
+      "xa_p90": {
+        "weight": 0.6,
+        "direction": 1
+      },
+      "key_passes_p90": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "aerial_duel_pct": {
+        "weight": 0.5,
+        "direction": 1
+      },
+      "dribble_success_pct": {
+        "weight": 0.4,
+        "direction": 1
+      },
+      "duel_win_pct": {
+        "weight": 0.4,
+        "direction": 1
+      },
+      "big_game_delta_pct": {
+        "weight": 0.3,
+        "direction": 1
+      }
     },
-    "big_game_composite_stats": ["xg_p90", "goals_p90"]
+    "big_game_composite_stats": [
+      "xg_p90",
+      "goals_p90"
+    ]
   }
 }
