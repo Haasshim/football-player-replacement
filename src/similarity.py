@@ -17,7 +17,12 @@ for accuracy metrics until real outcome data exists.
 import math
 import pandas as pd
 
-DISTANCE_SCALE = 1.4  # tunable: controls how quickly score falls off with distance
+DISTANCE_SCALE = 2.0  # chosen by grid search over [1.0-4.0]: 2.0 gives the best
+# worst-case position separation (CM: 0.83 -> 0.88) while still preserving a
+# meaningful score floor (some real comparisons still score below 20%).
+# Higher values keep improving the separation stat but compress every score
+# upward until the tool almost never shows a genuinely poor match - see
+# README "Model validation" for the full grid search results.
 
 
 class SimilarityEngine:

@@ -1,4 +1,4 @@
-# EPL Player Replacement Finder
+# EPL Player Matcher
 
 Finds how similar two football players are, so you can check whether one
 player is a good replacement for another. Built for the English Premier
@@ -9,7 +9,8 @@ Pick a team, look at the current lineup on a pitch view, tap a starting
 player, search for any other player in the database, and see a match
 score between them based on stats that matter for that position -
 weighted so that performing well against strong opponents counts for
-more.
+more - plus an overlaid radar chart, a 0-10 rating, and a separate team
+chemistry score.
 
 ## Try it
 
@@ -115,13 +116,37 @@ into a 0-100% distance-based score. It answers "would this player's
 style suit how this team already plays", separately from "is this
 player statistically similar to who they're replacing".
 
+## Radar chart and rating
+
+The comparison page also overlays both players on a radar chart - the
+standard visualization this category of tool uses (Opta's Player
+Radars, StatsBomb's original player radars, and comparison tools like
+RenderFoot all converge on the same idea). Each axis is one of the
+position's most heavily-weighted stats, plotted as a real empirical
+percentile rank against every other player at that position (not an
+assumed normal distribution) - direction-corrected so "further out" always
+means "better", even for stats where a lower raw number is the good
+outcome (fewer fouls, fewer times dribbled past). Only the top 8 stats
+by weight are plotted, both for readability and because that matches
+how these tools present it in practice - the full stat list is still
+below as bars.
+
+Every player also gets a 0-10 rating: the average of their percentile
+ranks across their position's stats, scaled down to 10. It's the same
+"quick glance" idea as Sofascore's or FotMob's player ratings, built
+from the same data already computed for the radar and match score
+rather than a separate model.
+
 ## Team badges
 
 Real club crests are trademarked, so instead of reproducing actual
 badge artwork, each club gets a generated shield in its real colors
 with its short code (e.g. ARS, LIV) - gives every team a distinct,
 recognizable visual identity without using logo assets that aren't ours
-to redistribute.
+to redistribute. Player photos are left out for the same reason - real
+photos of real, named people aren't something to source and embed
+without rights to do so, so the visual identity here is built from
+data instead: badges, an overlaid radar chart, a rating, and color.
 
 ## Big game weighting
 
@@ -198,20 +223,29 @@ default team strength rather than a guessed number.
 
 There's no labeled "this replacement worked out" data to compute real
 accuracy against, so `src/metrics.py` checks things that stand in for
-it:
+it, and the two tunable parameters (`DISTANCE_SCALE` in `src/similarity.py`,
+and each position's `big_game_delta_pct` weight) were picked by grid
+search against these checks, not guessed:
 
 - **Position separation**: does a player's profile actually look more
-  like same-position players than other positions? Run against the real
-  data, 7 of 8 positions separate clearly (ratio > 1.0, e.g. GK at 1.6,
-  CB at 1.4, ST at 1.3). **Central midfielders are the exception**
-  (ratio 0.83, meaning a CM's profile currently looks slightly *more*
-  like a random non-CM than another CM) - this held regardless of the
-  big-game-weight fix above, so it looks like a genuine finding: CM stat
-  profiles are less statistically distinctive than specialist roles in
-  this data, not a bug to chase further right now.
+  like same-position players than other positions? A grid search over
+  `DISTANCE_SCALE` (1.0-4.0) and the big-game weight (0.15-0.5) showed
+  worst-case separation kept improving as `DISTANCE_SCALE` increased -
+  but past about 2.5 the score distribution compressed so hard that the
+  tool almost never showed a genuinely poor match (0% of a 300-pair
+  sample scored 20% or below), which would make the actual comparisons
+  less honest even though the one metric looked better. `DISTANCE_SCALE
+  = 2.0` with `big_game_delta_pct` weight `0.4` was the best trade-off
+  found: **7 of 8 positions separate clearly** (ratio > 1.0, e.g. GK at
+  10.6, CB at 1.25, ST at 1.18), and **central midfielders improved from
+  0.83 to 0.88** - still the weakest position, but no longer worse than
+  random, and without flattening the score range. The remaining CM
+  weakness looks like a genuine finding rather than a tuning problem:
+  central midfielders' stat profiles are less statistically distinctive
+  than specialist roles in this data.
 - **Score distribution**: match scores across a same-position sample
-  spread from ~5 to ~100 with a mean around 45-50 - not degenerately
-  bunched at one value.
+  spread from ~11 to ~95 with a mean around 55 and a real spread
+  (std ~14) - informative in both directions, not bunched at one value.
 
 Once real transfer/scouting outcomes exist, replace or add to this with
 a proper accuracy metric (e.g. Spearman correlation between match_score

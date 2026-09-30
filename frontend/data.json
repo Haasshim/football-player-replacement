@@ -25679,7 +25679,7 @@
           "direction": -1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -25738,7 +25738,7 @@
           "direction": -1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -25800,7 +25800,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -25858,7 +25858,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -25915,7 +25915,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -25972,7 +25972,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -26029,7 +26029,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -26082,7 +26082,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },

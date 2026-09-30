@@ -13,6 +13,36 @@ async function main() {
   await wait(200); // let inline scripts run
   const doc = window.document;
 
+  // 0. Homepage should render first, with title, description, how-it-works
+  // cards, and a working methodology toggle, before any team cards exist
+  assert(doc.title === 'EPL Player Matcher', `expected page title "EPL Player Matcher", got "${doc.title}"`);
+  const heroTitle = doc.querySelector('.hero h1');
+  assert(heroTitle && heroTitle.textContent.includes('EPL Player Matcher'), 'expected homepage hero title');
+  const heroDesc = doc.querySelector('.hero p');
+  assert(heroDesc && heroDesc.textContent.length > 40, 'expected a homepage description');
+  console.log('OK: homepage rendered with title and description');
+
+  const howCards = doc.querySelectorAll('.how-card');
+  assert(howCards.length === 3, `expected 3 how-it-works cards, got ${howCards.length}`);
+  console.log('OK: homepage shows', howCards.length, 'how-it-works steps');
+
+  assert(doc.querySelectorAll('.team-card').length === 0, 'team cards should not exist before leaving the homepage');
+
+  const methodToggle = doc.querySelector('#method-toggle');
+  const methodBody = doc.querySelector('#method-body');
+  assert(methodToggle && methodBody, 'expected a methodology explainer toggle');
+  assert(!methodBody.classList.contains('open'), 'methodology body should start collapsed');
+  methodToggle.click();
+  await wait(30);
+  assert(doc.querySelector('#method-body').classList.contains('open'), 'methodology body should open after clicking the toggle');
+  console.log('OK: "how the scores work" methodology toggle expands');
+
+  // 0b. The CTA button should take us to team selection
+  const getStartedBtn = doc.querySelector('#get-started-btn');
+  assert(getStartedBtn, 'expected a "Choose your team" CTA button on the homepage');
+  getStartedBtn.click();
+  await wait(50);
+
   // 1. Teams page should have rendered team cards
   const teamCards = doc.querySelectorAll('.team-card');
   assert(teamCards.length === 20, `expected 20 team cards, got ${teamCards.length}`);
@@ -21,6 +51,17 @@ async function main() {
   const badges = doc.querySelectorAll('.badge');
   assert(badges.length > 0, 'expected team badges to render');
   console.log('OK:', badges.length, 'team badges rendered on this page');
+
+  // team cards must show whole numbers with a clear "recent form" qualifier,
+  // never a raw decimal like "1.8th" or "82.8 pts" with no explanation
+  const teamMetaTexts = Array.from(doc.querySelectorAll('.team-meta')).map((el) => el.textContent);
+  const hasDecimalPosition = teamMetaTexts.some((t) => /\d+\.\d+(st|nd|rd|th)/.test(t));
+  assert(!hasDecimalPosition, `found an unexplained decimal position in a team card: ${teamMetaTexts.find((t) => /\d+\.\d+(st|nd|rd|th)/.test(t))}`);
+  const allHaveQualifier = teamMetaTexts.every((t) => t.includes('recent form') || t.includes('no recent top-flight data'));
+  assert(allHaveQualifier, 'expected every team card to explain that position/points are a recent-form blend, not a literal table');
+  const strengthLabels = doc.querySelectorAll('.team-card');
+  assert(Array.from(strengthLabels).every((c) => c.textContent.includes('Squad strength')), 'expected every team card to label the strength bar');
+  console.log('OK: team cards show whole numbers with a "recent form" explanation, no unexplained decimals');
 
   // 2. Click a team -> should move to squad view with a starting XI (allow
   // for real-data gaps: some clubs are short a player or two in one slot)
@@ -92,6 +133,16 @@ async function main() {
   const chemSvgText = doc.querySelectorAll('.score-item')[1].querySelector('svg text');
   assert(chemSvgText, 'expected a chemistry score ring to render');
   console.log('OK: team fit / chemistry score rendered:', chemSvgText.textContent);
+
+  const radarSvg = doc.querySelector('.radar-wrap svg');
+  assert(radarSvg, 'expected an overlaid radar chart to render on the comparison page');
+  const radarPolygons = doc.querySelectorAll('.radar-wrap polygon');
+  assert(radarPolygons.length >= 6, `expected grid rings + 2 player polygons on the radar, got ${radarPolygons.length} polygons`);
+  console.log('OK: radar chart rendered with', radarPolygons.length, 'polygons');
+
+  const ratingPills = doc.querySelectorAll('.compare-head .rating-pill');
+  assert(ratingPills.length === 2, `expected 2 rating badges (one per player) on the comparison page, got ${ratingPills.length}`);
+  console.log('OK: rating badges shown for both players:', Array.from(ratingPills).map((el) => el.textContent).join(' vs '));
 
   const statRows = doc.querySelectorAll('.stat-row');
   assert(statRows.length > 0, 'expected stat comparison rows');

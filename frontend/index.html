@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>EPL player replacement finder</title>
+<title>EPL Player Matcher</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -71,7 +71,7 @@
   button { font-family: inherit; }
   .wrap { max-width: 720px; margin: 0 auto; padding: 20px 16px 48px; }
   .topbar {
-    display: flex; align-items: center; justify-content: center; gap: 4px;
+    display: flex; align-items: center; justify-content: flex-start; gap: 4px;
     padding: 14px 16px; border-bottom: 1px solid var(--border); background: var(--surface);
     position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
   }
@@ -223,6 +223,46 @@
   @media (prefers-reduced-motion: reduce) {
     .page, .team-card, .token, .bench-chip, .primary-btn, .secondary-btn, .score-pop { animation: none !important; transition: none !important; }
   }
+
+  /* Home page */
+  .hero { text-align: center; padding: 36px 8px 8px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px;
+    border-radius: 50%; background: var(--accent-tint); font-size: 26px; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 26px; font-weight: 500; margin: 0 0 10px; letter-spacing: -0.3px; }
+  .hero p { font-size: 14px; color: var(--ink-muted); max-width: 440px; margin: 0 auto 24px; line-height: 1.55; }
+  .hero-cta {
+    display: inline-block; width: auto; padding: 13px 28px; margin: 0 0 40px;
+  }
+  .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 28px; }
+  .how-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 14px; text-align: left; }
+  .how-step { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 11px; font-weight: 500; margin-bottom: 10px; }
+  .how-card h3 { font-size: 13px; font-weight: 500; margin: 0 0 4px; }
+  .how-card p { font-size: 12px; color: var(--ink-muted); margin: 0; line-height: 1.5; }
+
+  .method-panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 4px 18px; margin-bottom: 20px; }
+  .method-toggle {
+    width: 100%; background: none; border: none; padding: 16px 0; display: flex; align-items: center;
+    justify-content: space-between; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--ink); text-align: left;
+  }
+  .method-chevron { transition: transform 0.2s var(--ease); color: var(--ink-faint); font-size: 12px; }
+  .method-chevron.open { transform: rotate(180deg); }
+  .method-body { display: none; padding-bottom: 16px; }
+  .method-body.open { display: block; }
+  .method-body p { font-size: 12.5px; color: var(--ink-muted); line-height: 1.6; margin: 0 0 12px; }
+  .method-body strong { color: var(--ink); font-weight: 500; }
+
+  .rating-pill {
+    display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 18px; padding: 0 5px;
+    border-radius: 5px; font-size: 10px; font-weight: 500; font-family: var(--font-mono); color: #fff;
+  }
+
+  /* Radar chart */
+  .radar-wrap { display: flex; flex-direction: column; align-items: center; padding: 8px 16px 4px; }
+  .radar-legend { display: flex; gap: 18px; margin-top: 6px; }
+  .radar-legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--ink-muted); }
+  .radar-swatch { width: 10px; height: 10px; border-radius: 3px; }
 </style>
 </head>
 <body>
@@ -25910,7 +25950,7 @@
           "direction": -1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -25969,7 +26009,7 @@
           "direction": -1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -26031,7 +26071,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -26089,7 +26129,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -26146,7 +26186,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -26203,7 +26243,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -26260,7 +26300,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -26313,7 +26353,7 @@
           "direction": 1
         },
         "big_game_delta_pct": {
-          "weight": 0.3,
+          "weight": 0.4,
           "direction": 1
         }
       },
@@ -26457,12 +26497,12 @@
       breakdown.push({ stat: stat, teamVal: teamVal, candVal: candVal, zDiff: diff });
     });
     var rawDistance = weightSum ? Math.sqrt(weightedSqDiffSum / weightSum) : 0;
-    var score = 100 * Math.exp(-rawDistance / 1.4);
+    var score = 100 * Math.exp(-rawDistance / 2.0);
     score = Math.max(0, Math.min(100, score));
     return { chemScore: Math.round(score * 10) / 10, breakdown: breakdown };
   }
 
-  var state = { view: 'teams', teamId: null, starters: [], bench: [], currentPlayer: null, candidatePlayer: null, lastSwap: null, _prevView: 'teams' };
+  var state = { view: 'home', teamId: null, starters: [], bench: [], currentPlayer: null, candidatePlayer: null, lastSwap: null, _prevView: 'home', methodOpen: false };
 
   function computeStats(players, positionConfig) {
     var table = {};
@@ -26484,6 +26524,56 @@
       });
     });
     return table;
+  }
+
+  // Empirical percentiles (not assumed-normal) for the radar chart and the
+  // 0-10 rating - "this player ranks better than X% of their position on
+  // this stat", direction-corrected so higher-on-the-radar always means
+  // "better", even for stats where a lower raw number is the good outcome.
+  var percentilePools = {};
+  Object.keys(positionConfig).forEach(function (pos) {
+    var statNames = Object.keys(positionConfig[pos].stats);
+    var group = players.filter(function (p) { return p.primary_position === pos; });
+    percentilePools[pos] = {};
+    statNames.forEach(function (stat) {
+      percentilePools[pos][stat] = group.map(function (p) { return p[stat]; })
+        .filter(function (v) { return typeof v === 'number' && !isNaN(v); })
+        .sort(function (a, b) { return a - b; });
+    });
+  });
+
+  function computePercentile(position, stat, value) {
+    var pool = (percentilePools[position] || {})[stat];
+    if (!pool || pool.length === 0 || typeof value !== 'number' || isNaN(value)) return null;
+    var countBelowOrEqual = 0;
+    for (var i = 0; i < pool.length; i++) { if (pool[i] <= value) countBelowOrEqual++; }
+    var raw = Math.round((countBelowOrEqual / pool.length) * 100);
+    var direction = ((positionConfig[position] || {}).stats[stat] || {}).direction || 1;
+    return direction === -1 ? 100 - raw : raw;
+  }
+
+  function computeRating(player) {
+    var config = (positionConfig[player.primary_position] || {}).stats || {};
+    var pcts = Object.keys(config).map(function (stat) {
+      return computePercentile(player.primary_position, stat, player[stat]);
+    }).filter(function (p) { return p !== null; });
+    if (pcts.length === 0) return null;
+    var avg = pcts.reduce(function (a, b) { return a + b; }, 0) / pcts.length;
+    return Math.round((avg / 10) * 10) / 10;
+  }
+
+  function ratingColor(rating) {
+    if (rating === null) return 'var(--ink-faint)';
+    if (rating >= 7.5) return '#0E9F6E';
+    if (rating >= 6) return 'var(--accent)';
+    if (rating >= 4.5) return 'var(--candidate)';
+    return '#E02424';
+  }
+
+  function ratingBadge(player) {
+    var r = computeRating(player);
+    if (r === null) return '';
+    return '<span class="rating-pill" style="background:' + ratingColor(r) + '">' + r.toFixed(1) + '</span>';
   }
 
   function zScore(position, stat, value) {
@@ -26520,7 +26610,7 @@
       breakdown.push({ stat: stat, valA: rawA, valB: rawB, weight: weight, zDiff: za - zb, favored: favored });
     });
     var rawDistance = weightSum ? Math.sqrt(weightedSqDiffSum / weightSum) : 0;
-    var score = 100 * Math.exp(-rawDistance / 1.4);
+    var score = 100 * Math.exp(-rawDistance / 2.0);
     score = Math.max(0, Math.min(100, score));
     breakdown.sort(function (a, b) {
       var av = a.zDiff === null ? -1 : a.weight * Math.abs(a.zDiff);
@@ -26603,6 +26693,7 @@
     render();
   }
 
+  function goHome() { state.view = 'home'; render(); }
   function goTeams() { state.view = 'teams'; render(); }
   function goSquad() { if (state.teamId) { state.view = 'squad'; render(); } }
 
@@ -26615,13 +26706,19 @@
   function renderTopbar() {
     var bar = document.getElementById('topbar');
     bar.innerHTML = '';
+    var brand = el('<button class="brand-btn" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:7px;padding:0;margin-right:auto;font-size:13px;font-weight:500;color:var(--ink);">' +
+      '<span style="font-size:16px;">\u26BD</span>EPL Player Matcher</button>');
+    brand.onclick = goHome;
+    bar.appendChild(brand);
+
+    if (state.view === 'home') return;
+
     var stepsDef = [
       { key: 'teams', label: 'Team', reachable: true },
       { key: 'squad', label: 'Squad', reachable: !!state.teamId },
       { key: 'compare', label: 'Compare', reachable: !!(state.currentPlayer && state.candidatePlayer) }
     ];
     stepsDef.forEach(function (s, i) {
-      if (i > 0) bar.appendChild(el('<span class="step-sep">/</span>'));
       var cls = 'step' + (state.view === s.key ? ' active' : (s.reachable ? ' reachable' : ''));
       var btn = el('<button class="' + cls + '">' + s.label + '</button>');
       btn.onclick = function () {
@@ -26630,7 +26727,46 @@
         else if (s.key === 'compare' && s.reachable) { state.view = 'compare'; render(); }
       };
       bar.appendChild(btn);
+      if (i < stepsDef.length - 1) bar.appendChild(el('<span class="step-sep">/</span>'));
     });
+  }
+
+  function renderHome() {
+    var app = document.getElementById('app');
+    var totalPlayers = players.length;
+    var chevronCls = state.methodOpen ? 'method-chevron open' : 'method-chevron';
+    var bodyCls = state.methodOpen ? 'method-body open' : 'method-body';
+
+    app.innerHTML = '<div class="page">' +
+      '<div class="hero">' +
+      '<div class="hero-badge">\u26BD</div>' +
+      '<h1>EPL Player Matcher</h1>' +
+      '<p>Find the best replacement for any Premier League player. Search ' + totalPlayers + ' real players across all 20 clubs, compare them position by position using real 2024-25 and 2025-26 stats, and see how a signing would actually fit the team\u2019s style before you make the call.</p>' +
+      '<button class="primary-btn hero-cta" id="get-started-btn">Choose your team \u2192</button>' +
+      '</div>' +
+      '<div class="how-grid">' +
+      '<div class="how-card"><div class="how-step">1</div><h3>Pick a team &amp; player</h3><p>Browse all 20 clubs, see the real starting XI on a pitch, and tap anyone you want to replace.</p></div>' +
+      '<div class="how-card"><div class="how-step">2</div><h3>Search any player</h3><p>Not just their own squad - search all ' + totalPlayers + ' players in the database for a candidate.</p></div>' +
+      '<div class="how-card"><div class="how-step">3</div><h3>See the fit</h3><p>A match score against the player they\u2019re replacing, plus a team chemistry score for their style.</p></div>' +
+      '</div>' +
+      '<div class="method-panel">' +
+      '<button class="method-toggle" id="method-toggle" aria-expanded="' + state.methodOpen + '" aria-controls="method-body">How the scores actually work <span class="' + chevronCls + '" id="method-chevron">\u25BC</span></button>' +
+      '<div class="' + bodyCls + '" id="method-body">' +
+      '<p><strong>Match score</strong> compares two players using only the stats that matter for their position - a full back is judged on crossing and tackling, a striker on goals and shot quality, not the same generic list for everyone. Each stat is measured against other players at that position, so someone is only ever judged against their peers.</p>' +
+      '<p><strong>Team fit</strong> is a separate score: how well a candidate\u2019s all-round style (passing, work rate, physicality, creativity) matches how the team as a whole already plays, not just the one player being replaced.</p>' +
+      '<p><strong>Ratings</strong> (the small number next to a name) average a player\u2019s percentile rank across their position\u2019s key stats, scaled to 0-10.</p>' +
+      '<p><strong>Team position and points</strong> on the team-select page are not last season\u2019s literal final table - they\u2019re a recency-weighted blend of each club\u2019s last 3-4 Premier League seasons (more recent seasons count for more), so promoted clubs with little recent top-flight history are clearly marked rather than given a made-up rank. That\u2019s why you\u2019ll see rounded, slightly unusual-looking numbers like "~83 pts" instead of a clean league table.</p>' +
+      '<p>Everything is built on real 2024-25 and 2025-26 Premier League stats and real current squads - not placeholder data. Some very new signings and academy players have limited stats yet and are flagged where that\u2019s the case.</p>' +
+      '</div></div>' +
+      '</div>';
+
+    app.querySelector('#get-started-btn').onclick = goTeams;
+    app.querySelector('#method-toggle').onclick = function () {
+      state.methodOpen = !state.methodOpen;
+      app.querySelector('#method-body').classList.toggle('open', state.methodOpen);
+      app.querySelector('#method-chevron').classList.toggle('open', state.methodOpen);
+      app.querySelector('#method-toggle').setAttribute('aria-expanded', state.methodOpen);
+    };
   }
 
   function renderTeams() {
@@ -26638,11 +26774,15 @@
     var sorted = teams.slice().sort(function (a, b) { return a.final_league_position - b.final_league_position; });
     var cards = sorted.map(function (t) {
       var pct = Math.round((t.team_strength_index || 0) * 100);
+      var posDisplay = Math.round(t.final_league_position);
+      var ptsDisplay = Math.round(t.points);
+      var confidenceNote = t.data_confidence === 'no_recent_top_flight_data' ? 'no recent top-flight data' : 'recent form, last 3-4 seasons';
       return '<div class="team-card" data-team="' + t.team_id + '">' +
         '<div class="team-head">' + teamBadge(t.team_id, 'md') +
         '<div><div class="team-name">' + t.team_name + '</div>' +
-        '<div class="team-meta">' + t.final_league_position + getOrdinal(t.final_league_position) + ' · ' + t.points + ' pts</div></div></div>' +
-        '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div>' +
+        '<div class="team-meta" title="' + escapeAttr(confidenceNote) + '">' + posDisplay + getOrdinal(posDisplay) + ' · ~' + ptsDisplay + ' pts <span style="color:var(--ink-faint);">(' + confidenceNote + ')</span></div></div></div>' +
+        '<div><div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div>' +
+        '<div style="font-size:10px; color:var(--ink-faint); margin-top:3px;">Squad strength ' + pct + '%</div></div>' +
         '</div>';
     }).join('');
     app.innerHTML = '<div class="page"><h1>Choose a team</h1><p class="subtitle">Pick a squad to explore, then find a replacement for any player.</p>' +
@@ -26698,7 +26838,7 @@
           var t = teamLookup[p.club];
           return '<div class="search-result-row" data-player="' + p.player_id + '">' +
             '<div style="display:flex; align-items:center; gap:10px;">' + teamBadge(p.club, 'sm') +
-            '<div><div class="search-result-name">' + p.full_name + dataBadge(p) + '</div>' +
+            '<div><div class="search-result-name">' + p.full_name + ' ' + ratingBadge(p) + dataBadge(p) + '</div>' +
             '<div class="search-result-meta">' + p.primary_position + ' · ' + (t ? t.team_name : p.club) + '</div></div></div>' +
             '</div>';
         }).join('') + '</div>';
@@ -26785,17 +26925,26 @@
       ? '<div class="score-item"><div style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:11px;">n/a</div><div class="score-label">team fit</div></div>'
       : '<div class="score-item">' + scoreRing(chem.chemScore, 'var(--candidate)', 64) + '<div class="score-label">team fit</div></div>';
 
+    var radarSvg = radarChart(position, a, b, 220);
+    var radarBlock = radarSvg ? '<div class="radar-wrap">' + radarSvg +
+      '<div class="radar-legend">' +
+      '<div class="radar-legend-item"><span class="radar-swatch" style="background:var(--accent)"></span>' + shortName(a.full_name) + '</div>' +
+      '<div class="radar-legend-item"><span class="radar-swatch" style="background:var(--candidate)"></span>' + shortName(b.full_name) + '</div>' +
+      '</div></div>' : '';
+
     app.innerHTML = '<div class="page"><div class="panel">' +
       '<div class="compare-head">' +
-      '<div class="compare-side"><div class="compare-name">' + a.full_name + dataBadge(a) + '</div>' +
+      '<div class="compare-side"><div class="compare-name">' + a.full_name + dataBadge(a) + ' ' + ratingBadge(a) + '</div>' +
       '<div class="compare-meta">' + a.primary_position + ' · ' + (teamA ? teamA.team_name : a.club) + ' · current</div></div>' +
-      '<div class="compare-side right"><div class="compare-name">' + b.full_name + dataBadge(b) + '</div>' +
+      '<div class="compare-side right"><div class="compare-name">' + ratingBadge(b) + ' ' + b.full_name + dataBadge(b) + '</div>' +
       '<div class="compare-meta">' + b.primary_position + ' · ' + (teamB ? teamB.team_name : b.club) + ' · candidate</div></div>' +
       '</div>' +
       '<div class="score-block">' +
       '<div class="score-item">' + scoreRing(score, 'var(--accent)', 80) + '<div class="score-label">match score</div></div>' +
       chemRing +
       '</div>' +
+      radarBlock +
+      '<div class="section-label">Stat by stat</div>' +
       rows +
       '<div class="btn-row"><button class="primary-btn" id="replace-btn">Replace player</button>' +
       '<button class="secondary-btn" id="back-btn">Back to squad</button></div>' +
@@ -26803,6 +26952,72 @@
 
     app.querySelector('#replace-btn').onclick = confirmReplace;
     app.querySelector('#back-btn').onclick = backToSquad;
+  }
+
+  var RADAR_LABELS = {
+    pass_completion_pct: 'Passing', tackle_success_pct: 'Tackling', aerial_duel_pct: 'Aerial',
+    dribble_success_pct: 'Dribbling', cross_accuracy_pct: 'Crossing', long_pass_accuracy_pct: 'Long balls',
+    psxg_prevented_p90: 'Shot-stop', clean_sheet_pct: 'Clean sheets', progressive_carries_p90: 'Carrying',
+    progressive_passes_p90: 'Progression', times_dribbled_past_p90: 'Not beaten', touches_in_box_p90: 'Box touches',
+    big_game_delta_pct: 'Big games', key_passes_p90: 'Chances', xa_p90: 'xA', xg_p90: 'xG', goals_p90: 'Goals',
+    shots_p90: 'Shots', shot_accuracy_pct: 'Accuracy', interceptions_p90: 'Intercepts', tackles_won_p90: 'Tackles',
+    blocks_p90: 'Blocks', clearances_p90: 'Clearances', duel_win_pct: 'Duels', recoveries_p90: 'Recoveries',
+    fouls_committed_p90: 'Discipline', dribbles_completed_p90: 'Dribbles', crosses_completed_p90: 'Crosses',
+    through_balls_p90: 'Thru balls', save_pct: 'Saves'
+  };
+  function radarLabel(stat) { return RADAR_LABELS[stat] || label(stat); }
+
+  function radarChart(position, playerA, playerB, size) {
+    var config = (positionConfig[position] || {}).stats || {};
+    var statList = Object.keys(config).sort(function (a, b) { return config[b].weight - config[a].weight; }).slice(0, 8);
+    var n = statList.length;
+    if (n < 3) return '';
+    var cx = size / 2, cy = size / 2, maxR = size * 0.32;
+
+    function pointFor(i, pct) {
+      var angle = -Math.PI / 2 + i * (2 * Math.PI / n);
+      var r = maxR * (pct / 100);
+      return [cx + r * Math.cos(angle), cy + r * Math.sin(angle)];
+    }
+    function polygon(pcts, color, fillOpacity) {
+      var pts = statList.map(function (stat, i) { var p = pointFor(i, pcts[stat] || 0); return p[0] + ',' + p[1]; }).join(' ');
+      return '<polygon points="' + pts + '" fill="' + color + '" fill-opacity="' + fillOpacity + '" stroke="' + color + '" stroke-width="2"></polygon>';
+    }
+
+    var pctA = {}, pctB = {};
+    statList.forEach(function (stat) {
+      pctA[stat] = computePercentile(position, stat, playerA[stat]);
+      pctB[stat] = computePercentile(position, stat, playerB[stat]);
+      if (pctA[stat] === null) pctA[stat] = 0;
+      if (pctB[stat] === null) pctB[stat] = 0;
+    });
+
+    var rings = [25, 50, 75, 100].map(function (pct) {
+      var pts = statList.map(function (stat, i) { var p = pointFor(i, pct); return p[0] + ',' + p[1]; }).join(' ');
+      return '<polygon points="' + pts + '" fill="none" stroke="var(--border)" stroke-width="1"></polygon>';
+    }).join('');
+
+    var labelMargin = size * 0.22;
+    var axesAndLabels = statList.map(function (stat, i) {
+      var edge = pointFor(i, 100);
+      var labelPt = pointFor(i, 100 + (labelMargin / maxR) * 100);
+      var anchor = 'middle';
+      if (labelPt[0] < cx - 6) anchor = 'end';
+      else if (labelPt[0] > cx + 6) anchor = 'start';
+      var line = '<line x1="' + cx + '" y1="' + cy + '" x2="' + edge[0] + '" y2="' + edge[1] + '" stroke="var(--border)" stroke-width="1"></line>';
+      var text = '<text x="' + labelPt[0] + '" y="' + labelPt[1] + '" text-anchor="' + anchor + '" font-size="9" fill="var(--ink-muted)" font-family="var(--font-sans)">' + radarLabel(stat) + '</text>';
+      return line + text;
+    }).join('');
+
+    var viewSize = size + labelMargin * 2;
+    var offset = labelMargin;
+    var svgTitle = '<title>Radar comparing ' + playerA.full_name + ' and ' + playerB.full_name + ' across ' + n + ' ' + position + ' stats, as percentile rank</title>';
+    return '<svg width="' + viewSize + '" height="' + viewSize + '" viewBox="' + (-offset) + ' ' + (-offset) + ' ' + viewSize + ' ' + viewSize + '" role="img">' +
+      svgTitle +
+      rings + axesAndLabels +
+      polygon(pctA, 'var(--accent)', 0.22) +
+      polygon(pctB, 'var(--candidate)', 0.22) +
+      '</svg>';
   }
 
   function scoreRing(score, color, size) {
@@ -26819,14 +27034,15 @@
       '</svg>';
   }
 
-  var VIEW_ORDER = ['teams', 'squad', 'compare'];
+  var VIEW_ORDER = ['home', 'teams', 'squad', 'compare'];
 
   function render() {
     renderTopbar();
     var oldIndex = VIEW_ORDER.indexOf(state._prevView);
     var newIndex = VIEW_ORDER.indexOf(state.view);
     var direction = newIndex >= oldIndex ? 'enter-forward' : 'enter-back';
-    if (state.view === 'teams') renderTeams();
+    if (state.view === 'home') renderHome();
+    else if (state.view === 'teams') renderTeams();
     else if (state.view === 'squad') renderSquad();
     else if (state.view === 'compare') renderCompare();
     var pageEl = document.querySelector('#app > .page');

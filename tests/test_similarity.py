@@ -40,8 +40,8 @@ def test_more_different_players_score_lower():
     score_p1_p3 = engine.match_score(p1, p3)
     score_p1_p4 = engine.match_score(p1, p4)
 
-    assert score_p1_p3 == pytest.approx(59.0, abs=0.5)
-    assert score_p1_p4 == pytest.approx(34.8, abs=0.5)
+    assert score_p1_p3 == pytest.approx(69.1, abs=0.5)
+    assert score_p1_p4 == pytest.approx(47.8, abs=0.5)
     assert score_p1_p4 < score_p1_p3 < 100.0
 
 
