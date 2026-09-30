@@ -147,6 +147,31 @@ Stat rows where neither player has data are hidden entirely, rather
 than showing a confusing "- vs -" - a count of how many were hidden is
 still shown, so nothing disappears silently.
 
+## Fonts, homepage, and stat tooltips
+
+Headlines (the homepage title, team names, player names on the
+comparison page) use Oswald - a bold, condensed sans-serif that's the
+de facto standard for sports branding, paired with the existing IBM
+Plex Sans for body text and IBM Plex Mono for stat numbers.
+
+The homepage has a low-opacity (5%) diagonal stripe pattern in the
+pitch-green color behind the hero, and a row of all 20 clubs' jersey
+icons - real photos and the real Premier League logo aren't things to
+reproduce without rights to do so (same reasoning as the badges), so
+the visual identity stays built from generated, data-driven graphics.
+Two buttons were added beyond the original single CTA: "Try a random
+comparison" (jumps straight into a live comparison between two real
+players with full data, so the tool is visible immediately) and a
+GitHub source link.
+
+Every stat name on the comparison page is clickable - tapping it
+reveals a plain-language definition beneath the row ("Expected assists:
+the likelihood the passes a player made would end in a goal..."),
+tapping again collapses it. This doubles as the app's only tooltip
+mechanism, deliberately: a hover-only tooltip doesn't work on a touch
+screen, so a click-to-reveal pattern was used everywhere instead of
+building two separate interaction paths for desktop and mobile.
+
 ## Why React only for the team-select page
 
 The team-select tiles are a real React component (React 18, loaded via

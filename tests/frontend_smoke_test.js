@@ -31,6 +31,30 @@ async function main() {
   assert(doc.querySelector('#method-body').classList.contains('open'), 'methodology body should open after clicking the toggle');
   console.log('OK: "how the scores work" methodology toggle expands');
 
+  const jerseyIcons = doc.querySelectorAll('.jersey-strip svg');
+  assert(jerseyIcons.length === 20, `expected 20 jersey icons on homepage, got ${jerseyIcons.length}`);
+  console.log('OK: homepage jersey strip shows', jerseyIcons.length, 'clubs');
+
+  const githubLink = doc.querySelector('.github-link');
+  assert(githubLink && githubLink.getAttribute('href') === 'https://github.com/Haasshim/football-player-replacement', 'expected a working GitHub source link');
+  console.log('OK: GitHub source link present and correct');
+
+  // "Try a random comparison" should jump straight to a valid compare page
+  const randomBtn = doc.querySelector('#random-btn');
+  assert(randomBtn, 'expected a "Try a random comparison" button');
+  randomBtn.click();
+  await wait(50);
+  const randomScoreSvg = doc.querySelector('.score-block svg text');
+  assert(randomScoreSvg && !isNaN(parseFloat(randomScoreSvg.textContent)), 'expected random comparison to land on a valid compare page with a real score');
+  console.log('OK: "Try a random comparison" jumps straight to a valid comparison:', randomScoreSvg.textContent);
+
+  // back to a clean state (home) for the rest of the flow, same as the
+  // original test's expectation of starting fresh from the homepage
+  doc.querySelector('#back-btn').click();
+  await wait(50);
+  doc.querySelector('.brand-btn').click();
+  await wait(50);
+
   // 0b. The CTA button should take us to team selection
   const getStartedBtn = doc.querySelector('#get-started-btn');
   assert(getStartedBtn, 'expected a "Choose your team" CTA button on the homepage');
@@ -141,6 +165,21 @@ async function main() {
   const statRows = doc.querySelectorAll('.stat-row');
   assert(statRows.length > 0, 'expected stat comparison rows');
   console.log('OK:', statRows.length, 'stat comparison rows rendered');
+
+  // stat names should be clickable to reveal a plain-language definition
+  const statBtn = doc.querySelector('.stat-name-btn');
+  assert(statBtn, 'expected clickable stat name buttons');
+  assert(!doc.querySelector('.stat-definition'), 'definition should not be visible before clicking');
+  statBtn.click();
+  await wait(50);
+  const def = doc.querySelector('.stat-definition');
+  assert(def && def.textContent.length > 15, 'expected a real definition to appear after clicking a stat name');
+  console.log('OK: clicking a stat name reveals its definition:', def.textContent.slice(0, 50) + '...');
+  statBtn.click();
+  await wait(50);
+  assert(!doc.querySelector('.stat-definition'), 'expected the definition to collapse again on a second click');
+  console.log('OK: clicking again collapses the definition');
+
 
   // 7. Confirm replace works and returns to squad with swapped player
   const replaceBtn = doc.querySelector('#replace-btn');

@@ -6,7 +6,7 @@
 <title>EPL Player Matcher</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <style>
@@ -28,6 +28,7 @@
     --pitch-line: rgba(255,255,255,0.3);
     --font-sans: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, sans-serif;
     --font-mono: 'IBM Plex Mono', SFMono-Regular, Menlo, Consolas, monospace;
+    --font-display: 'Oswald', 'Arial Narrow', sans-serif;
     --radius: 14px;
     --ease: cubic-bezier(0.34, 1.56, 0.64, 1);
     --accent-rgb: 11,99,246;
@@ -83,7 +84,7 @@
   .step.active { color: #fff; background: var(--accent); font-weight: 500; }
   .step-sep { color: var(--border-strong); font-size: 12px; }
 
-  h1 { font-size: 20px; font-weight: 500; margin: 0 0 2px; }
+  h1 { font-size: 20px; font-weight: 500; margin: 0 0 2px; font-family: var(--font-display); letter-spacing: 0.2px; }
   .subtitle { font-size: 13px; color: var(--ink-muted); margin: 0 0 20px; }
 
   .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
@@ -106,14 +107,14 @@
   .badge.sm { width: 26px; height: 30px; font-size: 10px; }
   .badge.md { width: 34px; height: 39px; font-size: 12px; }
   .badge.lg { width: 44px; height: 50px; font-size: 14px; }
-  .team-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+  .team-name { font-size: 14px; font-weight: 500; color: var(--ink); font-family: var(--font-display); }
   .team-meta { font-size: 12px; color: var(--ink-muted); }
   .bar-track { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
   .bar-fill { height: 5px; background: var(--accent); border-radius: 3px; transition: width 0.4s var(--ease); }
 
   .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgba(var(--accent-rgb),0.05); }
   .panel-head { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--border); }
-  .panel-head .team-name { font-size: 16px; }
+  .panel-head .team-name { font-size: 18px; font-family: var(--font-display); font-weight: 600; letter-spacing: 0.3px; }
   .link-btn { background: none; border: none; color: var(--accent-ink); font-size: 12px; cursor: pointer; padding: 6px 10px; margin-left: auto; border-radius: 999px; transition: background 0.15s; }
   .link-btn:hover { background: var(--accent-tint); }
 
@@ -141,11 +142,12 @@
   .section-label { padding: 12px 16px 4px; color: var(--ink-muted); font-size: 12px; }
   .bench-list { display: flex; gap: 8px; padding: 0 16px 14px; flex-wrap: wrap; }
   .bench-chip {
-    background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px;
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 8px 14px;
     cursor: pointer; color: var(--ink); font-size: 12px; display: flex; align-items: center; gap: 6px;
     transition: transform 0.15s var(--ease), border-color 0.15s;
   }
   .bench-chip:hover { transform: translateY(-1px); border-color: var(--candidate); }
+  .bench-chip:active { transform: scale(0.96); }
   .bench-chip.selected { box-shadow: 0 0 0 2px var(--candidate); border-color: transparent; }
   .bench-pos { color: var(--candidate); font-family: var(--font-mono); font-size: 10px; }
 
@@ -160,10 +162,11 @@
   .search-result-row {
     display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 14px;
     cursor: pointer; border-bottom: 1px solid var(--border); background: var(--surface);
-    transition: background 0.12s;
+    transition: background 0.12s, transform 0.12s var(--ease);
   }
   .search-result-row:last-child { border-bottom: none; }
   .search-result-row:hover { background: var(--accent-tint); }
+  .search-result-row:active { transform: scale(0.98); background: var(--accent-tint); }
   .search-result-name { font-size: 12px; color: var(--ink); }
   .search-result-meta { font-size: 11px; color: var(--ink-muted); }
 
@@ -189,7 +192,7 @@
   .secondary-btn:hover { background: var(--surface-2); transform: translateY(-1px); }
 
   .compare-head { display: flex; justify-content: space-between; padding: 16px; border-bottom: 1px solid var(--border); }
-  .compare-name { font-size: 14px; font-weight: 500; }
+  .compare-name { font-size: 16px; font-weight: 600; font-family: var(--font-display); letter-spacing: 0.2px; }
   .compare-meta { font-size: 11px; color: var(--ink-muted); margin-top: 2px; }
   .compare-side.right { text-align: right; }
 
@@ -200,7 +203,23 @@
   .stat-row { padding: 10px 16px; }
   .stat-values { display: flex; justify-content: space-between; margin-bottom: 5px; }
   .stat-values span { font-size: 12px; font-family: var(--font-mono); color: var(--ink); }
-  .stat-name { font-size: 11px; color: var(--ink-muted); font-family: var(--font-sans); }
+  .stat-name-btn {
+    font-size: 11px; color: var(--ink-muted); font-family: var(--font-sans); background: none; border: none;
+    cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding: 2px 4px; border-radius: 4px;
+    transition: background 0.15s, color 0.15s, transform 0.12s var(--ease);
+  }
+  .stat-name-btn:hover { background: var(--surface-2); color: var(--ink); }
+  .stat-name-btn:active { transform: scale(0.96); }
+  .stat-info-mark {
+    display: inline-flex; align-items: center; justify-content: center; width: 13px; height: 13px;
+    border-radius: 50%; background: var(--ink-muted); color: var(--surface); font-size: 9px; font-weight: 500;
+    flex-shrink: 0;
+  }
+  .stat-name-btn[aria-expanded="true"] .stat-info-mark { background: var(--accent); color: #fff; }
+  .stat-definition {
+    font-size: 11px; color: var(--ink-muted); background: var(--surface-2); border-radius: 6px;
+    padding: 8px 10px; margin-top: 6px; line-height: 1.5; text-align: left;
+  }
   .diverge { display: flex; height: 6px; border-radius: 3px; overflow: hidden; gap: 2px; }
   .diverge-half { width: 50%; display: flex; }
   .diverge-half.left { justify-content: flex-end; }
@@ -228,18 +247,34 @@
   }
 
   /* Home page */
-  .hero { text-align: center; padding: 36px 8px 8px; }
+  .hero {
+    text-align: center; padding: 36px 8px 8px; position: relative; overflow: hidden;
+    border-radius: var(--radius);
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: repeating-linear-gradient(120deg, var(--pitch) 0px, var(--pitch) 44px, transparent 44px, transparent 88px);
+    opacity: 0.05;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .jersey-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 520px; margin: 0 auto 22px; }
+  .jersey-strip svg { opacity: 0.55; transition: opacity 0.2s, transform 0.2s; }
+  .jersey-strip svg:hover { opacity: 1; transform: translateY(-3px); }
+  .hero-btn-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+  .github-link { display: inline-block; font-size: 12px; color: var(--ink-faint); text-decoration: none; margin-bottom: 36px; border-bottom: 1px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .github-link:hover { color: var(--accent-ink); border-color: var(--accent-ink); }
   .hero-badge {
     display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px;
     border-radius: 50%; background: var(--accent-tint); font-size: 26px; margin-bottom: 16px;
   }
-  .hero h1 { font-size: 26px; font-weight: 500; margin: 0 0 10px; letter-spacing: -0.3px; }
+  .hero h1 { font-size: 34px; font-weight: 600; margin: 0 0 10px; letter-spacing: 0.3px; font-family: var(--font-display); }
   .hero p { font-size: 14px; color: var(--ink-muted); max-width: 440px; margin: 0 auto 24px; line-height: 1.55; }
   .hero-cta {
-    display: inline-block; width: auto; padding: 13px 28px; margin: 0 0 40px;
+    display: inline-block; width: auto; padding: 13px 28px; margin: 0;
   }
-  .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 28px; }
-  .how-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 14px; text-align: left; }
+  .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  .how-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 18px; text-align: left; transition: transform 0.2s var(--ease), border-color 0.2s; }
+  .how-card:hover { transform: translateY(-3px); border-color: var(--border-strong); }
   .how-step { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 11px; font-weight: 500; margin-bottom: 10px; }
   .how-card h3 { font-size: 13px; font-weight: 500; margin: 0 0 4px; }
   .how-card p { font-size: 12px; color: var(--ink-muted); margin: 0; line-height: 1.5; }
@@ -26865,6 +26900,40 @@
 
   function label(stat) { return STAT_LABELS[stat] || stat; }
 
+  var STAT_DEFINITIONS = {
+    save_pct: 'Shots the goalkeeper stopped, out of all shots on target they faced.',
+    psxg_prevented_p90: 'Goals actually conceded vs. how many an average keeper would be expected to concede, given the quality of shots faced - positive means better than expected, per 90 minutes.',
+    clean_sheet_pct: 'Share of appearances where the team didn\u2019t concede a single goal.',
+    pass_completion_pct: 'Share of attempted passes that reached a teammate.',
+    long_pass_accuracy_pct: 'Share of long passes (over roughly 30 yards) that found a teammate.',
+    progressive_passes_p90: 'Passes that move the ball meaningfully closer to the opponent\u2019s goal, per 90 minutes.',
+    recoveries_p90: 'Loose or contested balls won back for the team, per 90 minutes.',
+    fouls_committed_p90: 'Fouls given away, per 90 minutes - lower is better.',
+    big_game_delta_pct: 'How much better or worse the player\u2019s team performs against strong opponents than their overall form would predict. A team-level figure (see \u201cHow the scores work\u201d on the homepage), not purely about this one player.',
+    tackle_success_pct: 'Share of attempted tackles that won the ball cleanly.',
+    tackles_won_p90: 'Tackles that won the ball, per 90 minutes.',
+    interceptions_p90: 'Opponent passes cut out before reaching their target, per 90 minutes.',
+    blocks_p90: 'Shots or passes blocked with the body, per 90 minutes.',
+    clearances_p90: 'Balls cleared away from danger, per 90 minutes.',
+    aerial_duel_pct: 'Share of aerial (headed) duels won.',
+    duel_win_pct: 'Share of ground duels (challenges for the ball) won.',
+    times_dribbled_past_p90: 'Times beaten by an opponent\u2019s dribble, per 90 minutes - lower is better.',
+    cross_accuracy_pct: 'Share of attempted crosses that found a teammate.',
+    crosses_completed_p90: 'Crosses that found a teammate, per 90 minutes.',
+    key_passes_p90: 'Passes that directly led to a shot, per 90 minutes.',
+    xa_p90: 'Expected assists: the likelihood the passes a player made would end in a goal, based on the quality of the chances created, per 90 minutes.',
+    progressive_carries_p90: 'Times the player carried the ball meaningfully closer to the opponent\u2019s goal, per 90 minutes.',
+    dribble_success_pct: 'Share of attempted dribbles (take-ons) that beat an opponent.',
+    through_balls_p90: 'Passes played through the defensive line for a teammate to run onto, per 90 minutes.',
+    xg_p90: 'Expected goals: the likelihood a shot results in a goal, based on shot quality (distance, angle, pressure), per 90 minutes.',
+    dribbles_completed_p90: 'Successful dribbles (take-ons) that beat an opponent, per 90 minutes.',
+    touches_in_box_p90: 'Touches of the ball inside the opponent\u2019s penalty box, per 90 minutes.',
+    goals_p90: 'Goals scored, per 90 minutes.',
+    shots_p90: 'Shots attempted, per 90 minutes.',
+    shot_accuracy_pct: 'Share of shots that were on target.'
+  };
+  function statDefinition(stat) { return STAT_DEFINITIONS[stat] || ''; }
+
   function dataBadge(p) {
     if (p.data_confidence === 'bio_only') return ' <span style="color:var(--candidate); font-size:10px;">no stats yet</span>';
     if (p.data_confidence === 'stats_only') return ' <span style="color:var(--ink-faint); font-size:10px;">est. position</span>';
@@ -27001,7 +27070,7 @@
       React.createElement('div', { style: { display: 'flex', alignItems: 'center', gap: '12px' } },
         React.createElement('div', { dangerouslySetInnerHTML: { __html: teamBadge(team.team_id, 'lg') } }),
         React.createElement('div', null,
-          React.createElement('div', { style: { fontSize: '17px', fontWeight: 500, color: textColor } }, team.team_name),
+          React.createElement('div', { style: { fontSize: '18px', fontWeight: 600, color: textColor, fontFamily: 'var(--font-display)', letterSpacing: '0.3px' } }, team.team_name),
           React.createElement('div', { style: { fontSize: '12px', color: mutedColor, opacity: mutedOpacity, marginTop: '2px' } },
             posDisplay + getOrdinal(posDisplay) + ' \u00b7 ~' + ptsDisplay + ' pts')
         )
@@ -27099,7 +27168,7 @@
     return { chemScore: Math.round(score * 10) / 10, breakdown: breakdown };
   }
 
-  var state = { view: 'home', teamId: null, starters: [], bench: [], currentPlayer: null, candidatePlayer: null, lastSwap: null, _prevView: 'home', methodOpen: false };
+  var state = { view: 'home', teamId: null, starters: [], bench: [], currentPlayer: null, candidatePlayer: null, lastSwap: null, _prevView: 'home', methodOpen: false, expandedStats: {} };
 
   function computeStats(players, positionConfig) {
     var table = {};
@@ -27398,12 +27467,22 @@
     var chevronCls = state.methodOpen ? 'method-chevron open' : 'method-chevron';
     var bodyCls = state.methodOpen ? 'method-body open' : 'method-body';
 
+    var jerseyStrip = '<div class="jersey-strip">' +
+      teams.slice().sort(function (a, b) { return a.team_id.localeCompare(b.team_id); })
+        .map(function (t) { return jerseyIcon(t.team_id, 26); }).join('') +
+      '</div>';
+
     app.innerHTML = '<div class="page">' +
       '<div class="hero">' +
       '<div class="hero-badge">\u26BD</div>' +
       '<h1>EPL Player Matcher</h1>' +
       '<p>Find the best replacement for any Premier League player. Search ' + totalPlayers + ' real players across all 20 clubs, compare them position by position using real 2024-25 and 2025-26 stats, and see how a signing would actually fit the team\u2019s style before you make the call.</p>' +
+      jerseyStrip +
+      '<div class="hero-btn-row">' +
       '<button class="primary-btn hero-cta" id="get-started-btn">Choose your team \u2192</button>' +
+      '<button class="secondary-btn hero-cta" id="random-btn">Try a random comparison</button>' +
+      '</div>' +
+      '<a class="github-link" href="https://github.com/Haasshim/football-player-replacement" target="_blank" rel="noopener">View source on GitHub</a>' +
       '</div>' +
       '<div class="how-grid">' +
       '<div class="how-card"><div class="how-step">1</div><h3>Pick a team &amp; player</h3><p>Browse all 20 clubs, see the real starting XI on a pitch, and tap anyone you want to replace.</p></div>' +
@@ -27422,12 +27501,33 @@
       '</div>';
 
     app.querySelector('#get-started-btn').onclick = goTeams;
+    app.querySelector('#random-btn').onclick = tryRandomComparison;
     app.querySelector('#method-toggle').onclick = function () {
       state.methodOpen = !state.methodOpen;
       app.querySelector('#method-body').classList.toggle('open', state.methodOpen);
       app.querySelector('#method-chevron').classList.toggle('open', state.methodOpen);
       app.querySelector('#method-toggle').setAttribute('aria-expanded', state.methodOpen);
     };
+  }
+
+  function tryRandomComparison() {
+    var goodPlayers = players.filter(function (p) { return p.data_confidence === 'full'; });
+    if (goodPlayers.length < 2) return;
+    var currentPlayer = goodPlayers[Math.floor(Math.random() * goodPlayers.length)];
+    var samePosPool = goodPlayers.filter(function (p) { return p.primary_position === currentPlayer.primary_position && p.player_id !== currentPlayer.player_id; });
+    var candidatePool = samePosPool.length > 0 ? samePosPool : goodPlayers.filter(function (p) { return p.player_id !== currentPlayer.player_id; });
+    var candidatePlayer = candidatePool[Math.floor(Math.random() * candidatePool.length)];
+
+    var teamPlayers = players.filter(function (p) { return p.club === currentPlayer.club; });
+    var lineup = computeLineup(teamPlayers);
+    state.teamId = currentPlayer.club;
+    state.starters = lineup.starters;
+    state.bench = lineup.bench;
+    state.currentPlayer = currentPlayer;
+    state.candidatePlayer = candidatePlayer;
+    state.lastSwap = null;
+    state.view = 'compare';
+    render();
   }
 
   function renderTeamsFallback(container) {
@@ -27594,12 +27694,16 @@
       var base = Math.abs(r.valA) + Math.abs(r.valB);
       var pA = base ? (Math.abs(r.valA) / base * 100) : 50;
       var pB = base ? (Math.abs(r.valB) / base * 100) : 50;
+      var isOpen = !!state.expandedStats[r.stat];
+      var def = statDefinition(r.stat);
+      var defLine = (isOpen && def) ? '<div class="stat-definition">' + def + '</div>' : '';
       return '<div class="stat-row">' +
         '<div class="stat-values"><span>' + formatValue(r.stat, r.valA) + '</span>' +
-        '<span class="stat-name">' + label(r.stat) + '</span>' +
+        '<button class="stat-name-btn" data-stat="' + r.stat + '" aria-expanded="' + isOpen + '">' + label(r.stat) + '<span class="stat-info-mark">' + (isOpen ? '\u2212' : '?') + '</span></button>' +
         '<span>' + formatValue(r.stat, r.valB) + '</span></div>' +
         '<div class="diverge"><div class="diverge-half left"><div class="diverge-fill a" style="width:' + pA + '%"></div></div>' +
         '<div class="diverge-half right"><div class="diverge-fill b" style="width:' + pB + '%"></div></div></div>' +
+        defLine +
         '</div>';
     }).join('');
 
@@ -27657,6 +27761,13 @@
 
     app.querySelector('#replace-btn').onclick = confirmReplace;
     app.querySelector('#back-btn').onclick = backToSquad;
+    app.querySelectorAll('.stat-name-btn').forEach(function (btn) {
+      btn.onclick = function () {
+        var stat = btn.getAttribute('data-stat');
+        state.expandedStats[stat] = !state.expandedStats[stat];
+        renderCompare();
+      };
+    });
   }
 
   var RADAR_LABELS = {
