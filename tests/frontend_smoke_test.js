@@ -30,6 +30,10 @@ async function main() {
   assert(tokens.length >= 8 && tokens.length <= 11, `expected close to 11 starting tokens, got ${tokens.length}`);
   console.log('OK: squad page rendered', tokens.length, 'starting XI tokens');
 
+  let pageEl = doc.querySelector('#app > .page');
+  assert(pageEl && pageEl.classList.contains('enter-forward'), 'expected a forward page transition teams -> squad');
+  console.log('OK: forward transition applied (teams -> squad)');
+
   const benchChips = doc.querySelectorAll('.bench-chip');
   assert(benchChips.length > 0, 'expected at least one bench player');
   console.log('OK: bench rendered', benchChips.length, 'reserves');
@@ -48,6 +52,13 @@ async function main() {
   const inputEvent = new window.Event('input', { bubbles: true });
   searchInput.dispatchEvent(inputEvent);
   await wait(50);
+
+  // typing in search re-renders the squad page directly (not through the
+  // central dispatcher), so it must NOT replay the page transition
+  const pageElAfterSearch = doc.querySelector('#app > .page');
+  assert(pageElAfterSearch && !pageElAfterSearch.classList.contains('enter-forward') && !pageElAfterSearch.classList.contains('enter-back'),
+    'search re-render should not trigger a page transition');
+  console.log('OK: no transition replay while typing in search');
 
   const resultRows = doc.querySelectorAll('.search-result-row');
   assert(resultRows.length > 0, 'expected search results for a broad query');
@@ -72,6 +83,10 @@ async function main() {
   assert(scoreSvg, 'expected a match score to render');
   console.log('OK: comparison page rendered with match score:', scoreSvg.textContent);
 
+  pageEl = doc.querySelector('#app > .page');
+  assert(pageEl && pageEl.classList.contains('enter-forward'), 'expected a forward page transition squad -> compare');
+  console.log('OK: forward transition applied (squad -> compare)');
+
   const scoreLabels = Array.from(doc.querySelectorAll('.score-label')).map((el) => el.textContent);
   assert(scoreLabels.includes('team fit'), 'expected a team fit (chemistry) score alongside match score');
   const chemSvgText = doc.querySelectorAll('.score-item')[1].querySelector('svg text');
@@ -91,6 +106,10 @@ async function main() {
   const tokensAfter = doc.querySelectorAll('.token');
   assert(tokensAfter.length === expectedTokenCount, 'expected same token count after replacement');
   console.log('OK: replace player returns to squad view with', tokensAfter.length, 'tokens intact');
+
+  pageEl = doc.querySelector('#app > .page');
+  assert(pageEl && pageEl.classList.contains('enter-back'), 'expected a back page transition compare -> squad');
+  console.log('OK: back transition applied (compare -> squad)');
 
   // the candidate must actually be visible on the pitch now, in the same
   // slot - not vanished because their real position differs from the

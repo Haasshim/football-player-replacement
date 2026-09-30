@@ -210,6 +210,16 @@
 
   @keyframes pop-in { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   .score-pop { animation: pop-in 0.35s var(--ease); }
+
+  .wrap { overflow-x: clip; }
+  .page { animation-duration: 0.32s; animation-timing-function: var(--ease); animation-fill-mode: both; }
+  .page.enter-forward { animation-name: page-in-forward; }
+  .page.enter-back { animation-name: page-in-back; }
+  @keyframes page-in-forward { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes page-in-back { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: translateX(0); } }
+  @media (prefers-reduced-motion: reduce) {
+    .page, .team-card, .token, .bench-chip, .primary-btn, .secondary-btn, .score-pop { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -26449,7 +26459,7 @@
     return { chemScore: Math.round(score * 10) / 10, breakdown: breakdown };
   }
 
-  var state = { view: 'teams', teamId: null, starters: [], bench: [], currentPlayer: null, candidatePlayer: null, lastSwap: null };
+  var state = { view: 'teams', teamId: null, starters: [], bench: [], currentPlayer: null, candidatePlayer: null, lastSwap: null, _prevView: 'teams' };
 
   function computeStats(players, positionConfig) {
     var table = {};
@@ -26632,8 +26642,8 @@
         '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div>' +
         '</div>';
     }).join('');
-    app.innerHTML = '<h1>Choose a team</h1><p class="subtitle">Pick a squad to explore, then find a replacement for any player.</p>' +
-      '<div class="team-grid">' + cards + '</div>';
+    app.innerHTML = '<div class="page"><h1>Choose a team</h1><p class="subtitle">Pick a squad to explore, then find a replacement for any player.</p>' +
+      '<div class="team-grid">' + cards + '</div></div>';
     app.querySelectorAll('.team-card').forEach(function (c) {
       c.onclick = function () { selectTeam(c.getAttribute('data-team')); };
     });
@@ -26711,7 +26721,7 @@
     }
 
     app.innerHTML =
-      '<div class="panel">' +
+      '<div class="page"><div class="panel">' +
       '<div class="panel-head">' + teamBadge(state.teamId, 'sm') +
       '<div class="team-name">' + team.team_name + '</div>' +
       '<button class="link-btn" id="change-team">Change team</button></div>' +
@@ -26725,7 +26735,7 @@
       searchResultsHtml + '</div>' +
       selectionHtml +
       '<button class="primary-btn" id="compare-btn" ' + (!(state.currentPlayer && state.candidatePlayer) ? 'disabled' : '') + '>Compare selected players</button>' +
-      '</div>';
+      '</div></div>';
 
     app.querySelector('#change-team').onclick = goTeams;
     app.querySelectorAll('.token').forEach(function (t) { t.onclick = function () { selectCurrent(t.getAttribute('data-player')); }; });
@@ -26772,7 +26782,7 @@
       ? '<div class="score-item"><div style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:11px;">n/a</div><div class="score-label">team fit</div></div>'
       : '<div class="score-item">' + scoreRing(chem.chemScore, 'var(--candidate)', 64) + '<div class="score-label">team fit</div></div>';
 
-    app.innerHTML = '<div class="panel">' +
+    app.innerHTML = '<div class="page"><div class="panel">' +
       '<div class="compare-head">' +
       '<div class="compare-side"><div class="compare-name">' + a.full_name + dataBadge(a) + '</div>' +
       '<div class="compare-meta">' + a.primary_position + ' · ' + (teamA ? teamA.team_name : a.club) + ' · current</div></div>' +
@@ -26786,7 +26796,7 @@
       rows +
       '<div class="btn-row"><button class="primary-btn" id="replace-btn">Replace player</button>' +
       '<button class="secondary-btn" id="back-btn">Back to squad</button></div>' +
-      '</div>';
+      '</div></div>';
 
     app.querySelector('#replace-btn').onclick = confirmReplace;
     app.querySelector('#back-btn').onclick = backToSquad;
@@ -26806,11 +26816,19 @@
       '</svg>';
   }
 
+  var VIEW_ORDER = ['teams', 'squad', 'compare'];
+
   function render() {
     renderTopbar();
+    var oldIndex = VIEW_ORDER.indexOf(state._prevView);
+    var newIndex = VIEW_ORDER.indexOf(state.view);
+    var direction = newIndex >= oldIndex ? 'enter-forward' : 'enter-back';
     if (state.view === 'teams') renderTeams();
     else if (state.view === 'squad') renderSquad();
     else if (state.view === 'compare') renderCompare();
+    var pageEl = document.querySelector('#app > .page');
+    if (pageEl && state.view !== state._prevView) pageEl.classList.add(direction);
+    state._prevView = state.view;
   }
 
   render();
