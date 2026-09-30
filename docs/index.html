@@ -9,49 +9,50 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #F7F8F9;
+    --bg: #FFF8F8;
     --surface: #FFFFFF;
-    --surface-2: #FBFBFC;
-    --ink: #171D26;
-    --ink-muted: #5B6673;
-    --ink-faint: #8A93A0;
-    --border: #DFE3E6;
-    --border-strong: #C5CBD1;
-    --accent: #2C5F63;
-    --accent-ink: #163639;
-    --accent-tint: #E3EEEE;
-    --candidate: #B98B3D;
-    --candidate-tint: #F7EEDD;
-    --pitch: #33513C;
-    --pitch-line: rgba(255,255,255,0.22);
+    --surface-2: #FFF0F1;
+    --ink: #1C1A1B;
+    --ink-muted: #726A6B;
+    --ink-faint: #A69C9D;
+    --border: #F5DEE0;
+    --border-strong: #F0C3C7;
+    --accent: #E4002B;
+    --accent-ink: #A3001F;
+    --accent-tint: #FFE8EA;
+    --candidate: #0E6FE4;
+    --candidate-tint: #E8F1FF;
+    --pitch: #2E7D4F;
+    --pitch-line: rgba(255,255,255,0.3);
     --font-sans: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, sans-serif;
     --font-mono: 'IBM Plex Mono', SFMono-Regular, Menlo, Consolas, monospace;
-    --radius: 8px;
+    --radius: 14px;
+    --ease: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #12161B;
-      --surface: #191E24;
-      --surface-2: #1F252C;
-      --ink: #E7EAED;
-      --ink-muted: #9AA3AC;
-      --ink-faint: #6B7580;
-      --border: #2A3038;
-      --border-strong: #3A424C;
-      --accent: #4FA3A8;
-      --accent-ink: #CFEFEF;
-      --accent-tint: #1B3335;
-      --candidate: #D9A458;
-      --candidate-tint: #3A2E17;
-      --pitch: #24382B;
-      --pitch-line: rgba(255,255,255,0.14);
+      --bg: #1A1214;
+      --surface: #241A1C;
+      --surface-2: #2D2022;
+      --ink: #F5E9EA;
+      --ink-muted: #C2AEB0;
+      --ink-faint: #8A7577;
+      --border: #3D2C2E;
+      --border-strong: #52383B;
+      --accent: #FF4661;
+      --accent-ink: #FFD7DC;
+      --accent-tint: #3D1820;
+      --candidate: #5B9FFF;
+      --candidate-tint: #142338;
+      --pitch: #1F5C3A;
+      --pitch-line: rgba(255,255,255,0.18);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #12161B; --surface: #191E24; --surface-2: #1F252C; --ink: #E7EAED;
-    --ink-muted: #9AA3AC; --ink-faint: #6B7580; --border: #2A3038; --border-strong: #3A424C;
-    --accent: #4FA3A8; --accent-ink: #CFEFEF; --accent-tint: #1B3335;
-    --candidate: #D9A458; --candidate-tint: #3A2E17; --pitch: #24382B; --pitch-line: rgba(255,255,255,0.14);
+    --bg: #1A1214; --surface: #241A1C; --surface-2: #2D2022; --ink: #F5E9EA;
+    --ink-muted: #C2AEB0; --ink-faint: #8A7577; --border: #3D2C2E; --border-strong: #52383B;
+    --accent: #FF4661; --accent-ink: #FFD7DC; --accent-tint: #3D1820;
+    --candidate: #5B9FFF; --candidate-tint: #142338; --pitch: #1F5C3A; --pitch-line: rgba(255,255,255,0.18);
   }
   * { box-sizing: border-box; }
   html { scroll-padding-top: env(safe-area-inset-top, 0px); }
@@ -71,34 +72,47 @@
     padding: 14px 16px; border-bottom: 1px solid var(--border); background: var(--surface);
     position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
   }
-  .step { font-size: 13px; color: var(--ink-faint); padding: 6px 10px; border-radius: 6px; cursor: default; border: none; background: none; }
+  .step { font-size: 13px; color: var(--ink-faint); padding: 7px 12px; border-radius: 999px; cursor: default; border: none; background: none; transition: background 0.15s, color 0.15s; }
   .step.reachable { color: var(--ink-muted); cursor: pointer; }
-  .step.active { color: var(--accent-ink); background: var(--accent-tint); font-weight: 500; }
+  .step.reachable:hover { background: var(--surface-2); color: var(--ink); }
+  .step.active { color: #fff; background: var(--accent); font-weight: 500; }
   .step-sep { color: var(--border-strong); font-size: 12px; }
 
-  h1 { font-size: 18px; font-weight: 500; margin: 0 0 2px; }
+  h1 { font-size: 20px; font-weight: 500; margin: 0 0 2px; }
   .subtitle { font-size: 13px; color: var(--ink-muted); margin: 0 0 20px; }
 
   .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
   .team-card {
     text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
     padding: 14px 16px; cursor: pointer; display: flex; flex-direction: column; gap: 10px;
+    transition: transform 0.18s var(--ease), box-shadow 0.18s, border-color 0.15s;
+    box-shadow: 0 1px 2px rgba(228,0,43,0.04);
   }
-  .team-card:hover { border-color: var(--border-strong); }
+  .team-card:hover { border-color: var(--accent); transform: translateY(-3px) scale(1.015); box-shadow: 0 10px 20px rgba(228,0,43,0.10); }
+  .team-card:active { transform: translateY(-1px) scale(0.995); }
   .team-head { display: flex; align-items: center; gap: 10px; }
   .dot { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
+  .badge {
+    flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 500; font-family: var(--font-sans); letter-spacing: 0.2px;
+    clip-path: polygon(50% 0%, 100% 20%, 100% 70%, 50% 100%, 0% 70%, 0% 20%);
+  }
+  .badge.sm { width: 26px; height: 30px; font-size: 10px; }
+  .badge.md { width: 34px; height: 39px; font-size: 12px; }
+  .badge.lg { width: 44px; height: 50px; font-size: 14px; }
   .team-name { font-size: 14px; font-weight: 500; color: var(--ink); }
   .team-meta { font-size: 12px; color: var(--ink-muted); }
-  .bar-track { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
-  .bar-fill { height: 4px; background: var(--accent); }
+  .bar-track { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 5px; background: var(--accent); border-radius: 3px; transition: width 0.4s var(--ease); }
 
-  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgba(228,0,43,0.05); }
   .panel-head { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--border); }
-  .panel-head .team-name { font-size: 15px; }
-  .link-btn { background: none; border: none; color: var(--accent-ink); font-size: 12px; cursor: pointer; padding: 0; margin-left: auto; }
+  .panel-head .team-name { font-size: 16px; }
+  .link-btn { background: none; border: none; color: var(--accent-ink); font-size: 12px; cursor: pointer; padding: 6px 10px; margin-left: auto; border-radius: 999px; transition: background 0.15s; }
+  .link-btn:hover { background: var(--accent-tint); }
 
   .pitch {
-    position: relative; margin: 14px 16px 8px; border-radius: 6px; overflow: hidden;
+    position: relative; margin: 14px 16px 8px; border-radius: var(--radius); overflow: hidden;
     background: var(--pitch); height: 300px;
   }
   .pitch-lines { position: absolute; inset: 0; z-index: 0; }
@@ -106,73 +120,86 @@
   .pitch-circle { position: absolute; top: 50%; left: 50%; width: 70px; height: 70px; margin: -35px 0 0 -35px; border: 1px solid var(--pitch-line); border-radius: 50%; }
   .pitch-rows { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 12px 8px; }
   .pitch-row { display: flex; justify-content: space-around; }
-  .token { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 2px; }
+  .token { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 2px; transition: transform 0.15s var(--ease); }
+  .token:hover { transform: translateY(-2px) scale(1.08); }
+  .token:active { transform: scale(0.94); }
   .token .circle {
     width: 36px; height: 36px; border-radius: 50%; background: var(--surface); color: var(--ink);
     font-size: 12px; font-weight: 500; display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.18), 0 0 0 0 transparent;
+    transition: box-shadow 0.2s var(--ease);
   }
-  .token.selected .circle { box-shadow: 0 0 0 3px var(--accent); }
-  .token .label { color: #EEF1F0; font-size: 10px; max-width: 58px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .token.selected .circle { box-shadow: 0 2px 5px rgba(0,0,0,0.18), 0 0 0 3px var(--accent); }
+  .token .label { color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.35); font-size: 10px; max-width: 58px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
   .section-label { padding: 12px 16px 4px; color: var(--ink-muted); font-size: 12px; }
   .bench-list { display: flex; gap: 8px; padding: 0 16px 14px; flex-wrap: wrap; }
   .bench-chip {
-    background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px;
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px;
     cursor: pointer; color: var(--ink); font-size: 12px; display: flex; align-items: center; gap: 6px;
+    transition: transform 0.15s var(--ease), border-color 0.15s;
   }
-  .bench-chip.selected { box-shadow: 0 0 0 2px var(--candidate); }
+  .bench-chip:hover { transform: translateY(-1px); border-color: var(--candidate); }
+  .bench-chip.selected { box-shadow: 0 0 0 2px var(--candidate); border-color: transparent; }
   .bench-pos { color: var(--candidate); font-family: var(--font-mono); font-size: 10px; }
 
   .search-block { padding: 4px 16px 14px; }
   .search-input {
-    width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 6px;
+    width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 999px;
     background: var(--surface-2); color: var(--ink); font-size: 13px; font-family: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
   }
-  .search-input:focus { outline: none; border-color: var(--border-strong); }
-  .search-results { margin-top: 6px; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-tint); }
+  .search-results { margin-top: 8px; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
   .search-result-row {
-    display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px;
+    display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 14px;
     cursor: pointer; border-bottom: 1px solid var(--border); background: var(--surface);
+    transition: background 0.12s;
   }
   .search-result-row:last-child { border-bottom: none; }
-  .search-result-row:hover { background: var(--surface-2); }
+  .search-result-row:hover { background: var(--accent-tint); }
   .search-result-name { font-size: 12px; color: var(--ink); }
   .search-result-meta { font-size: 11px; color: var(--ink-muted); }
 
-  .selection-strip { display: flex; gap: 12px; margin: 0 16px 14px; padding: 10px 12px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; }
+  .selection-strip { display: flex; gap: 12px; margin: 0 16px 14px; padding: 10px 14px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); }
   .selection-col { flex: 1; }
   .selection-label { font-size: 10px; color: var(--ink-muted); margin-bottom: 2px; }
   .selection-value { font-size: 12px; font-weight: 500; color: var(--ink); }
   .selection-col.right { text-align: right; }
 
   .primary-btn {
-    display: block; width: calc(100% - 32px); margin: 0 16px 16px; padding: 10px; border: none; border-radius: 6px;
-    background: var(--accent); color: var(--surface); font-size: 13px; font-weight: 500; cursor: pointer;
+    display: block; width: calc(100% - 32px); margin: 0 16px 16px; padding: 12px; border: none; border-radius: 999px;
+    background: var(--accent); color: #fff; font-size: 13px; font-weight: 500; cursor: pointer;
+    transition: transform 0.15s var(--ease), box-shadow 0.15s;
+    box-shadow: 0 4px 10px rgba(228,0,43,0.25);
   }
-  .primary-btn:disabled { opacity: 0.4; cursor: default; }
+  .primary-btn:not(:disabled):hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(228,0,43,0.32); }
+  .primary-btn:not(:disabled):active { transform: translateY(0) scale(0.98); }
+  .primary-btn:disabled { opacity: 0.35; cursor: default; box-shadow: none; }
   .secondary-btn {
-    display: block; width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px;
-    background: none; color: var(--ink); font-size: 13px; cursor: pointer;
+    display: block; width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 999px;
+    background: var(--surface); color: var(--ink); font-size: 13px; cursor: pointer; transition: background 0.15s, transform 0.15s var(--ease);
   }
+  .secondary-btn:hover { background: var(--surface-2); transform: translateY(-1px); }
 
   .compare-head { display: flex; justify-content: space-between; padding: 16px; border-bottom: 1px solid var(--border); }
   .compare-name { font-size: 14px; font-weight: 500; }
   .compare-meta { font-size: 11px; color: var(--ink-muted); margin-top: 2px; }
   .compare-side.right { text-align: right; }
 
-  .score-block { display: flex; flex-direction: column; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--border); }
+  .score-block { display: flex; justify-content: center; gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+  .score-item { display: flex; flex-direction: column; align-items: center; }
   .score-label { font-size: 11px; color: var(--ink-muted); margin-top: 6px; }
 
   .stat-row { padding: 10px 16px; }
   .stat-values { display: flex; justify-content: space-between; margin-bottom: 5px; }
   .stat-values span { font-size: 12px; font-family: var(--font-mono); color: var(--ink); }
   .stat-name { font-size: 11px; color: var(--ink-muted); font-family: var(--font-sans); }
-  .diverge { display: flex; height: 5px; border-radius: 3px; overflow: hidden; gap: 1px; }
+  .diverge { display: flex; height: 6px; border-radius: 3px; overflow: hidden; gap: 2px; }
   .diverge-half { width: 50%; display: flex; }
   .diverge-half.left { justify-content: flex-end; }
   .diverge-half.right { justify-content: flex-start; }
-  .diverge-fill { height: 5px; }
+  .diverge-fill { height: 6px; border-radius: 3px; transition: width 0.35s var(--ease); }
   .diverge-fill.a { background: var(--accent); }
   .diverge-fill.b { background: var(--candidate); }
 
@@ -180,6 +207,9 @@
   .btn-row .primary-btn, .btn-row .secondary-btn { margin: 0; width: auto; flex: 1; }
 
   .empty-hint { padding: 24px 16px; color: var(--ink-faint); font-size: 12px; text-align: center; }
+
+  @keyframes pop-in { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  .score-pop { animation: pop-in 0.35s var(--ease); }
 </style>
 </head>
 <body>
@@ -26332,7 +26362,92 @@
     MUN: '#DA291C', NEW: '#241F20', NFO: '#DD0000', SUN: '#EB172B', TOT: '#132257'
   };
 
+  function badgeTextColor(hex) {
+    var c = hex.replace('#', '');
+    var r = parseInt(c.substr(0, 2), 16), g = parseInt(c.substr(2, 2), 16), b = parseInt(c.substr(4, 2), 16);
+    return (0.299 * r + 0.587 * g + 0.114 * b) > 165 ? '#1C1A1B' : '#ffffff';
+  }
+
+  function teamBadge(teamId, sizeClass) {
+    var color = TEAM_COLORS[teamId] || '#999';
+    return '<div class="badge ' + sizeClass + '" style="background:' + color + '; color:' + badgeTextColor(color) + ';">' + teamId + '</div>';
+  }
+
   var statsTable = computeStats(players, positionConfig);
+
+  // "Chemistry": how closely a candidate's playing style matches the team
+  // they'd be joining as a whole (not the one player being replaced) -
+  // a handful of broadly-applicable style stats, weighted-averaged across
+  // the team's current outfield players, z-scored the same way match
+  // score is, just against the whole squad's tendency instead of one player.
+  var STYLE_STATS = ['pass_completion_pct', 'progressive_carries_p90', 'recoveries_p90', 'duels_won_p90', 'crosses_attempted_p90', 'key_passes_p90'];
+  var STYLE_LABELS = { pass_completion_pct: 'Passing style', progressive_carries_p90: 'Carrying threat', recoveries_p90: 'Work rate', duels_won_p90: 'Physicality', crosses_attempted_p90: 'Width reliance', key_passes_p90: 'Creativity' };
+
+  function computeGlobalStyleStats(players, statNames) {
+    var outfield = players.filter(function (p) { return p.primary_position !== 'GK'; });
+    var table = {};
+    statNames.forEach(function (stat) {
+      var vals = outfield.map(function (p) { return p[stat]; }).filter(function (v) { return typeof v === 'number' && !isNaN(v); });
+      var n = vals.length, mean = 0, std = 1;
+      if (n > 0) {
+        mean = vals.reduce(function (a, b) { return a + b; }, 0) / n;
+        if (n > 1) {
+          var variance = vals.reduce(function (a, b) { return a + (b - mean) * (b - mean); }, 0) / (n - 1);
+          std = Math.sqrt(variance) || 1;
+        }
+      }
+      table[stat] = { mean: mean, std: std };
+    });
+    return table;
+  }
+
+  function computeTeamProfile(teamId, statNames) {
+    var squad = players.filter(function (p) { return p.club === teamId && p.primary_position !== 'GK' && p.total_minutes; });
+    var profile = {};
+    statNames.forEach(function (stat) {
+      var weightedSum = 0, weightUsed = 0;
+      squad.forEach(function (p) {
+        var v = p[stat];
+        if (typeof v === 'number' && !isNaN(v) && p.total_minutes) {
+          weightedSum += v * p.total_minutes;
+          weightUsed += p.total_minutes;
+        }
+      });
+      profile[stat] = weightUsed ? weightedSum / weightUsed : null;
+    });
+    return profile;
+  }
+
+  var globalStyleStats = computeGlobalStyleStats(players, STYLE_STATS);
+  var teamProfiles = {};
+  teams.forEach(function (t) { teamProfiles[t.team_id] = computeTeamProfile(t.team_id, STYLE_STATS); });
+
+  function computeChemistry(candidate, teamId) {
+    var profile = teamProfiles[teamId];
+    if (!profile) return { chemScore: null, breakdown: [] };
+    var weightedSqDiffSum = 0, weightSum = 0;
+    var breakdown = [];
+    STYLE_STATS.forEach(function (stat) {
+      var teamVal = profile[stat];
+      var candVal = candidate[stat];
+      if (teamVal === null || typeof teamVal === 'undefined' || typeof candVal !== 'number' || isNaN(candVal)) {
+        breakdown.push({ stat: stat, teamVal: teamVal, candVal: candVal, zDiff: null });
+        return;
+      }
+      var s = globalStyleStats[stat];
+      var std = s.std || 1;
+      var zCand = (candVal - s.mean) / std;
+      var zTeam = (teamVal - s.mean) / std;
+      var diff = zCand - zTeam;
+      weightedSqDiffSum += diff * diff;
+      weightSum += 1;
+      breakdown.push({ stat: stat, teamVal: teamVal, candVal: candVal, zDiff: diff });
+    });
+    var rawDistance = weightSum ? Math.sqrt(weightedSqDiffSum / weightSum) : 0;
+    var score = 100 * Math.exp(-rawDistance / 1.4);
+    score = Math.max(0, Math.min(100, score));
+    return { chemScore: Math.round(score * 10) / 10, breakdown: breakdown };
+  }
 
   var state = { view: 'teams', teamId: null, starters: [], bench: [], currentPlayer: null, candidatePlayer: null, lastSwap: null };
 
@@ -26509,10 +26624,9 @@
     var app = document.getElementById('app');
     var sorted = teams.slice().sort(function (a, b) { return a.final_league_position - b.final_league_position; });
     var cards = sorted.map(function (t) {
-      var color = TEAM_COLORS[t.team_id] || '#999';
       var pct = Math.round((t.team_strength_index || 0) * 100);
       return '<div class="team-card" data-team="' + t.team_id + '">' +
-        '<div class="team-head"><div class="dot" style="background:' + color + '"></div>' +
+        '<div class="team-head">' + teamBadge(t.team_id, 'md') +
         '<div><div class="team-name">' + t.team_name + '</div>' +
         '<div class="team-meta">' + t.final_league_position + getOrdinal(t.final_league_position) + ' · ' + t.points + ' pts</div></div></div>' +
         '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div>' +
@@ -26549,7 +26663,6 @@
   function renderSquad() {
     var app = document.getElementById('app');
     var team = teamLookup[state.teamId];
-    var color = TEAM_COLORS[state.teamId] || '#999';
 
     var pitchRows = ROWS.map(renderTokenRow).join('');
 
@@ -26571,8 +26684,10 @@
         searchResultsHtml = '<div class="search-results">' + matches.map(function (p) {
           var t = teamLookup[p.club];
           return '<div class="search-result-row" data-player="' + p.player_id + '">' +
-            '<span class="search-result-name">' + p.full_name + dataBadge(p) + '</span>' +
-            '<span class="search-result-meta">' + p.primary_position + ' · ' + (t ? t.team_name : p.club) + '</span></div>';
+            '<div style="display:flex; align-items:center; gap:10px;">' + teamBadge(p.club, 'sm') +
+            '<div><div class="search-result-name">' + p.full_name + dataBadge(p) + '</div>' +
+            '<div class="search-result-meta">' + p.primary_position + ' · ' + (t ? t.team_name : p.club) + '</div></div></div>' +
+            '</div>';
         }).join('') + '</div>';
       } else {
         searchResultsHtml = '<div class="empty-hint">No players match that search.</div>';
@@ -26597,7 +26712,7 @@
 
     app.innerHTML =
       '<div class="panel">' +
-      '<div class="panel-head"><div class="dot" style="background:' + color + '"></div>' +
+      '<div class="panel-head">' + teamBadge(state.teamId, 'sm') +
       '<div class="team-name">' + team.team_name + '</div>' +
       '<button class="link-btn" id="change-team">Change team</button></div>' +
       swapBannerHtml +
@@ -26636,6 +26751,7 @@
     var position = a.primary_position;
     var result = explainScore(a, b, position);
     var score = result.matchScore;
+    var chem = computeChemistry(b, state.teamId);
 
     var rows = result.breakdown.map(function (r) {
       var base = Math.abs(r.valA) + Math.abs(r.valB);
@@ -26652,6 +26768,10 @@
 
     var teamA = teamLookup[a.club], teamB = teamLookup[b.club];
 
+    var chemRing = chem.chemScore === null
+      ? '<div class="score-item"><div style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:11px;">n/a</div><div class="score-label">team fit</div></div>'
+      : '<div class="score-item">' + scoreRing(chem.chemScore, 'var(--candidate)', 64) + '<div class="score-label">team fit</div></div>';
+
     app.innerHTML = '<div class="panel">' +
       '<div class="compare-head">' +
       '<div class="compare-side"><div class="compare-name">' + a.full_name + dataBadge(a) + '</div>' +
@@ -26659,7 +26779,10 @@
       '<div class="compare-side right"><div class="compare-name">' + b.full_name + dataBadge(b) + '</div>' +
       '<div class="compare-meta">' + b.primary_position + ' · ' + (teamB ? teamB.team_name : b.club) + ' · candidate</div></div>' +
       '</div>' +
-      '<div class="score-block">' + scoreRing(score) + '<div class="score-label">match score</div></div>' +
+      '<div class="score-block">' +
+      '<div class="score-item">' + scoreRing(score, 'var(--accent)', 80) + '<div class="score-label">match score</div></div>' +
+      chemRing +
+      '</div>' +
       rows +
       '<div class="btn-row"><button class="primary-btn" id="replace-btn">Replace player</button>' +
       '<button class="secondary-btn" id="back-btn">Back to squad</button></div>' +
@@ -26669,15 +26792,17 @@
     app.querySelector('#back-btn').onclick = backToSquad;
   }
 
-  function scoreRing(score) {
-    var r = 30, c = 2 * Math.PI * r;
+  function scoreRing(score, color, size) {
+    size = size || 80;
+    var r = size * 0.375, c = 2 * Math.PI * r, mid = size / 2;
     var offset = c * (1 - score / 100);
-    return '<svg width="80" height="80" viewBox="0 0 80 80">' +
-      '<circle cx="40" cy="40" r="' + r + '" fill="none" stroke="var(--border)" stroke-width="6"></circle>' +
-      '<circle cx="40" cy="40" r="' + r + '" fill="none" stroke="var(--accent)" stroke-width="6" ' +
+    var fontSize = size >= 80 ? 16 : 13;
+    return '<svg class="score-pop" width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '">' +
+      '<circle cx="' + mid + '" cy="' + mid + '" r="' + r + '" fill="none" stroke="var(--border)" stroke-width="6"></circle>' +
+      '<circle cx="' + mid + '" cy="' + mid + '" r="' + r + '" fill="none" stroke="' + color + '" stroke-width="6" ' +
       'stroke-dasharray="' + c + '" stroke-dashoffset="' + offset + '" stroke-linecap="round" ' +
-      'transform="rotate(-90 40 40)"></circle>' +
-      '<text x="40" y="45" text-anchor="middle" font-size="16" font-weight="500" fill="var(--ink)" font-family="var(--font-sans)">' + score + '%</text>' +
+      'transform="rotate(-90 ' + mid + ' ' + mid + ')"></circle>' +
+      '<text x="' + mid + '" y="' + (mid + 5) + '" text-anchor="middle" font-size="' + fontSize + '" font-weight="500" fill="var(--ink)" font-family="var(--font-sans)">' + score + '%</text>' +
       '</svg>';
   }
 

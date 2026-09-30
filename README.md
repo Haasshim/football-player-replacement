@@ -100,6 +100,29 @@ into a percentage match score. Any stat missing for either player (see
 "Data gaps" below) is left out of that comparison rather than treated as
 zero.
 
+## Team fit ("chemistry")
+
+Alongside the match score (candidate vs the specific player being
+replaced), the comparison page shows a second score: how well the
+candidate's playing style fits the team as a whole. This uses a small
+set of broadly-applicable style stats - passing accuracy, carrying
+threat, work rate (recoveries), physicality (duels won), width
+reliance (crosses attempted), and creativity (key passes) - averaged
+across the team's current outfield players (weighted by minutes
+played), then compared against the candidate the same way the match
+score compares two players: z-scored against the whole league, turned
+into a 0-100% distance-based score. It answers "would this player's
+style suit how this team already plays", separately from "is this
+player statistically similar to who they're replacing".
+
+## Team badges
+
+Real club crests are trademarked, so instead of reproducing actual
+badge artwork, each club gets a generated shield in its real colors
+with its short code (e.g. ARS, LIV) - gives every team a distinct,
+recognizable visual identity without using logo assets that aren't ours
+to redistribute.
+
 ## Big game weighting
 
 The original plan was to weight each player's stats by the strength of

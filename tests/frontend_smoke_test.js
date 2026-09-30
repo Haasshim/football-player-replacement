@@ -18,6 +18,10 @@ async function main() {
   assert(teamCards.length === 20, `expected 20 team cards, got ${teamCards.length}`);
   console.log('OK: teams page rendered', teamCards.length, 'team cards');
 
+  const badges = doc.querySelectorAll('.badge');
+  assert(badges.length > 0, 'expected team badges to render');
+  console.log('OK:', badges.length, 'team badges rendered on this page');
+
   // 2. Click a team -> should move to squad view with a starting XI (allow
   // for real-data gaps: some clubs are short a player or two in one slot)
   teamCards[0].click();
@@ -67,6 +71,12 @@ async function main() {
   const scoreSvg = doc.querySelector('.score-block svg text');
   assert(scoreSvg, 'expected a match score to render');
   console.log('OK: comparison page rendered with match score:', scoreSvg.textContent);
+
+  const scoreLabels = Array.from(doc.querySelectorAll('.score-label')).map((el) => el.textContent);
+  assert(scoreLabels.includes('team fit'), 'expected a team fit (chemistry) score alongside match score');
+  const chemSvgText = doc.querySelectorAll('.score-item')[1].querySelector('svg text');
+  assert(chemSvgText, 'expected a chemistry score ring to render');
+  console.log('OK: team fit / chemistry score rendered:', chemSvgText.textContent);
 
   const statRows = doc.querySelectorAll('.stat-row');
   assert(statRows.length > 0, 'expected stat comparison rows');
