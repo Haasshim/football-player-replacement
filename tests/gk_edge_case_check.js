@@ -1,11 +1,6 @@
-const fs = require('fs');
-const { JSDOM } = require('jsdom');
-
-const html = fs.readFileSync(require('path').join(__dirname, '..', 'frontend', 'index.html'), 'utf8');
-const dom = new JSDOM(html, { runScripts: 'dangerously', resources: 'usable' });
+const { loadApp, wait } = require('./_test_helpers');
+const dom = loadApp();
 const { window } = dom;
-
-function wait(ms) { return new Promise((res) => setTimeout(res, ms)); }
 
 function assert(cond, msg) {
   if (!cond) { console.error('FAIL:', msg); process.exit(1); }

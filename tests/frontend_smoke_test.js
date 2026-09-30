@@ -1,13 +1,7 @@
-const fs = require('fs');
-const path = require('path');
-const { JSDOM } = require('jsdom');
+const { loadApp, wait } = require('./_test_helpers');
 
-const html = fs.readFileSync(path.join(__dirname, '..', 'frontend', 'index.html'), 'utf8');
-
-const dom = new JSDOM(html, { runScripts: 'dangerously', resources: 'usable' });
+const dom = loadApp();
 const { window } = dom;
-
-function wait(ms) { return new Promise((res) => setTimeout(res, ms)); }
 
 async function main() {
   await wait(200); // let inline scripts run

@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <style>
   :root {
     --bg: #F4F8FF;
@@ -90,9 +92,10 @@
     padding: 14px 16px; cursor: pointer; display: flex; flex-direction: column; gap: 10px;
     transition: transform 0.18s var(--ease), box-shadow 0.18s, border-color 0.15s;
     box-shadow: 0 1px 2px rgba(var(--accent-rgb),0.04);
+    /* the team-select tiles are a React component that sets all of this
+       inline per-tile (club-colored hover state) - these rules are a plain
+       fallback only, in case the React/ReactDOM CDN scripts fail to load */
   }
-  .team-card:hover { border-color: var(--accent); transform: translateY(-3px) scale(1.015); box-shadow: 0 10px 20px rgba(var(--accent-rgb),0.10); }
-  .team-card:active { transform: translateY(-1px) scale(0.995); }
   .team-head { display: flex; align-items: center; gap: 10px; }
   .dot { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
   .badge {
@@ -26904,6 +26907,122 @@
     return '<div class="badge ' + sizeClass + '" style="background:' + color + '; color:' + badgeTextColor(color) + ';">' + teamId + '</div>';
   }
 
+  function hexToHSL(hex) {
+    var c = hex.replace('#', '');
+    var r = parseInt(c.substr(0, 2), 16) / 255, g = parseInt(c.substr(2, 2), 16) / 255, b = parseInt(c.substr(4, 2), 16) / 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
+    if (max === min) { h = s = 0; } else {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      if (max === r) h = (g - b) / d + (g < b ? 6 : 0);
+      else if (max === g) h = (b - r) / d + 2;
+      else h = (r - g) / d + 4;
+      h /= 6;
+    }
+    return [h * 360, s * 100, l * 100];
+  }
+
+  function hslToHex(h, s, l) {
+    h /= 360; s /= 100; l /= 100;
+    function hue2rgb(p, q, t) {
+      if (t < 0) t += 1;
+      if (t > 1) t -= 1;
+      if (t < 1 / 6) return p + (q - p) * 6 * t;
+      if (t < 1 / 2) return q;
+      if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+      return p;
+    }
+    var r, g, b;
+    if (s === 0) { r = g = b = l; } else {
+      var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      var p = 2 * l - q;
+      r = hue2rgb(p, q, h + 1 / 3); g = hue2rgb(p, q, h); b = hue2rgb(p, q, h - 1 / 3);
+    }
+    function toHex(x) { var v = Math.round(x * 255).toString(16); return v.length === 1 ? '0' + v : v; }
+    return '#' + toHex(r) + toHex(g) + toHex(b);
+  }
+
+  function complementaryColor(hex) {
+    var hsl = hexToHSL(hex);
+    return hslToHex((hsl[0] + 180) % 360, Math.max(hsl[1], 55), hsl[2] > 55 ? 35 : 60);
+  }
+
+  var teamsReactRoot = null;
+  function unmountTeamsReact() {
+    if (teamsReactRoot) {
+      try { teamsReactRoot.unmount(); } catch (e) { /* container already gone */ }
+      teamsReactRoot = null;
+    }
+  }
+
+  function TeamTile(props) {
+    var team = props.team;
+    var hoverState = React.useState(false);
+    var hovered = hoverState[0], setHovered = hoverState[1];
+    var color = TEAM_COLORS[team.team_id] || '#999';
+    var comp = complementaryColor(color);
+    var textColor = hovered ? badgeTextColor(color) : 'var(--ink)';
+    var mutedColor = hovered ? textColor : 'var(--ink-muted)';
+    var faintColor = hovered ? textColor : 'var(--ink-faint)';
+    // secondary text keeps a visual hierarchy below the headline even when
+    // hovered (both would otherwise render in the exact same solid color)
+    var mutedOpacity = hovered ? 0.82 : 1;
+    var faintOpacity = hovered ? 0.7 : 1;
+    // the strength-bar track's tint needs to contrast against whichever
+    // background is showing - a flat white tint (the original approach)
+    // washes out against light club colors like Leeds yellow or Man City blue
+    var trackTint = hovered ? (textColor === '#ffffff' ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.18)') : 'var(--border)';
+    var pct = Math.round((team.team_strength_index || 0) * 100);
+    var posDisplay = Math.round(team.final_league_position);
+    var ptsDisplay = Math.round(team.points);
+    var confidenceNote = team.data_confidence === 'no_recent_top_flight_data' ? 'no recent top-flight data' : 'recent form, last 3-4 seasons';
+
+    return React.createElement('div', {
+      className: 'team-card',
+      'data-team': team.team_id,
+      onMouseEnter: function () { setHovered(true); },
+      onMouseLeave: function () { setHovered(false); },
+      onClick: function () { props.onSelect(team.team_id); },
+      tabIndex: 0,
+      role: 'button',
+      'aria-label': 'Select ' + team.team_name,
+      onKeyDown: function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); props.onSelect(team.team_id); } },
+      style: {
+        background: hovered ? color : 'var(--surface)',
+        border: '2px solid ' + (hovered ? comp : 'var(--border)'),
+        borderRadius: '18px', padding: '22px 20px', cursor: 'pointer',
+        transition: 'transform 0.25s cubic-bezier(0.34,1.56,0.64,1), background 0.2s, border-color 0.2s, box-shadow 0.25s',
+        transform: hovered ? 'translateY(-6px) scale(1.03)' : 'none',
+        boxShadow: hovered ? '0 14px 28px ' + color + '55' : '0 1px 2px rgba(11,99,246,0.05)',
+        display: 'flex', flexDirection: 'column', gap: '14px', outline: 'none',
+      }
+    },
+      React.createElement('div', { style: { display: 'flex', alignItems: 'center', gap: '12px' } },
+        React.createElement('div', { dangerouslySetInnerHTML: { __html: teamBadge(team.team_id, 'lg') } }),
+        React.createElement('div', null,
+          React.createElement('div', { style: { fontSize: '17px', fontWeight: 500, color: textColor } }, team.team_name),
+          React.createElement('div', { style: { fontSize: '12px', color: mutedColor, opacity: mutedOpacity, marginTop: '2px' } },
+            posDisplay + getOrdinal(posDisplay) + ' \u00b7 ~' + ptsDisplay + ' pts')
+        )
+      ),
+      React.createElement('div', { style: { fontSize: '10px', color: faintColor, opacity: faintOpacity } }, '(' + confidenceNote + ')'),
+      React.createElement('div', { style: { height: '6px', background: trackTint, borderRadius: '3px', overflow: 'hidden' } },
+        React.createElement('div', { style: { height: '6px', width: pct + '%', background: hovered ? comp : 'var(--accent)', borderRadius: '3px', transition: 'width 0.4s ease' } })
+      ),
+      React.createElement('div', { style: { fontSize: '10px', color: faintColor, opacity: faintOpacity } }, 'Squad strength ' + pct + '%')
+    );
+  }
+
+  function TeamGrid(props) {
+    var sorted = props.teams.slice().sort(function (a, b) { return a.final_league_position - b.final_league_position; });
+    return React.createElement('div', {
+      style: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '18px' }
+    }, sorted.map(function (t) {
+      return React.createElement(TeamTile, { key: t.team_id, team: t, onSelect: props.onSelect });
+    }));
+  }
+
   var statsTable = computeStats(players, positionConfig);
 
   // "Chemistry": how closely a candidate's playing style matches the team
@@ -27311,10 +27430,12 @@
     };
   }
 
-  function renderTeams() {
-    var app = document.getElementById('app');
+  function renderTeamsFallback(container) {
+    // used only if the React/ReactDOM CDN scripts failed to load - a plain,
+    // non-interactive version so the page still works rather than showing
+    // an empty grid
     var sorted = teams.slice().sort(function (a, b) { return a.final_league_position - b.final_league_position; });
-    var cards = sorted.map(function (t) {
+    container.innerHTML = sorted.map(function (t) {
       var pct = Math.round((t.team_strength_index || 0) * 100);
       var posDisplay = Math.round(t.final_league_position);
       var ptsDisplay = Math.round(t.points);
@@ -27322,16 +27443,31 @@
       return '<div class="team-card" data-team="' + t.team_id + '">' +
         '<div class="team-head">' + teamBadge(t.team_id, 'md') +
         '<div><div class="team-name">' + t.team_name + '</div>' +
-        '<div class="team-meta" title="' + escapeAttr(confidenceNote) + '">' + posDisplay + getOrdinal(posDisplay) + ' · ~' + ptsDisplay + ' pts <span style="color:var(--ink-faint);">(' + confidenceNote + ')</span></div></div></div>' +
+        '<div class="team-meta">' + posDisplay + getOrdinal(posDisplay) + ' \u00b7 ~' + ptsDisplay + ' pts <span style="color:var(--ink-faint);">(' + confidenceNote + ')</span></div></div></div>' +
         '<div><div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div>' +
         '<div style="font-size:10px; color:var(--ink-faint); margin-top:3px;">Squad strength ' + pct + '%</div></div>' +
         '</div>';
     }).join('');
-    app.innerHTML = '<div class="page"><h1>Choose a team</h1><p class="subtitle">Pick a squad to explore, then find a replacement for any player.</p>' +
-      '<div class="team-grid">' + cards + '</div></div>';
-    app.querySelectorAll('.team-card').forEach(function (c) {
+    container.style.display = 'grid';
+    container.style.gridTemplateColumns = 'repeat(auto-fit, minmax(220px, 1fr))';
+    container.style.gap = '12px';
+    container.querySelectorAll('.team-card').forEach(function (c) {
       c.onclick = function () { selectTeam(c.getAttribute('data-team')); };
     });
+  }
+
+  function renderTeams() {
+    unmountTeamsReact();
+    var app = document.getElementById('app');
+    app.innerHTML = '<div class="page"><h1>Choose a team</h1><p class="subtitle">Pick a squad to explore, then find a replacement for any player. Hover a tile to see it in the club\u2019s colors.</p>' +
+      '<div id="react-team-grid"></div></div>';
+    var container = document.getElementById('react-team-grid');
+    if (typeof React === 'undefined' || typeof ReactDOM === 'undefined') {
+      renderTeamsFallback(container);
+      return;
+    }
+    teamsReactRoot = ReactDOM.createRoot(container);
+    teamsReactRoot.render(React.createElement(TeamGrid, { teams: teams, onSelect: selectTeam }));
   }
 
   function getOrdinal(n) {
@@ -27610,6 +27746,7 @@
     var oldIndex = VIEW_ORDER.indexOf(state._prevView);
     var newIndex = VIEW_ORDER.indexOf(state.view);
     var direction = newIndex >= oldIndex ? 'enter-forward' : 'enter-back';
+    if (state.view !== 'teams') unmountTeamsReact();
     if (state.view === 'home') renderHome();
     else if (state.view === 'teams') renderTeams();
     else if (state.view === 'squad') renderSquad();

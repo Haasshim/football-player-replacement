@@ -77,7 +77,7 @@ python scripts/generate_sample_data.py /tmp/demo_data
 pip install -r requirements.txt
 python scripts/run_real_pipeline.py   # rebuilds frontend/data.json from data/
 python -m pytest tests/               # 22 tests
-npm install && npm run test:frontend   # full flow, GK edge case, rating spread check
+npm install && npm run test:frontend   # full flow, GK edge case, rating spread, React tiles, React-failure fallback
 ```
 
 To rebuild `data/` itself from the original source files, run the
@@ -146,6 +146,31 @@ generic for a player with no standout quality.
 Stat rows where neither player has data are hidden entirely, rather
 than showing a confusing "- vs -" - a count of how many were hidden is
 still shown, so nothing disappears silently.
+
+## Why React only for the team-select page
+
+The team-select tiles are a real React component (React 18, loaded via
+UMD script tags, no build step or JSX/Babel - that would add close to
+1MB for no real benefit here). Hovering a tile transitions it to the
+club's actual color with a computed complementary accent for the
+border and strength bar; the rest of the app stays the plain JS/string-
+templating it already used.
+
+That split is deliberate, not partial effort: React's value is
+managing complex, deeply nested state across many interdependent
+components. This app's pages are simple, independent screens that each
+rebuild their own DOM on navigation - introducing a framework for the
+whole thing would add real weight (bundle size, mount/unmount
+bookkeeping) without making anything look or work better. The one place
+a framework genuinely earns its cost is the per-tile hover state here
+(20 tiles, each tracking its own hover independently, each computing a
+derived color) - that's exactly the kind of localized, repeated,
+state-driven UI React is good at, so that's the one place it's used.
+
+If the CDN script fails to load for any reason (blocked host, ad
+blocker, network blip), the page falls back to a plain, non-interactive
+version of the same tiles rather than rendering an empty grid -
+covered by its own test (`tests/react_fallback_check.js`).
 
 ## Team badges
 
@@ -284,6 +309,34 @@ a documented dead end is still useful:
 - **Score distribution**: match scores across a same-position sample
   spread from ~11 to ~95 with a mean around 55 and a real spread
   (std ~14) - informative in both directions, not bunched at one value.
+- **An entirely different model was tried and rejected**: weighted
+  cosine similarity, instead of weighted Euclidean distance, as the
+  core comparison. Cosine similarity judges the *shape* of a player's
+  stat profile (which things they're relatively strong or weak at)
+  rather than the absolute size of the difference on each stat. Tested
+  head to head with the same stable methodology: it separated *worse*
+  on every single position, several dropping below the random baseline,
+  and it nearly erased the goalkeeper/outfielder separation entirely
+  (8.0 down to 1.0). That tracks - cosine similarity is magnitude-
+  invariant, so a genuinely excellent player and a mediocre one with a
+  similar *pattern* of strengths and weaknesses would score as highly
+  similar, which is the wrong answer for a tool about judging whether
+  someone is a good replacement in absolute terms, not just a
+  similarly-shaped one. The current weighted-Euclidean approach stands
+  as the better-tested choice, not just the original one.
+
+What "model" means here, plainly: this is a weighted nearest-neighbor-
+style distance function - position-specific weighted Euclidean
+distance between two players' z-scored stat profiles, mapped to a 0-100
+score by exponential decay - not a trained machine learning model.
+There's no gradient descent and no neural net, because there's no
+labeled "this was a good replacement" data to train one against. It's
+closer to classical statistics / information retrieval than deep
+learning, and the validation work above (grid search, the rejected
+reweight, the rejected cosine-similarity alternative) is what "training"
+looks like for a scoring function instead of a learned model: define a
+metric that stands in for ground truth, test changes against it
+honestly, and keep only what actually holds up.
 
 Once real transfer/scouting outcomes exist, replace or add to this with
 a proper accuracy metric (e.g. Spearman correlation between match_score
