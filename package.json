@@ -1,0 +1,10 @@
+{
+  "name": "epl-player-replacement-finder",
+  "private": true,
+  "scripts": {
+    "test:frontend": "node tests/frontend_smoke_test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}
