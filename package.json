@@ -2,7 +2,7 @@
   "name": "epl-player-replacement-finder",
   "private": true,
   "scripts": {
-    "test:frontend": "node tests/frontend_smoke_test.js"
+    "test:frontend": "node tests/frontend_smoke_test.js && node tests/gk_edge_case_check.js && node tests/rating_distribution_check.js"
   },
   "devDependencies": {
     "jsdom": "^24.0.0"

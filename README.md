@@ -77,7 +77,7 @@ python scripts/generate_sample_data.py /tmp/demo_data
 pip install -r requirements.txt
 python scripts/run_real_pipeline.py   # rebuilds frontend/data.json from data/
 python -m pytest tests/               # 22 tests
-npm install && node tests/frontend_smoke_test.js   # clicks through the whole app
+npm install && npm run test:frontend   # full flow, GK edge case, rating spread check
 ```
 
 To rebuild `data/` itself from the original source files, run the
@@ -147,6 +147,13 @@ to redistribute. Player photos are left out for the same reason - real
 photos of real, named people aren't something to source and embed
 without rights to do so, so the visual identity here is built from
 data instead: badges, an overlaid radar chart, a rating, and color.
+Badge text color, and the rating pill colors, are chosen by real WCAG
+contrast calculation (not a rough luminance guess) so every one of the
+20 clubs' colors and every rating tier stays readable - a first pass
+using a simplified heuristic had misjudged a few saturated mid-tones
+(Man City sky blue, Hull orange) as fine for white text when they only
+hit ~2.5:1 contrast; both the badge and rating-pill colors were
+corrected after checking every case against the real formula.
 
 ## Big game weighting
 

@@ -26416,9 +26416,17 @@
   };
 
   function badgeTextColor(hex) {
+    // proper sRGB relative luminance (WCAG), not the naive weighted-RGB
+    // heuristic - that one misjudged saturated mid-tones (e.g. Man City
+    // sky blue, Hull orange) as dark enough for white text when they
+    // actually only hit ~2.5:1 contrast against it
     var c = hex.replace('#', '');
-    var r = parseInt(c.substr(0, 2), 16), g = parseInt(c.substr(2, 2), 16), b = parseInt(c.substr(4, 2), 16);
-    return (0.299 * r + 0.587 * g + 0.114 * b) > 165 ? '#1C1A1B' : '#ffffff';
+    var rgb = [0, 2, 4].map(function (i) {
+      var v = parseInt(c.substr(i, 2), 16) / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    var luminance = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
+    return luminance > 0.179 ? '#1C1A1B' : '#ffffff';
   }
 
   function teamBadge(teamId, sizeClass) {
@@ -26564,9 +26572,9 @@
 
   function ratingColor(rating) {
     if (rating === null) return 'var(--ink-faint)';
-    if (rating >= 7.5) return '#0E9F6E';
+    if (rating >= 7.5) return '#0C7A54'; // darkened from #0E9F6E for 4.5:1+ contrast with white text
     if (rating >= 6) return 'var(--accent)';
-    if (rating >= 4.5) return 'var(--candidate)';
+    if (rating >= 4.5) return '#A8480B'; // darkened from candidate orange for 4.5:1+ contrast with white text
     return '#E02424';
   }
 
