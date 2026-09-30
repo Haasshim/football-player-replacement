@@ -147,6 +147,30 @@ Stat rows where neither player has data are hidden entirely, rather
 than showing a confusing "- vs -" - a count of how many were hidden is
 still shown, so nothing disappears silently.
 
+## Best matches
+
+Picking a player to replace no longer means guessing candidates one at a
+time in the search box. The squad page now auto-ranks the top 5 real
+candidates from the entire database by match score the moment a current
+player is selected - this is the tool's actual stated purpose (finding
+good replacements), so making the user manually search for every
+candidate one at a time was the biggest usability gap before this. Only
+players with real matched stats are suggested (see the bug note in
+"Model validation" below for why that matters); the manual search box
+is still there for anyone who wants to consider a specific player by name.
+
+## Sources and footer
+
+A persistent footer links to the datasets this project is built on and
+the source code. Two of the five source files were identified with real
+confidence by matching their exact structure (archive 5's distinctive
+`DATA_JSON/Season_YYYY/Club_ID_Year.json` layout, and the team-match-log
+file's exact column set) against known Kaggle datasets - the indexing
+site used to find them has since shut down, so those links are
+constructed from the standard Kaggle URL pattern rather than confirmed
+by directly loading the page. The other two source files were not
+confidently identified and still need a confirmed link.
+
 ## Fonts, homepage, and stat tooltips
 
 Headlines (the homepage title, team names, player names on the
@@ -155,10 +179,12 @@ de facto standard for sports branding, paired with the existing IBM
 Plex Sans for body text and IBM Plex Mono for stat numbers.
 
 The homepage has a low-opacity (5%) diagonal stripe pattern in the
-pitch-green color behind the hero, and a row of all 20 clubs' jersey
-icons - real photos and the real Premier League logo aren't things to
-reproduce without rights to do so (same reasoning as the badges), so
-the visual identity stays built from generated, data-driven graphics.
+pitch-green color behind the hero, and all 20 clubs' jersey icons laid
+out in a fixed 10-column grid (exactly 2 rows of 10, at any screen
+size) with a hover tooltip showing the club name - real photos and the
+real Premier League logo aren't things to reproduce without rights to
+do so (same reasoning as the badges), so the visual identity stays
+built from generated, data-driven graphics.
 Two buttons were added beyond the original single CTA: "Try a random
 comparison" (jumps straight into a live comparison between two real
 players with full data, so the tool is visible immediately) and a
@@ -286,6 +312,21 @@ however many are available for that slot rather than breaking.
 Coventry, Hull, and Sunderland have zero match data in the archives used
 (newly promoted for 2026/27) - they get an explicit, clearly-flagged
 default team strength rather than a guessed number.
+
+- **A real bug, found by sanity-checking the "best matches" feature**: when
+  two players share zero comparable stats (most commonly, one of them has
+  no real data at all), the weighted-distance formula divides by a zero
+  weight-sum. The old code defaulted that to "distance 0", which silently
+  meant "0% distance apart" - a perfect 100% match - for any pair of
+  players neither of which has any data. This was invisible on the
+  comparison page (nobody manually picks a zero-data player to compare
+  against), but the moment "best matches" started scoring every player in
+  the database against a real one, several zero-data players tied for
+  first place at 98-100%, which is how it was caught. Fixed in both
+  `src/similarity.py` and the frontend port: zero comparable stats now
+  scores 0, not 100, and `computeTopMatches` additionally only suggests
+  players with real data in the first place. Covered by a new regression
+  test (`test_zero_comparable_stats_scores_zero_not_a_perfect_match`).
 
 ## Model validation
 

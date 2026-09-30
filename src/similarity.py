@@ -113,16 +113,23 @@ class SimilarityEngine:
                 "favored": favored,
             })
 
-        raw_distance = math.sqrt(weighted_sq_diff_sum / weight_sum) if weight_sum else 0.0
-        score = 100 * math.exp(-raw_distance / DISTANCE_SCALE)
-        score = max(0.0, min(100.0, score))
+        if weight_sum == 0:
+            # zero comparable stats between these two players (e.g. one has
+            # no real data at all) - this must NOT default to a perfect
+            # score. Distance-to-score is undefined here, not zero.
+            raw_distance = None
+            score = 0.0
+        else:
+            raw_distance = math.sqrt(weighted_sq_diff_sum / weight_sum)
+            score = 100 * math.exp(-raw_distance / DISTANCE_SCALE)
+            score = max(0.0, min(100.0, score))
 
         breakdown.sort(key=lambda r: r["weight"] * abs(r["z_diff"]) if r["z_diff"] is not None else -1, reverse=True)
 
         return {
             "position_used": position,
             "match_score": round(score, 1),
-            "raw_distance": round(raw_distance, 3),
+            "raw_distance": round(raw_distance, 3) if raw_distance is not None else None,
             "stat_breakdown": breakdown,
             "stats_compared": sum(1 for r in breakdown if r["favored"] != "unavailable"),
             "stats_unavailable": sum(1 for r in breakdown if r["favored"] == "unavailable"),

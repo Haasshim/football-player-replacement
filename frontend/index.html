@@ -170,6 +170,21 @@
   .search-result-name { font-size: 12px; color: var(--ink); }
   .search-result-meta { font-size: 11px; color: var(--ink-muted); }
 
+  .best-matches { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin: 0 16px 14px; }
+  .best-match-row {
+    display: flex; align-items: center; gap: 10px; padding: 9px 14px; cursor: pointer;
+    border-bottom: 1px solid var(--border); background: var(--surface); transition: background 0.12s, transform 0.12s var(--ease);
+  }
+  .best-match-row:last-child { border-bottom: none; }
+  .best-match-row:hover { background: var(--candidate-tint); }
+  .best-match-row:active { transform: scale(0.98); }
+  .best-match-row.selected { box-shadow: inset 0 0 0 2px var(--candidate); }
+  .best-match-rank { font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint); width: 14px; flex-shrink: 0; }
+  .best-match-info { flex: 1; min-width: 0; }
+  .best-match-name { font-size: 12px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .best-match-meta { font-size: 11px; color: var(--ink-muted); }
+  .best-match-score { font-family: var(--font-mono); font-size: 13px; font-weight: 500; flex-shrink: 0; }
+
   .selection-strip { display: flex; gap: 12px; margin: 0 16px 14px; padding: 10px 14px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); }
   .selection-col { flex: 1; }
   .selection-label { font-size: 10px; color: var(--ink-muted); margin-bottom: 2px; }
@@ -257,9 +272,16 @@
     opacity: 0.05;
   }
   .hero > * { position: relative; z-index: 1; }
-  .jersey-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 520px; margin: 0 auto 22px; }
-  .jersey-strip svg { opacity: 0.55; transition: opacity 0.2s, transform 0.2s; }
-  .jersey-strip svg:hover { opacity: 1; transform: translateY(-3px); }
+  .jersey-strip { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; max-width: 480px; margin: 0 auto 22px; }
+  .jersey-item { position: relative; display: flex; justify-content: center; }
+  .jersey-item svg { width: 100%; height: auto; max-width: 30px; opacity: 0.6; transition: opacity 0.2s, transform 0.2s; }
+  .jersey-item:hover svg { opacity: 1; transform: translateY(-3px); }
+  .jersey-item::after {
+    content: attr(data-name); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-4px);
+    background: var(--ink); color: var(--bg); font-size: 10px; font-weight: 500; padding: 4px 8px; border-radius: 5px;
+    white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.15s; z-index: 10;
+  }
+  .jersey-item:hover::after { opacity: 1; }
   .hero-btn-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
   .github-link { display: inline-block; font-size: 12px; color: var(--ink-faint); text-decoration: none; margin-bottom: 36px; border-bottom: 1px solid transparent; transition: color 0.15s, border-color 0.15s; }
   .github-link:hover { color: var(--accent-ink); border-color: var(--accent-ink); }
@@ -301,11 +323,31 @@
   .radar-legend { display: flex; gap: 18px; margin-top: 6px; }
   .radar-legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--ink-muted); }
   .radar-swatch { width: 10px; height: 10px; border-radius: 3px; }
+
+  .site-footer { border-top: 1px solid var(--border); padding: 18px 16px 28px; background: var(--surface); }
+  .footer-inner { max-width: 720px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; font-size: 11px; }
+  .footer-inner + .footer-inner { margin-top: 8px; }
+  .footer-label { color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.5px; font-size: 10px; }
+  .site-footer a { color: var(--ink-muted); text-decoration: none; border-bottom: 1px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .site-footer a:hover { color: var(--accent-ink); border-color: var(--accent-ink); }
+  .footer-note { color: var(--ink-faint); font-style: italic; }
 </style>
 </head>
 <body>
 <div class="topbar" id="topbar"></div>
 <div class="wrap" id="app"></div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-label">Sources</span>
+    <a href="https://www.kaggle.com/datasets/samoilovmikhail/all-premier-league-team-and-players-1992-2024" target="_blank" rel="noopener">Squad &amp; bio history, 1992-2024 (Kaggle)</a>
+    <a href="https://www.kaggle.com/datasets/shubhamgadekar/english-premier-league20202022-dataset" target="_blank" rel="noopener">Team match logs (Kaggle)</a>
+    <a href="https://www.kaggle.com/datasets/saife245/english-premier-league" target="_blank" rel="noopener">Match results, 2000-2025 (Kaggle)</a>
+    <span class="footer-note">Player season stats sourced from Kaggle player-stats datasets - exact listing pending confirmation.</span>
+  </div>
+  <div class="footer-inner">
+    <a href="https://github.com/Haasshim/football-player-replacement" target="_blank" rel="noopener">Source code on GitHub</a>
+  </div>
+</footer>
 
 <script id="app-data" type="application/json">{
   "teams": [
@@ -27162,8 +27204,8 @@
       weightSum += 1;
       breakdown.push({ stat: stat, teamVal: teamVal, candVal: candVal, zDiff: diff });
     });
-    var rawDistance = weightSum ? Math.sqrt(weightedSqDiffSum / weightSum) : 0;
-    var score = 100 * Math.exp(-rawDistance / 2.0);
+    var rawDistance = weightSum ? Math.sqrt(weightedSqDiffSum / weightSum) : null;
+    var score = weightSum ? 100 * Math.exp(-rawDistance / 2.0) : 0;
     score = Math.max(0, Math.min(100, score));
     return { chemScore: Math.round(score * 10) / 10, breakdown: breakdown };
   }
@@ -27339,8 +27381,8 @@
       else if ((za - zb) * direction < 0) favored = 'b';
       breakdown.push({ stat: stat, valA: rawA, valB: rawB, weight: weight, zDiff: za - zb, favored: favored });
     });
-    var rawDistance = weightSum ? Math.sqrt(weightedSqDiffSum / weightSum) : 0;
-    var score = 100 * Math.exp(-rawDistance / 2.0);
+    var rawDistance = weightSum ? Math.sqrt(weightedSqDiffSum / weightSum) : null;
+    var score = weightSum ? 100 * Math.exp(-rawDistance / 2.0) : 0;
     score = Math.max(0, Math.min(100, score));
     breakdown.sort(function (a, b) {
       var av = a.zDiff === null ? -1 : a.weight * Math.abs(a.zDiff);
@@ -27348,6 +27390,16 @@
       return bv - av;
     });
     return { matchScore: Math.round(score * 10) / 10, breakdown: breakdown };
+  }
+
+  function computeTopMatches(currentPlayer, n) {
+    var scored = players
+      .filter(function (p) { return p.player_id !== currentPlayer.player_id && p.data_confidence === 'full'; })
+      .map(function (p) {
+        return { player: p, score: explainScore(currentPlayer, p, currentPlayer.primary_position).matchScore };
+      });
+    scored.sort(function (a, b) { return b.score - a.score; });
+    return scored.slice(0, n);
   }
 
   function computeLineup(teamPlayers) {
@@ -27469,7 +27521,7 @@
 
     var jerseyStrip = '<div class="jersey-strip">' +
       teams.slice().sort(function (a, b) { return a.team_id.localeCompare(b.team_id); })
-        .map(function (t) { return jerseyIcon(t.team_id, 26); }).join('') +
+        .map(function (t) { return '<div class="jersey-item" data-name="' + escapeAttr(t.team_name) + '">' + jerseyIcon(t.team_id, 26) + '</div>'; }).join('') +
       '</div>';
 
     app.innerHTML = '<div class="page">' +
@@ -27643,6 +27695,24 @@
         'Replaced <strong style="font-weight:500;">' + state.lastSwap.replacedName + '</strong> with <strong style="font-weight:500;">' + state.lastSwap.candidateName + '</strong></div>';
     }
 
+    var bestMatchesHtml = '';
+    if (state.currentPlayer) {
+      var topMatches = computeTopMatches(state.currentPlayer, 5);
+      bestMatchesHtml = '<div class="section-label">Best matches for ' + shortName(state.currentPlayer.full_name) + '</div>' +
+        '<div class="best-matches">' + topMatches.map(function (m, i) {
+          var p = m.player;
+          var t = teamLookup[p.club];
+          var selCls = state.candidatePlayer && state.candidatePlayer.player_id === p.player_id ? ' selected' : '';
+          return '<div class="best-match-row' + selCls + '" data-player="' + p.player_id + '">' +
+            '<span class="best-match-rank">' + (i + 1) + '</span>' +
+            teamBadge(p.club, 'sm') +
+            '<div class="best-match-info"><div class="best-match-name">' + p.full_name + dataBadge(p) + '</div>' +
+            '<div class="best-match-meta">' + p.primary_position + ' \u00b7 ' + (t ? t.team_name : p.club) + '</div></div>' +
+            '<span class="best-match-score" style="color:' + ratingColor(m.score / 10) + '">' + m.score + '%</span>' +
+            '</div>';
+        }).join('') + '</div>';
+    }
+
     app.innerHTML =
       '<div class="page"><div class="panel">' +
       '<div class="panel-head">' + teamBadge(state.teamId, 'sm') + jerseyIcon(state.teamId, 28) +
@@ -27653,6 +27723,7 @@
       '<div class="pitch-rows">' + pitchRows + '</div></div>' +
       '<div class="section-label">Bench &amp; reserves</div>' +
       '<div class="bench-list">' + benchChips + '</div>' +
+      bestMatchesHtml +
       '<div class="section-label">Compare against any player in the database</div>' +
       '<div class="search-block"><input class="search-input" id="search-input" type="text" placeholder="Search a player by name" value="' + escapeAttr(searchBoxValue) + '">' +
       searchResultsHtml + '</div>' +
@@ -27663,6 +27734,9 @@
     app.querySelector('#change-team').onclick = goTeams;
     app.querySelectorAll('.token').forEach(function (t) { t.onclick = function () { selectCurrent(t.getAttribute('data-player')); }; });
     app.querySelectorAll('.bench-chip').forEach(function (t) { t.onclick = function () { selectCurrent(t.getAttribute('data-player')); }; });
+    app.querySelectorAll('.best-match-row').forEach(function (r) {
+      r.onclick = function () { selectCandidate(r.getAttribute('data-player')); };
+    });
     var input = app.querySelector('#search-input');
     input.oninput = function (e) { window.__searchValue = e.target.value; renderSquad(); refocusSearch(); };
     app.querySelectorAll('.search-result-row').forEach(function (r) {

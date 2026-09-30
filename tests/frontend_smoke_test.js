@@ -35,6 +35,23 @@ async function main() {
   assert(jerseyIcons.length === 20, `expected 20 jersey icons on homepage, got ${jerseyIcons.length}`);
   console.log('OK: homepage jersey strip shows', jerseyIcons.length, 'clubs');
 
+  // jsdom doesn't implement real CSS Grid layout, so it returns the raw
+  // repeat() text rather than expanded computed column values - check the
+  // declared column count directly instead of trying to count rendered columns
+  const jerseyGridCols = window.getComputedStyle(doc.querySelector('.jersey-strip')).gridTemplateColumns;
+  assert(/repeat\(\s*10\s*,/.test(jerseyGridCols), `expected a 10-column grid declaration, got: ${jerseyGridCols}`);
+  console.log('OK: jersey strip declares a 10-column grid (20 icons \u2192 2 rows of 10)');
+
+  const firstJerseyItem = doc.querySelector('.jersey-item');
+  assert(firstJerseyItem && firstJerseyItem.getAttribute('data-name'), 'expected each jersey to carry its club name for the hover tooltip');
+  console.log('OK: jersey hover tooltip data present:', firstJerseyItem.getAttribute('data-name'));
+
+  const footer = doc.querySelector('.site-footer');
+  assert(footer, 'expected a persistent footer');
+  const footerLinks = footer.querySelectorAll('a');
+  assert(footerLinks.length >= 3, `expected multiple source links in the footer, got ${footerLinks.length}`);
+  console.log('OK: footer present with', footerLinks.length, 'links');
+
   const githubLink = doc.querySelector('.github-link');
   assert(githubLink && githubLink.getAttribute('href') === 'https://github.com/Haasshim/football-player-replacement', 'expected a working GitHub source link');
   console.log('OK: GitHub source link present and correct');
@@ -103,6 +120,22 @@ async function main() {
   const selectedToken = doc.querySelector('.token.selected');
   assert(selectedToken, 'expected a token to have the selected class after clicking');
   console.log('OK: current player selection highlights token');
+
+  // Best-matches: once a current player is picked, the app should auto-suggest
+  // ranked candidates rather than requiring a manual search every time
+  const bestMatchRows = doc.querySelectorAll('.best-match-row');
+  assert(bestMatchRows.length === 5, `expected 5 auto-suggested best matches, got ${bestMatchRows.length}`);
+  const bestMatchScores = Array.from(bestMatchRows).map((r) => parseFloat(r.querySelector('.best-match-score').textContent));
+  const isDescending = bestMatchScores.every((s, i) => i === 0 || s <= bestMatchScores[i - 1]);
+  assert(isDescending, `expected best matches sorted highest-score-first, got: ${bestMatchScores.join(', ')}`);
+  console.log('OK: 5 best matches auto-suggested, sorted by score:', bestMatchScores.join('%, ') + '%');
+
+  // clicking a best-match row should select it as the candidate directly
+  bestMatchRows[0].click();
+  await wait(50);
+  const selectedCandidateName = doc.querySelector('.selection-col.right .selection-value').textContent;
+  assert(selectedCandidateName !== 'search below', 'expected clicking a best match to select it as the candidate');
+  console.log('OK: clicking a best-match row selects it as the candidate:', selectedCandidateName);
 
   // 4. Search should find players NOT limited to this team
   const searchInput = doc.querySelector('#search-input');

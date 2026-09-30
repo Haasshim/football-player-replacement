@@ -78,3 +78,36 @@ def test_scoring_before_fit_raises():
     df = make_player_stats()
     with pytest.raises(RuntimeError):
         engine.match_score(df.iloc[0], df.iloc[1])
+
+
+def test_zero_comparable_stats_scores_zero_not_a_perfect_match():
+    """
+    Regression test: when two players share no comparable stats at all
+    (e.g. one has no real data), the weighted-distance formula divides by
+    a zero weight-sum. This must NOT default to "distance 0 -> 100% match" -
+    that previously made any two no-data players look like a perfect
+    match, which silently corrupted "best matches"-style ranking.
+    """
+    config = {
+        "ST": {
+            "stats": {"stat1": {"weight": 1.0, "direction": 1}},
+            "big_game_composite_stats": [],
+        }
+    }
+    df = pd.DataFrame([
+        {"player_id": "a", "primary_position": "ST", "stat1": 10.0},
+        {"player_id": "b", "primary_position": "ST", "stat1": float("nan")},
+        {"player_id": "c", "primary_position": "ST", "stat1": float("nan")},
+    ])
+    engine = SimilarityEngine(config).fit(df)
+
+    # b and c share zero comparable stats (both NaN on the only configured stat)
+    result = engine.explain_score(df.iloc[1], df.iloc[2])
+    assert result["match_score"] == 0.0
+    assert result["raw_distance"] is None
+    assert result["stats_compared"] == 0
+
+    # sanity: a real comparison (a vs b, one stat available on each side is
+    # still impossible here since b is all-NaN) still behaves the same way
+    result2 = engine.explain_score(df.iloc[0], df.iloc[1])
+    assert result2["match_score"] == 0.0
